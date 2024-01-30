@@ -9,6 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug SSH connection
+        run: |
+          echo "Attempting SSH connection to ${{ secrets.SERVER_IP }} as ${{ secrets.SSH_USER }}"
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} "echo SSH connection successful"
+
       - name: SSH into server and deploy
         uses: appleboy/ssh-action@master
         with:
