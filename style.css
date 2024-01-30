@@ -5,3 +5,25 @@ html, body {
 	background-color: #363636;
 	color: white;
 }
+
+.title-area {
+	height: 100px;
+	line-height: 100px;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #32a852;
+}
+
+.nav-button {
+	float: left;
+    display: block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+	background-color: #51d675;
+}
