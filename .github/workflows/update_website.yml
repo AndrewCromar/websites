@@ -1,0 +1,26 @@
+name: Update Website
+
+on:
+  push:
+    branches:
+      - main  # Adjust this according to your repository's branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: SSH into server and update website
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd public_html/andrewcromar/home
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global credential.helper store
+          git pull origin main
