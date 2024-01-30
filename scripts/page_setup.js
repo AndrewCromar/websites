@@ -12,7 +12,7 @@ function setup_page(title){
     <div class="navbar">
         <a class="nav-button" href="index.html">Home</a>
         <a class="nav-button" href="programming.html">Programming</a>
-        <a class="nav-button" href="Resume.html">resume</a>
+        <a class="nav-button" href="resume.html">Resume</a>
     </div>
 
     <script src="scripts/sticky_navbar.js"></script>
