@@ -26,4 +26,4 @@ jobs:
           git pull origin main
           git config --global user.email "you@example.com"  # Set your email address
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
-          git config --global user.password "${{ secrets.GITHUB_PAT }}"
+          git config --global user.password "${{ secrets.PAT }}"
