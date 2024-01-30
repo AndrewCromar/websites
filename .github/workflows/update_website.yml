@@ -20,7 +20,10 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd public_html/andrewcromar/home
+          cd /path/to/your/directory
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
           git config --global credential.helper store
           git pull origin main
+          git config --global user.email "you@example.com"  # Set your email address
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global user.password "${{ secrets.GITHUB_PAT }}"
