@@ -9,7 +9,7 @@ function setup_page(title){
         <title>Andrew Cromar</title>
     </div>
 
-    <div class="navbar">
+    <div id="navbar">
         <a class="nav-button" href="index.html">Home</a>
         <a class="nav-button" href="programming.html">Programming</a>
         <a class="nav-button" href="resume.html">Resume</a>
