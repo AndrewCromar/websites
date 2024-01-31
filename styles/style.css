@@ -31,18 +31,20 @@ html, body {
 }
 
 .social {
-	text-decoration: none;
-	color: white;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 .footer {
-	position: fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-	border-top: solid #51d675 5px;
+    border-top: solid #51d675 5px;
     background-color: #363636;
     color: white;
-	text-align: center;
-	line-height: 50px;
+    text-align: center;
+    line-height: 50px;
 }

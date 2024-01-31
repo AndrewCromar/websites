@@ -3,5 +3,6 @@ document.write(`
 
     <div class="footer">
         <a class="social" href="https://github.com/AndrewCromar">GitHub</a>
+        <a class="social" href="https://github.com/AndrewCromar">GitHub</a>
     </div>
 `);
