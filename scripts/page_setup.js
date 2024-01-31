@@ -14,7 +14,5 @@ function setup_page(title){
         <a class="nav-button" href="programming.html">Programming</a>
         <a class="nav-button" href="resume.html">Resume</a>
     </div>
-
-    
 `);
 }
