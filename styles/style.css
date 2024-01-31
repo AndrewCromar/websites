@@ -29,3 +29,14 @@ html, body {
 .nav-button:hover {
 	background-color: #51d675;
 }
+
+.footer {
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #51d675;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

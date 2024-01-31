@@ -4,7 +4,6 @@ function setup_page(title){
     <link rel="stylesheet" href="styles/resume.css">
     <link rel="stylesheet" href="styles/sticky_navbar.css">
     <link rel="stylesheet" href="styles/social.css">
-    <link rel="stylesheet" href="styles/footer.css">
 
     <div class="header">
         <center><h1>${title}<h1></center>
