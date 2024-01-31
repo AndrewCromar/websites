@@ -15,6 +15,6 @@ function setup_page(title){
         <a class="nav-button" href="resume.html">Resume</a>
     </div>
 
-    <script src="scripts/sticky_navbar.js"></script>
+    
 `);
 }
