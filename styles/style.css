@@ -35,8 +35,7 @@ html, body {
     bottom: 0;
     left: 0;
     width: 100%;
-	border-top: solid #51d675 2px;
+	border-top: solid #51d675 5px;
     background-color: #363636;
     color: white;
-    text-align: center;
 }
