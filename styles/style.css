@@ -34,9 +34,11 @@ html, body {
     text-decoration: none;
     color: white;
     display: inline-block;
-    margin: 12.5px 5px;
+    margin: 10px 2.5px;
+	padding: 2.5px;
 
 	border: solid #51d675 2px;
+	border-radius: 10px;
 }
 
 .social:hover {
