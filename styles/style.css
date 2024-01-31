@@ -30,6 +30,11 @@ html, body {
 	background-color: #51d675;
 }
 
+.socials {
+	text-decoration: none;
+	color: white;
+}
+
 .footer {
 	position: fixed;
     bottom: 0;
@@ -38,4 +43,5 @@ html, body {
 	border-top: solid #51d675 5px;
     background-color: #363636;
     color: white;
+	text-align: center;
 }
