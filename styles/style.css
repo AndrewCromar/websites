@@ -34,17 +34,15 @@ html, body {
     text-decoration: none;
     color: white;
     display: inline-block;
-    margin: 10px 2.5px;
-	padding: 5px;
+	padding: 14px;
 
-	border: solid #51d675 2px;
-	border-radius: 10px;
+	background-color: #51d675;
 
 	transition-duration: 100ms;
 }
 
 .social:hover {
-	border: solid red 2px;
+	background-color: red;
 	padding: 5px 10px;
 }
 
@@ -53,9 +51,8 @@ html, body {
     bottom: 0;
     left: 0;
     width: 100%;
-    border-top: solid #51d675 5px;
-    background-color: #363636;
+    background-color: #51d675;
     color: white;
     text-align: center;
-    line-height: 25px;
+    line-height: 50px;
 }
