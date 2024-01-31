@@ -47,7 +47,11 @@ el.addEventListener('mouseout', function() {
   el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
 })
 
+el.addEventListener('mousedown', function() {
+  el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+})
+
 /* Add listener for mouseup, simulate release of mouse click */
 el.addEventListener('mouseup', function() {
-  el.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+  el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
 })
