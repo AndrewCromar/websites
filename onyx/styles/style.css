@@ -1,0 +1,37 @@
+html, body {
+	font-family: "Source Code Pro", monospace;
+	margin: 0;
+	padding: 0;
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+.header {
+	height: 100px;
+	line-height: 100px;
+}
+
+#navbar {
+	overflow: hidden;
+	background-color: var(--navbar-background-color);
+	z-index: 100;
+}
+
+.nav-button {
+	float: left;
+    display: block;
+    text-align: center;
+    padding: 14px;
+	font-size: larger;
+    text-decoration: none;
+	color: var(--text-color);
+}
+
+.nav-button:hover {
+	background-color: var(--navbar-hover-color);
+}
+
+.icon {
+    float: right;
+    height: 51px;
+}
