@@ -6,7 +6,7 @@ function setup_page(title){
     <link rel="stylesheet" href="styles/social.css">
 
     <div class="header">
-        <center><h1>${title}<h1></center>
+        <center><h1 style="font-weight: bold;">${title}<h1></center>
         <title>Andrew Cromar</title>
     </div>
 
