@@ -3,4 +3,5 @@
     height: auto;
     margin-top: 50px;
     filter: drop-shadow(0 0 10px black);
+    transition-duration: 10ms;
 }
