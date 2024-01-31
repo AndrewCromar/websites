@@ -11,7 +11,7 @@ html, body {
 	line-height: 100px;
 }
 
-.navbar {
+#navbar {
 	overflow: hidden;
 	background-color: #32a852;
 	z-index: 100;
