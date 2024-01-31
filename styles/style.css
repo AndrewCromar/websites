@@ -34,7 +34,7 @@ html, body {
     text-decoration: none;
     color: white;
     display: inline-block;
-    margin: 0 10px;
+    margin: 12.5px 5px;
 
 	border: solid #51d675 2px;
 }
@@ -52,5 +52,5 @@ html, body {
     background-color: #363636;
     color: white;
     text-align: center;
-    line-height: 50px;
+    line-height: 25px;
 }
