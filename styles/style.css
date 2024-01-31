@@ -39,8 +39,12 @@ html, body {
 	color: white;
 }
 
-.social:hover {
-	background-color: red;
+.github:hover {
+    background-color: black;
+}
+
+.youtube:hover {
+    background-color: red;
 }
 
 .footer {
