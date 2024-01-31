@@ -1,4 +1,4 @@
-function setup_page(title){
+function Header(title, icon_path){
     document.write(`
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="../styles/sticky_navbar.css">
@@ -13,7 +13,19 @@ function setup_page(title){
             <a class="nav-button" href="onyx.html">ONYX</a>
             <a class="nav-button" href="hell_hotel.html">Hell Hotel</a>
             <a class="nav-button" href="juicy.html">Juicy</a>
-            <img class="icon" src="images/onyx_logo.png">
+            <img class="icon" src="${icon_path}">
         </div>
+    `);
+}
+
+function Theme(theme){
+    document.write(`
+        <link rel="stylesheet" href="../styles/themes/${theme}.css">
+    `);
+}
+
+function Footer(){
+    document.write(`
+        <script src="scripts/sticky_navbar.js"></script>
     `);
 }

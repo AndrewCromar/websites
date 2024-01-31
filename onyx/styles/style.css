@@ -2,8 +2,8 @@ html, body {
 	font-family: "Source Code Pro", monospace;
 	margin: 0;
 	padding: 0;
-	background-color: #363636;
-	color: white;
+	background-color: var(--background-color);
+	color: var(--text-color);
 }
 
 .header {
@@ -13,7 +13,7 @@ html, body {
 
 #navbar {
 	overflow: hidden;
-	background-color: #9000ff;
+	background-color: var(--navbar-background-color);
 	z-index: 100;
 }
 
@@ -24,11 +24,11 @@ html, body {
     padding: 14px;
 	font-size: larger;
     text-decoration: none;
-	color: white;
+	color: var(--text-color);
 }
 
 .nav-button:hover {
-	background-color: #006aff;
+	background-color: var(--navbar-hover-color);
 }
 
 .icon {
