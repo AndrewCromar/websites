@@ -69,3 +69,10 @@ html, body {
 	background-color: #32a852;
 	z-index: 100;
 }
+
+hr {
+	border: none;
+	background-color: #51d675;
+	width: 100%;
+	height: 5px;
+}
