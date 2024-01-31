@@ -36,11 +36,11 @@ html, body {
     display: inline-block;
     margin: 0 10px;
 
-	border-top: solid #51d675 2px;
+	border-color: solid #51d675 2px;
 }
 
-.hover {
-	border-top: solid red 2px;
+.social:hover {
+	border: solid red 2px;
 }
 
 .footer {
