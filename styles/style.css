@@ -31,6 +31,11 @@ html, body {
 	background-color: #51d675;
 }
 
+.icon {
+    float: right;
+    height: 51px;
+}
+
 .social {
 	float: left;
     display: block;
@@ -54,6 +59,10 @@ html, body {
 
 .linkedin:hover {
 	background-color: #0077B5;
+}
+
+.discord:hover {
+	background-color: #2b2d31;
 }
 
 .footer {
