@@ -41,7 +41,6 @@ html, body {
 
 .social:hover {
 	background-color: red;
-	padding: 5px 10px;
 }
 
 .footer {
@@ -52,5 +51,6 @@ html, body {
     background-color: #32a852;
     color: white;
     text-align: center;
-    line-height: 50px;
+	height: 100px;
+	line-height: 100px;
 }
