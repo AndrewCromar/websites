@@ -36,7 +36,7 @@ html, body {
     display: inline-block;
     margin: 0 10px;
 
-	border-color: solid #51d675 2px;
+	border: solid #51d675 2px;
 }
 
 .social:hover {
