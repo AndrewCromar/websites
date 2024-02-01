@@ -35,3 +35,7 @@ html, body {
     float: right;
     height: 51px;
 }
+
+.colored-text {
+    color: var(--colored-text-color);
+}
