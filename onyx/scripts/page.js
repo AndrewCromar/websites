@@ -34,6 +34,7 @@ function Footer(){
         <br>
 
         <div class="footer">
+            <a class="social github" target="_blank" href="https://github.com/AndrewCromar/Juicy-Player-Controller"><img src="../images/logos/github_text.png"></a>
             <a class="social youtube" target="_blank" href="https://www.youtube.com/@ONYXDevelopment"><img src="../images/logos/youtube_text.png"></a>
         </div>
     `);
