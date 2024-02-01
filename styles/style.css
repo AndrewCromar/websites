@@ -50,7 +50,7 @@ html, body {
 }
 
 .github:hover {
-    background-color: var(--social-hover-color);
+    background-color: var(--github-hover-color);
 }
 
 .youtube:hover {

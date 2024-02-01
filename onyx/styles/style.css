@@ -60,6 +60,10 @@ hr {
     height: 25px;
 }
 
+.github:hover {
+    background-color: var(--github-hover-color);
+}
+
 .youtube:hover {
     background-color: var(--youtube-hover-color);
 }
