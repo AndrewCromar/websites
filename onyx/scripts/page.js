@@ -1,6 +1,6 @@
 function Header(title, icon_path){
     document.write(`
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" href="../styles/sticky_navbar.css">
         
         <div class="header">
@@ -27,5 +27,16 @@ function Theme(theme){
 function Footer(){
     document.write(`
         <script src="scripts/sticky_navbar.js"></script>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="footer">
+            <a class="social github" target="_blank" href="https://github.com/AndrewCromar/Juicy-Player-Controller"><img src="../images/logos/github_text.png"></a>
+            <a class="social youtube" target="_blank" href="https://www.youtube.com/@ONYXDevelopment"><img src="../images/logos/youtube_text.png"></a>
+            <a class="social discord" target="_blank" href="https://discord.gg/2maTr7RQQQ"><img src="../images/logos/discord_text.png"></a>
+        </div>
     `);
 }
