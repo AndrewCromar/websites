@@ -34,9 +34,30 @@ function Footer(){
         <br>
 
         <div class="footer">
-            <a class="social github" target="_blank" href="https://github.com/AndrewCromar/Juicy-Player-Controller"><img src="../../images/logos/github_text.png"></a>
-            <a class="social youtube" target="_blank" href="https://www.youtube.com/@ONYXDevelopment"><img src="../../images/logos/youtube_text.png"></a>
-            <a class="social discord" target="_blank" href="https://discord.gg/2maTr7RQQQ"><img src="../../images/logos/discord_text.png"></a>
+            <!-- Github Links -->
+            <div class="dropup">
+                <button class="dropbtn github"><img src="../../images/logos/github_text.png"></button>
+                <div class="dropup-content">
+                <a target="_blank" href="https://github.com/AndrewCromar/Juicy-Player-Controller">Juicy Player Controller</a>
+                <a target="_blank" href="https://github.com/AndrewCromar/Juicy-Player-Controller/blob/main/Docs/documentation.md">Juicy Documentation</a>
+                </div>
+            </div>
+
+            <!-- Youtube Link -->
+            <div class="dropup">
+                <button class="dropbtn youtube"><img src="../../images/logos/youtube_text.png"></button>
+                <div class="dropup-content">
+                <a target="_blank" href="https://www.youtube.com/@ONYXDevelopment">@OnyxDevelopment</a>
+                </div>
+            </div>
+
+            <!-- Discord Links -->
+            <div class="dropup">
+                <button class="dropbtn discord"><img src="../../images/logos/discord_text.png"></button>
+                <div class="dropup-content">
+                <a target="_blank" href="https://discord.gg/2maTr7RQQQ">ONYX Development</a>
+                </div>
+            </div>
         </div>
     `);
 }
