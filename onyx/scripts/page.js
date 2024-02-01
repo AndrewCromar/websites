@@ -27,5 +27,14 @@ function Theme(theme){
 function Footer(){
     document.write(`
         <script src="scripts/sticky_navbar.js"></script>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="footer">
+            <a class="social youtube" target="_blank" href="https://www.youtube.com/@ONYXDevelopment"><img src="../images/logos/youtube_text.png"></a>
+        </div>
     `);
 }

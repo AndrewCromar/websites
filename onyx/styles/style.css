@@ -46,3 +46,20 @@ hr {
 .colored-text {
     color: var(--colored-text-color);
 }
+
+.social {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.social > img {
+    height: 25px;
+}
+
+.youtube:hover {
+    background-color: var(--youtube-hover-color);
+}
