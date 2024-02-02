@@ -12,6 +12,7 @@ function Header(title, icon_path){
             <a class="nav-button" href="../andrewcromar/home.html">andrewcromar.org</a>
             <a class="nav-button" href="trio.html">Trio Productions</a>
             <a class="nav-button" href="twitc.html">TWITC</a>
+            <a class="nav-button" href="releases.html">Releases</a>
             <img class="icon" src="${icon_path}">
         </div>
     `);
@@ -33,6 +34,14 @@ function Footer(){
         <br>
 
         <div class="footer">
+            <!-- Youtube Links -->
+            <div class="dropup">
+                <button class="dropbtn youtube"><img src="../../images/logos/youtube_text.png"></button>
+                <div class="dropup-content">
+                <a target="_blank" href="https://www.youtube.com/watch?v=nw6acf2nSy4">The World In The Closet</a>
+                </div>
+            </div>
+
             <!-- Discord Links -->
             <div class="dropup">
                 <button class="dropbtn discord"><img src="../../images/logos/discord_text.png"></button>
