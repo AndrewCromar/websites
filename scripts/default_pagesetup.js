@@ -11,6 +11,7 @@ function Header(title, icon_path){
         <div id="navbar">
             <a class="nav-button" href="home.html">Home</a>
             <a class="nav-button" href="programming.html">Programming</a>
+            <a class="nav-button" href="../articles/articles.html">Articles</a>
             <a class="nav-button" href="../onyx/onyx.html">ONYX Development</a>
             <a class="nav-button" href="../trio/trio.html">Trio Productions</a>
             <img class="icon" src="${icon_path}">
