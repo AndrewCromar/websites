@@ -10,9 +10,9 @@ function Header(title, icon_path){
         
         <div id="navbar">
             <a class="nav-button" href="../andrewcromar/home.html">andrewcromar.org</a>
-            <a class="nav-button" href="onyx.html">ONYX Development</a>
-            <a class="nav-button" href="hell_hotel.html">Hell Hotel</a>
-            <a class="nav-button" href="juicy.html">Juicy</a>
+            <a class="nav-button" href="onyx-development.html">ONYX Development</a>
+            <a class="nav-button" href="hell-hotel.html">Hell Hotel</a>
+            <a class="nav-button" href="juicy-player-controller.html">Juicy</a>
             <img class="icon" src="${icon_path}">
         </div>
     `);
