@@ -6,5 +6,6 @@ Source code for [my website](https://andrewcromar.org/).
 - [x] Make the github footer button be a drop-up with different github pages linked (Andrew Cromar, Juicy Payer Controller, Juicy Player Controller - Documentation).
 - [x] Create a section for articles.
 - [x] Rename files to be more specific/longer.
+- [x] Change how theme colors work.  
+- [x] Organize style.css.
 - [ ] Fix white flash when loading a new page.
-- [ ] Organize style.css.

@@ -1,19 +1,29 @@
+/*#region setup  */
+
 html, body {
     font-family: "Source Code Pro", monospace;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--background);
+    color: var(--text);
 }
+
+/*#endregion setup  */
+
+/*#region header  */
 
 .header {
     height: 100px;
     line-height: 100px;
 }
 
+/*#endregion header  */
+
+/*#region navbar */
+
 #navbar {
     overflow: hidden;
-    background-color: var(--navbar-background-color);
+    background-color: var(--primary);
     z-index: 100;
 }
 
@@ -24,17 +34,19 @@ html, body {
     padding: 14px;
     font-size: larger;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text);
 }
 
-.nav-button:hover {
-    background-color: var(--navbar-hover-color);
-}
+.nav-button:hover { background-color: var(--secondary); }
 
 .icon {
     float: right;
     height: 51px;
 }
+
+/*#endregion navbar */
+
+/*#region social  */
 
 .social {
     float: left;
@@ -42,50 +54,53 @@ html, body {
     text-align: center;
     padding: 14px;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text);
 }
 
-.social > img {
-    height: 25px;
-}
+.social > img { height: 25px; }
 
-.github:hover {
-    background-color: var(--github-hover-color);
-}
+.github:hover { background-color: var(--github); }
+.youtube:hover { background-color: var(--youtube); }
+.linkedin:hover { background-color: var(--linkedin); }
+.discord:hover { background-color: var(--discord); }
 
-.youtube:hover {
-    background-color: var(--youtube-hover-color);
-}
+/*#endregion social  */
 
-.linkedin:hover {
-    background-color: var(--linkedin-hover-color);
-}
-
-.discord:hover {
-    background-color: var(--discord-hover-color);
-}
+/*#region footer  */
 
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--footer-background-color);
-    color: var(--text-color);
+    background-color: var(--primary);
+    color: var(--text);
     text-align: center;
     z-index: 100;
 }
 
+/*#endregion footer  */
+
+/*#region hr  */
+
 hr {
     border: none;
-    background-color: var(--hr-color);
+    background-color: var(--primary);
     width: 100%;
     height: 5px;
 }
 
+/*#endregion hr  */
+
+/*#region colored_text */
+
 .colored-text {
-    color: var(--colored-text-color);
+    color: var(--primary);
 }
+
+/*#endregion colored_text */
+
+/*#region article */
 
 .article {
     max-width: 100%;
@@ -94,9 +109,15 @@ hr {
     filter: drop-shadow(0 0 10px black);
 }
 
-.content {
-    padding: 16px;
-}
+/*#endregion article */
+
+/*#region content */
+
+.content { padding: 16px; }
+
+/*#endregion content */
+
+/*#region sticky */
 
 .sticky {
     position: fixed;
@@ -104,22 +125,20 @@ hr {
     width: 100%;
 }
 
-.sticky + .content {
-    padding-top: 60px;
-}
+.sticky + .content { padding-top: 60px; }
 
-/* ---------- DROPUP ---------- */
+/*#endregion sticky */
+
+/*#region dropup */
 
 .dropbtn {
-    background-color: var(--footer-background-color);
+    background-color: var(--primary);
     padding: 14px;
     font-size: 16px;
     border: none;
 }
 
-.dropbtn > img {
-    height: 25px;
-}
+.dropbtn > img { height: 25px; }
 
 .dropup {
     display: block;
@@ -129,26 +148,26 @@ hr {
 .dropup-content {
     display: none;
     position: absolute;
-    background-color: var(--footer-background-color);
+    background-color: var(--primary);
     bottom: 53px;
     z-index: 1;
 }
 
 .dropup-content a {
-    color: var(--text-color);
+    color: var(--text);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     font-weight: bold;
 }
 
-.dropup-content a:hover { background-color: var(--navbar-hover-color) }
+.dropup-content a:hover { background-color: var(--secondary) }
 
-.dropup:hover .dropup-content {
-    display: block;
-}
+.dropup:hover .dropup-content { display: block; }
 
-/* ---------- Song/Album Stuff ---------- */
+/*#endregion dropup */
+
+/*#region album_suff */
 
 .music {
     display: grid;
@@ -202,3 +221,5 @@ hr {
     bottom: -100px;
     width: 145%;
 }
+
+/*#endregion album_suff*/
