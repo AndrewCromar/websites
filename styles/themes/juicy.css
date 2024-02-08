@@ -1,13 +1,11 @@
 :root {
-    --background-color: #363636;
-    --navbar-background-color: #fe9a00;
-    --navbar-hover-color: #ffa924;
-    --github-hover-color: #f5f5f5;
-    --youtube-hover-color: #FF0000;
-    --linkedin-hover-color: #0077B5;
-    --discord-hover-color: #5c6aed;
-    --footer-background-color: #fe9a00;
-    --hr-color: #fe9a00;
-    --text-color: white;
-    --colored-text-color: #fe9a00;
+    --primary: #fe9a00;
+    --secondary: #ffa924;
+    --background: #363636;
+    --text: white;
+    
+    --github: #f5f5f5;
+    --youtube: #FF0000;
+    --linkedin: #0077B5;
+    --discord: #5c6aed;
 }
