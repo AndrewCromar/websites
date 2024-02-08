@@ -9,3 +9,4 @@ Source code for [my website](https://andrewcromar.org/).
 - [x] Change how theme colors work.  
 - [x] Organize style.css.
 - [ ] Fix white flash when loading a new page.
+- [ ] Add pages and content.
