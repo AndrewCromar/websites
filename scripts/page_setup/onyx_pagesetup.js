@@ -13,6 +13,7 @@ function Header(title, icon_path){
             <a class="nav-button" href="onyx-development.html">ONYX Development</a>
             <a class="nav-button" href="hell-hotel.html">Hell Hotel</a>
             <a class="nav-button" href="juicy-player-controller.html">Juicy</a>
+            <a class="nav-button" href="ps1-styled-game.html">PS1 Styled Game</a>
             <img class="icon" src="${icon_path}">
         </div>
     `);
