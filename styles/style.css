@@ -76,6 +76,15 @@ hr {
     max-width: 100%;
     height: auto;
     margin-top: 50px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px black);
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 50px;
+    border-radius: 10px;
     filter: drop-shadow(0 0 10px black);
 }
 
