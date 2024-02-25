@@ -36,7 +36,15 @@ function Footer(){
         <br>
 
         <div class="footer">
-            <span style="line-height: 50px;">.</span>
+            <div class="rm-container">
+                <p>Reduced Motion</p>
+                <label class="switch">
+                    <input class="rm-toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
         </div>
+
+        <script src="../../scripts/reduced_motion.js"></script>
     `);
 }

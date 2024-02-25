@@ -9,8 +9,14 @@ function loadingTransitionOnLoad(){
         var add_class = "slide-out";
     }
 
+    // Loading with image:
+    // document.write(`
+    //     <div class="loading-screen ${add_class}"><img src="../../images/loading.png"></div>
+    // `);
+
+    // Loading with text:
     document.write(`
-        <div class="loading-screen ${add_class}"><img src="../../images/loading.png"></div>
+        <div class="loading-screen ${add_class}"><h1>LOADING...</h1></div>
     `);
 }
 

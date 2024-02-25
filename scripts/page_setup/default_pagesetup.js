@@ -73,6 +73,16 @@ function Footer(){
                 <a target="_blank" href="https://discord.gg/2maTr7RQQQ">ONYX Development</a>
                 </div>
             </div>
+
+            <div class="rm-container">
+                <p>Reduced Motion</p>
+                <label class="switch">
+                    <input class="rm-toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
         </div>
+
+        <script src="../../scripts/reduced_motion.js"></script>
     `);
 }
