@@ -2,18 +2,21 @@ function Header(title, icon_path){
     document.write(`
         <link rel="stylesheet" href="../../styles/style.css">
         <link rel="stylesheet" href="../../styles/sticky_navbar.css">
-        
+
+        <script src="../../scripts/loading_transition.js"></script>
+
         <div class="header">
             <center><h1 style="font-weight: bold;">${title}</h1></center>
             <title>Andrew Cromar</title>
         </div>
         
         <div id="navbar">
-            <a class="nav-button" href="../andrewcromar/home.html">andrewcromar.org</a>
-            <a class="nav-button" href="onyx-development.html">ONYX Development</a>
-            <a class="nav-button" href="hell-hotel.html">Hell Hotel</a>
-            <a class="nav-button" href="juicy-player-controller.html">Juicy</a>
-            <a class="nav-button" href="ps1-styled-game.html">PS1 Styled Game</a>
+            <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../andrewcromar/home.html')">andrewcromar.org</a>
+            <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'onyx-development.html')">ONYX Development</a>
+            <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'hell-hotel.html')">Hell Hotel</a>
+            <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'juicy-player-controller.html')">Juicy</a>
+            <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'ps1-styled-game.html')">PS1 Styled Game</a>
+
             <img class="icon" src="${icon_path}">
         </div>
     `);
