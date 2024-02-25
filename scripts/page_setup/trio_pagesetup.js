@@ -55,6 +55,16 @@ function Footer(){
                 <a target="_blank" href="https://discord.gg/mhDhWdkWeB">Trio Productions</a>
                 </div>
             </div>
+
+            <div class="rm-container">
+                <p>Reduced Motion</p>
+                <label class="switch">
+                    <input class="rm-toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
         </div>
+
+        <script src="../../scripts/reduced_motion.js"></script>
     `);
 }
