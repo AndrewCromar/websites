@@ -16,7 +16,7 @@ function Header(title, icon_path){
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../articles/articles.html')">Articles</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../onyx/onyx-development.html')">ONYX Development</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../trio/trio-productions.html')">Trio Productions</a>
-            <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../games/games.html')">Games</a>
+            <!-- <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../games/games.html')">Games</a> -->
             
             <img class="icon" src="${icon_path}">
         </div>
