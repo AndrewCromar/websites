@@ -3,6 +3,10 @@ loadingTransitionOnLoad();
 function loadingTransitionOnLoad(){
     var reduced_motion = localStorage.getItem("reduced_motion");
 
+    if(reduced_motion == null){
+        localStorage.setItem("reduced_motion", "false");
+    }
+
     var add_class = "";
     
     if(reduced_motion == "false"){
