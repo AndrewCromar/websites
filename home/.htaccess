@@ -1,0 +1,2 @@
+# Set custom error page for 404 errors
+ErrorDocument 404 /errors/404.html
