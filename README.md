@@ -4,7 +4,7 @@ Source code for [my website](https://andrewcromar.org/).
 # Ideas
 - Grandma's Weekly Newspaper.
 - All projects page.
-- - Has tags like, in progress, finished, given up, and more.
+  - Has tags like, in progress, finished, given up, and more.
 
 # To Do
 - [x] Move all files from "./onyx" to src.
