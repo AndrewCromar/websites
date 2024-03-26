@@ -16,3 +16,4 @@ Source code for [my website](https://andrewcromar.org/).
 - [x] Organize style.css.
 - [x] Fix white flash when loading a new page.
 - [ ] Add pages and content.
+- [ ] Move the page setups into their local folders (maby idk if this is a good idea).
