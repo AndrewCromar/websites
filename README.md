@@ -18,3 +18,4 @@ Source code for [my website](https://andrewcromar.org/).
 - [ ] Add pages and content.
 - [ ] Move the page setups into their local folders (maby idk if this is a good idea).
 - [x] Add "The Case for Wikepedia" article.
+- [ ] Setup a bot to auto pull (on the server) when I push to the main branch on github.
