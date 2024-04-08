@@ -26,6 +26,7 @@ html, body {
     font-size: larger;
     text-decoration: none;
     color: var(--text);
+    border-right: solid var(--secondary) 2px;
 }
 
 .nav-button:hover { background-color: var(--secondary); }
@@ -105,6 +106,7 @@ hr {
     padding: 14px;
     font-size: 16px;
     border: none;
+    border-right: solid var(--secondary) 2px;
 }
 
 .dropbtn > img { height: 25px; }
@@ -327,4 +329,15 @@ input:checked + .slider:before {
 /* error text */
 .error-text {
     color: var(--error);
+}
+
+.image-box {
+    background-color: white;
+
+    margin: 5px;
+    padding: 0;
+
+    height: 150px;
+    border: solid var(--primary) 5px;
+    border-radius: 5px;
 }
