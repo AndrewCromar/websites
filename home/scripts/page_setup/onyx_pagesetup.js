@@ -15,6 +15,7 @@ function Header(title, icon_path){
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'onyx-development.html')">ONYX Development</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'hell-hotel.html')">Hell Hotel</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'juicy-player-controller.html')">Juicy</a>
+            <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'punch-her.html')">Punch HER</a>
             <!-- <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'ps1-styled-game.html')">PS1 Styled Game</a> -->
 
             <img class="icon" src="${icon_path}">
@@ -60,6 +61,14 @@ function Footer(){
                 <button class="dropbtn discord"><img src="../../images/logos/discord_text.png"></button>
                 <div class="dropup-content">
                 <a target="_blank" href="https://discord.gg/2maTr7RQQQ">ONYX Development</a>
+                </div>
+            </div>
+
+            <!-- Dropbox Links -->
+            <div class="dropup">
+                <button class="dropbtn dropbox"><img src="../../images/logos/dropbox_text.png"></button>
+                <div class="dropup-content">
+                <a href="https://www.dropbox.com/scl/fi/8i497m1qiaynziht12xbr/PUNCH-HER-v1.4-ONYX-Development.zip?rlkey=zdj4j1hedj81pyav1xyhg781f&dl=1">Punch HER (Download)</a>
                 </div>
             </div>
 

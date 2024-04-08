@@ -50,6 +50,7 @@ html, body {
 .youtube:hover { background-color: var(--youtube); }
 .linkedin:hover { background-color: var(--linkedin); }
 .discord:hover { background-color: var(--discord); }
+.dropbox:hover { background-color: var(--dropbox); }
 
 .footer {
     position: fixed;
