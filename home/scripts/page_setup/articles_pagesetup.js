@@ -15,6 +15,7 @@ function Header(title, icon_path){
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'articles.html')">Articles</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'less-homework-relates-to-greater-learning.html')">LHRGL</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'the-case-for-wikepedia.html')">CFW</a>
+            <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'did-truman-choose-the-right.html')">DTCTR</a>
 
             <img class="icon" src="${icon_path}">
         </div>
