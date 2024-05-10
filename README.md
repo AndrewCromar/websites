@@ -4,7 +4,7 @@ Source code for [my website](https://andrewcromar.org/).
 # Ideas
 - Grandma's Weekly Newspaper.
 - All projects page.
-  - Has tags like, in progress, finished, given up, and more.
+  - Has tags like, in progress, finished, dropped, and more.
 
 # To Do
 - [x] Move all files from "./onyx" to src.
@@ -15,7 +15,6 @@ Source code for [my website](https://andrewcromar.org/).
 - [x] Change how theme colors work.  
 - [x] Organize style.css.
 - [x] Fix white flash when loading a new page.
-- [ ] Add pages and content.
-- [ ] Move the page setups into their local folders (maby idk if this is a good idea).
 - [x] Add "The Case for Wikepedia" article.
+- [x] Add a page for luna.
 - [ ] Setup a bot to auto pull (on the server) when I push to the main branch on github.
