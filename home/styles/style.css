@@ -341,3 +341,40 @@ input:checked + .slider:before {
     border: solid var(--primary) 5px;
     border-radius: 5px;
 }
+
+
+/* LUNA */
+.luna {
+    width: fit-content;
+    height: fit-content;
+
+    padding: 5px;
+
+    border-radius: 10px;
+
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.luna > p {
+    padding: 0;
+    margin: 20px;
+    margin-bottom: 10px;
+}
+
+.luna > img {
+    border-radius: 5px;
+}
+
+.l-alive {
+    border: solid var(--l-alive) 5px;
+    background-color: var(--l-alive-bg);
+}
+
+.l-dead {
+    border: solid var(--l-dead) 5px;
+    background-color: var(--l-dead-bg);
+}
