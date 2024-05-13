@@ -367,6 +367,7 @@ input:checked + .slider:before {
 
 .luna > img {
     border-radius: 5px;
+    width: 464;
 }
 
 .l-alive {
