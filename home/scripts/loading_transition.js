@@ -1,5 +1,11 @@
 loadingTransitionOnLoad();
 
+// remove the class in case of back button pressed
+document.addEventListener("DOMContentLoaded", function() {
+    var loadingScreen = document.querySelector('.loading-screen');
+    loadingScreen.classList.remove('slide-in');
+});
+
 function loadingTransitionOnLoad(){
     var reduced_motion = localStorage.getItem("reduced_motion");
 
@@ -47,8 +53,5 @@ function navigateWithLoadingScreen(event, path) {
 
     setTimeout(function() {
         window.location.href = path;
-
-        var loadingScreen = document.querySelector('.loading-screen');
-        loadingScreen.classList.remove('slide-in');
     }, current_delay);
 }
