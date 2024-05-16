@@ -18,6 +18,7 @@ Source code for [my website](https://andrewcromar.org/).
 - [x] Add "The Case for Wikepedia" article.
 - [x] Add a page for luna.
 - [ ] Setup a bot to auto pull (on the server) when I push to the main branch on github.
-- [ ] Add more to the software page.
-- - [ ] Blender.
-- - [ ] Gimp.
+- [x] Add more to the software page.
+- - [x] Blender.
+- - [x] Gimp.
+- - [x] Audacity.
