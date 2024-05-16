@@ -46,9 +46,10 @@ function navigateWithLoadingScreen(event, path) {
     }
 
     setTimeout(function() {
+        window.location.href = path;
+        
         var loadingScreen = document.querySelector('.loading-screen');
         loadingScreen.classList.remove('slide-in');
 
-        window.location.href = path;
     }, current_delay);
 }
