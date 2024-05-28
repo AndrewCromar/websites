@@ -1,7 +1,6 @@
 function Header(title, icon_path){
     document.write(`
         <link rel="stylesheet" href="../../styles/style.css">
-        <link rel="stylesheet" href="../../styles/sticky_navbar.css">
 
         <script src="../../scripts/loading_transition.js"></script>
 
