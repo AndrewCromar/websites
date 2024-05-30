@@ -1,7 +1,7 @@
 html, body {
     font-family: "Source Code Pro", monospace;
 
-    background-color: #303030;
+    background-color: #404040;
     color: white;
 
     margin: 0;
@@ -13,7 +13,7 @@ html, body {
 }
 
 .content {
-    background-color: #151515;
+    background-color: #202020;
 
     width: 90%;
     max-width: 1000px;
