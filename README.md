@@ -22,3 +22,15 @@ Source code for [my website](https://andrewcromar.org/).
 - - [x] Blender.
 - - [x] Gimp.
 - - [x] Audacity.
+- [ ] Add content to the ONYX Development site.
+- - [ ] About.
+- - [ ] Juicy player controller.
+- - [ ] Punch her.
+- - [ ] Sergent wiskers brigade.
+- [ ] Change up how the onyx team section works. (Maybe make a whole section for each person with an image.)
+- [ ] Add images for the onyx team.
+- - [ ] Andrew
+- - [ ] David
+- - [ ] Charlie
+- - [ ] Everett
+- - [ ] Ethan
