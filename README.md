@@ -27,10 +27,10 @@ Source code for [my website](https://andrewcromar.org/).
 - - [ ] Juicy player controller.
 - - [ ] Punch her.
 - - [ ] Sergent wiskers brigade.
-- [ ] Change up how the onyx team section works. (Maybe make a whole section for each person with an image.)
+- [x] Change up how the onyx team section works. (Maybe make a whole section for each person with an image.)
 - [ ] Add images for the onyx team.
-- - [ ] Andrew
+- - [x] Andrew
 - - [ ] David
-- - [ ] Charlie
+- - [x] Charlie
 - - [ ] Everett
 - - [ ] Ethan
