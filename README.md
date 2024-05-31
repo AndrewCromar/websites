@@ -34,3 +34,4 @@ Source code for [my website](https://andrewcromar.org/).
 - - [x] Charlie
 - - [ ] Everett
 - - [ ] Ethan
+- [ ] Add a link for Juicy Player Controller to the github.
