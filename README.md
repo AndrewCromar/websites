@@ -24,9 +24,9 @@ Source code for [my website](https://andrewcromar.org/).
 - - [x] Audacity.
 - [ ] Add content to the ONYX Development site.
 - - [ ] About.
-- - [ ] Juicy player controller.
-- - [ ] Punch her.
-- - [ ] Sergent wiskers brigade.
+- - [x] Juicy player controller.
+- - [x] Punch her.
+- - [x] Sergent wiskers brigade.
 - [x] Change up how the onyx team section works. (Maybe make a whole section for each person with an image.)
 - [ ] Add images for the onyx team.
 - - [x] Andrew
