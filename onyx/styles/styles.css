@@ -46,6 +46,9 @@ hr {
     height: 2px;
 
     border: none;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 p { margin: 0; }
@@ -64,7 +67,7 @@ a {
 
 .starter {
     margin-top: 10px;
-    
+
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
