@@ -30,7 +30,7 @@ Source code for [my website](https://andrewcromar.org/).
 - [x] Change up how the onyx team section works. (Maybe make a whole section for each person with an image.)
 - [ ] Add images for the onyx team.
 - - [x] Andrew
-- - [ ] David
+- - [x] David
 - - [x] Charlie
 - - [ ] Everett
 - - [ ] Ethan
