@@ -35,3 +35,4 @@ Source code for [my website](https://andrewcromar.org/).
 - - [ ] Everett
 - - [ ] Ethan
 - [ ] Add a link for Juicy Player Controller to the github.
+- [ ] Update the trio productions songs and their covers.
