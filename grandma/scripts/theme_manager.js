@@ -1,3 +1,6 @@
+const currentTheme = localStorage.getItem("theme");
+if(currnetTheme == null) localStorage.setItem("theme", "light");
+
 function loadTheme(article) {
     let pathPrefix = "";
     if (article) pathPrefix = "../"; 

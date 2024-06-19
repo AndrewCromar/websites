@@ -25,6 +25,8 @@ body {
 
     height: fit-content;
     min-height: calc(100% - 20px - 80px - 5px);
+
+    scroll-behavior: smooth;
 }
 
 .page-title {
@@ -48,6 +50,7 @@ a {
     background-color: var(--navbar-background-color);
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .navbar a {
@@ -68,4 +71,8 @@ a {
 .navbar a:hover {
     background-color: var(--navbutton-hover-background-color);
     color: var(--navbutton-hover-text-color);
+}
+
+.article-image {
+    width: 100%;
 }
