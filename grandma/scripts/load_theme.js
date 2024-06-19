@@ -1,1 +1,0 @@
-document.write(`<link rel="stylesheet" href="styles/themes/${localStorage.getItem("theme")}.css">`);

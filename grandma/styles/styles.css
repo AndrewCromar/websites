@@ -1,6 +1,71 @@
 html, body{
-    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+
+    background: linear-gradient(135deg, var(--html-background-gradient-color-1) 0%, var(--html-background-gradient-color-1) 100%);
 
     margin: 0;
     padding: 0;
+}
+
+body {
+    background: none;
+    background-color: var(--background-color);
+
+    width: 750px;
+
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: calc((100% - 2px - 80px - 750px) / 2);
+
+    padding: 40px;
+
+    border: solid var(--border-color) 2px;
+    color: var(--text-color);
+
+    height: fit-content;
+    min-height: calc(100% - 20px - 80px - 5px);
+}
+
+.page-title {
+    text-align: center;
+    margin: 20px;
+}
+
+hr {
+    border: solid var(--hr-color) 2px;
+    width: 100%;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    background-color: var(--navbar-background-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar a {
+    color: var(--navbutton-text-color);
+    background-color: var(--navbutton-background-color);
+
+    text-decoration: none;
+
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition-duration: 200ms;
+}
+
+.navbar a:hover {
+    background-color: var(--navbutton-hover-background-color);
+    color: var(--navbutton-hover-text-color);
 }
