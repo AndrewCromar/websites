@@ -1,0 +1,23 @@
+:root {
+    /* ---------- HTML ---------- */
+    --html-background-gradient-color-1: #1a1a1a;
+    --html-background-gradient-color-2: #2b2b2b;
+
+    /* ---------- BODY ---------- */
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --border-color: #1a1a1a;
+
+    --hr-color: #1a1a1a;
+
+    /* ---------- Article Link ---------- */
+    --article-link-border-color: #ffffff;
+    --article-link-background-color: rgba(42, 42, 42, 0.5);
+
+    /* ---------- Nav Bar ---------- */
+    --navbar-background-color: #1a1a1a;
+    --navbutton-text-color: #ffffff;
+    --navbutton-background-color: #333333;
+    --navbutton-hover-background-color: #2b2b2b;
+    --navbutton-hover-text-color: #cccccc;
+}

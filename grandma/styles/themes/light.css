@@ -1,0 +1,27 @@
+:root {
+    /* ---------- HTML ---------- */
+    --html-background-gradient-color-1: #485563;
+    --html-background-gradient-color-2: #29323c;
+
+    /* ---------- BODY ---------- */
+    --background-color: #a4a4a4;
+    --text-color: black;
+    --border-color: black;
+
+    --hr-color: #8c8c8c;
+
+    /* ---------- Article Link ---------- */
+    --article-link-border-color: black;
+    --article-link-background-color: rgba(72, 85, 99, 0.5);
+
+    /* ---------- Nav Bar ---------- */
+    --navbar-background-color: #8c8c8c;
+
+    /* normal */
+    --navbutton-text-color: black;
+    --navbutton-background-color: #a4a4a4;
+    
+    /* hover */
+    --navbutton-hover-text-color: black;
+    --navbutton-hover-background-color: #969696;
+}

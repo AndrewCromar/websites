@@ -1,0 +1,27 @@
+:root {
+    /* ---------- HTML ---------- */
+    --html-background-gradient-color-1: #f44336; /* Red */
+    --html-background-gradient-color-2: #00bcd4; /* Cyan */
+
+    /* ---------- BODY ---------- */
+    --background-color: #212121; /* Dark Gray */
+    --text-color: #ffffff; /* White */
+    --border-color: #ffffff; /* White */
+
+    --hr-color: #ffffff; /* White */
+
+    /* ---------- Article Link ---------- */
+    --article-link-border-color: #ffffff; /* White */
+    --article-link-background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+
+    /* ---------- Nav Bar ---------- */
+    --navbar-background-color: #616161; /* Gray */
+
+    /* normal */
+    --navbutton-text-color: #ffffff; /* White */
+    --navbutton-background-color: #424242; /* Dark Gray */
+    
+    /* hover */
+    --navbutton-hover-text-color: #ffffff; /* White */
+    --navbutton-hover-background-color: #757575; /* Light Gray */
+}
