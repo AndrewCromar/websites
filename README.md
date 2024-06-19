@@ -1,11 +1,6 @@
 # Website
 Source code for [my website](https://andrewcromar.org/).
 
-# Ideas
-- Grandma's Weekly Newspaper.
-- All projects page.
-  - Has tags like, in progress, finished, dropped, and more.
-
 # To Do
 - [x] Move all files from "./onyx" to src.
 - [x] Make a folder for pages and have index.html redirect to "./pages/home.html".
@@ -32,7 +27,8 @@ Source code for [my website](https://andrewcromar.org/).
 - - [x] Andrew
 - - [x] David
 - - [x] Charlie
-- - [ ] Everett
+- - [x] Everett
 - - [ ] Ethan
 - [ ] Add a link for Juicy Player Controller to the github.
 - [ ] Update the trio productions songs and their covers.
+- [x] Add Grandma's Weekly Newspaper website.
