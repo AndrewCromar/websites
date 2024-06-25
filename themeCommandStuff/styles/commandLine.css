@@ -1,0 +1,19 @@
+.commandLineContainer{
+    background-color: rgba(0, 0, 0, 0.5);
+
+    width: 100vw;
+    height: 100vh;
+
+    padding-top: 100px;
+}
+
+.commandLine {
+    background-color: gray;
+
+    width: 600px;
+
+    height: fit-content;
+}
+
+.commandLineInput {
+}
