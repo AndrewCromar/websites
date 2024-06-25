@@ -32,3 +32,4 @@ Source code for [my website](https://andrewcromar.org/).
 - [ ] Add a link for Juicy Player Controller to the github.
 - [ ] Update the trio productions songs and their covers.
 - [x] Add Grandma's Weekly Newspaper website.
+- [ ] Make a new theme system/ maybe a command line.
