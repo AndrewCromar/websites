@@ -37,7 +37,7 @@ function LoadCommands(commands) {
 
     const loadedCommands = commands.map(command => `
         <div class="commandLineCommand" id="command-${command.id}">
-            <i class="fa-solid fa-ban"></i>
+            ${command.isTheme ? `<i class="fa-solid fa-palette"></i>` : `<i class="fa-solid fa-ban"></i>`}
             <p>${command.title}</p>
             <i class="fa-solid fa-chevron-right"></i>
             ${command.isActive ? '<i class="fa-solid fa-check"></i>' : '<div class="commandLineCommandSpacer"></div>'}

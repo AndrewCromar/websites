@@ -6,7 +6,7 @@ function GetThemes() {
             "colors": [
                 "rgb(17, 83, 159)",
                 "rgb(50, 108, 214)",
-                "rgb(0, 0, 0)",
+                "rgb(255, 255, 255)",
                 "rgb(9, 22, 121)"
             ]
         },
@@ -29,7 +29,7 @@ function GetThemes() {
             ]
         },
         {
-            "name": "pink",
+            "name": "maroon",
             "colors": [
                 "rgb(83, 11, 60)",
                 "rgb(221, 51, 198)",
