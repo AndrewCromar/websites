@@ -33,3 +33,4 @@ Source code for [my website](https://andrewcromar.org/).
 - [ ] Update the trio productions songs and their covers.
 - [x] Add Grandma's Weekly Newspaper website.
 - [ ] Make a new theme system/ maybe a command line.
+- [ ] Add favicon to onyx site.
