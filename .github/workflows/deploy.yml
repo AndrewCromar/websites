@@ -23,4 +23,6 @@ jobs:
         env:
           SSHPASS: ${{ secrets.SSH_PASSWORD }}
         run: |
-          sshpass -p "$SSHPASS" ssh -o StrictHostKeyChecking=no -T astartup@162.241.226.70 ls
+          sshpass -p "$SSHPASS" ssh -o StrictHostKeyChecking=no -T astartup@162.241.226.70
+          cd public_html/andrewcromar
+          ls
