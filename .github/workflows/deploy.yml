@@ -24,8 +24,12 @@ jobs:
           SSHPASS: ${{ secrets.SSH_PASSWORD }}
         run: |
           sshpass -p "$SSHPASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T astartup@162.241.226.70
+          pwn
           cd /
+          pwn
           cd home3/astartup
+          pwn
           cd public_html/andrewcromar
+          pwn
           git pull origin main
           exit
