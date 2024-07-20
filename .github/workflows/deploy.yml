@@ -1,36 +1,27 @@
-name: SSH and Git Pull
+name: Deploy to Server
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  ssh_and_git_pull:
-    runs-on: windows-latest
+  deploy:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Install OpenSSH Client
-      run: |
-        Add-WindowsCapability -Online -Name OpenSSH.Client*
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
 
-    - name: Run SSH and Git commands
-      env:
-        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-      run: |
-        $password = "${{ secrets.SSH_PASSWORD }}"
-        $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
-        $credential = New-Object System.Management.Automation.PSCredential ("astartup", $securePassword)
-        
-        $session = New-PSSession -HostName 162.241.226.70 -UserName "astartup" -SSHTransport -Credential $credential
-
-        Invoke-Command -Session $session -ScriptBlock {
-            cd public_html/andrewcromar
-            git pull origin main
-        }
-        
-        Remove-PSSession -Session $session
+      - name: Deploy
+        env:
+          SSHPASS: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          sshpass -p "$SSHPASS" ssh astartup@162.241.226.70
+          ls
