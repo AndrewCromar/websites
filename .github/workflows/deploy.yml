@@ -1,0 +1,35 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Expect
+        run: sudo apt-get install -y expect
+
+      - name: Deploy to server
+        run: |
+          expect <<EOF
+          spawn ssh astartup@162.241.226.70
+          expect "password:"
+          send "${{ secrets.SSH_PASSWORD }}\r"
+          expect "$ "
+          send "cd public_html/andrewcromar\r"
+          expect "$ "
+          send "git pull origin main\r"
+          expect "$ "
+          send "exit\r"
+          expect eof
+          EOF
