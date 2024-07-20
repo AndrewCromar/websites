@@ -25,11 +25,15 @@ jobs:
         run: |
           sshpass -p "$SSHPASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T astartup@162.241.226.70
           pwd
+          ls
           cd /
           pwd
+          ls
           cd home3/astartup
           pwd
+          ls
           cd public_html/andrewcromar
           pwd
+          ls
           git pull origin main
           exit
