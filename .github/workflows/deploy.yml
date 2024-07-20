@@ -27,3 +27,4 @@ jobs:
           ls
           cd public_html
           ls
+          exit
