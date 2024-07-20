@@ -1,37 +1,36 @@
-name: Deploy to Server
+name: SSH and Git Pull
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  ssh_and_git_pull:
+    runs-on: windows-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Install Expect
-        run: sudo apt-get update && sudo apt-get install -y expect
+    - name: Install OpenSSH Client
+      run: |
+        Add-WindowsCapability -Online -Name OpenSSH.Client*
 
-      - name: Deploy to server
-        env:
-          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-        run: |
-          expect <<EOF
-          spawn ssh astartup@162.241.226.70
-          expect "password:"
-          send "$SSH_PASSWORD\r"
-          expect "$ "
-          send "cd public_html/andrewcromar\r"
-          expect "$ "
-          send "git pull origin main\r"
-          expect "$ "
-          send "exit\r"
-          expect eof
-          EOF
+    - name: Run SSH and Git commands
+      env:
+        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+      run: |
+        $password = "${{ secrets.SSH_PASSWORD }}"
+        $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
+        $credential = New-Object System.Management.Automation.PSCredential ("astartup", $securePassword)
+        
+        $session = New-PSSession -HostName 162.241.226.70 -UserName "astartup" -SSHTransport -Credential $credential
+
+        Invoke-Command -Session $session -ScriptBlock {
+            cd public_html/andrewcromar
+            git pull origin main
+        }
+        
+        Remove-PSSession -Session $session
