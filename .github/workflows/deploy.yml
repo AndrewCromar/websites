@@ -25,6 +25,4 @@ jobs:
         run: |
           sshpass -p "$SSHPASS" ssh -o StrictHostKeyChecking=no -T astartup@162.241.226.70
           ls
-          cd public_html
-          ls
           exit
