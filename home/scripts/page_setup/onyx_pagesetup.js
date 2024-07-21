@@ -63,14 +63,6 @@ function Footer(){
                 </div>
             </div>
 
-            <!-- Dropbox Links -->
-            <div class="dropup">
-                <button class="dropbtn dropbox"><img src="../../images/logos/dropbox_text.png"></button>
-                <div class="dropup-content">
-                <a href="https://www.dropbox.com/scl/fi/8i497m1qiaynziht12xbr/PUNCH-HER-v1.4-ONYX-Development.zip?rlkey=zdj4j1hedj81pyav1xyhg781f&dl=1">Punch HER (Download)</a>
-                </div>
-            </div>
-
             <div class="rm-container">
                 <p>Reduced Motion</p>
                 <label class="switch">
