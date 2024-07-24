@@ -13,8 +13,8 @@ function Header(title, icon_path){
         <div id="navbar">
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../andrewcromar/home.html')">andrewcromar.org</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'onyx-development.html')">ONYX Development</a>
-            <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'hell-hotel.html')">Hell Hotel</a>
-            <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'juicy-player-controller.html')">Juicy</a>
+            <!-- <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'hell-hotel.html')">Hell Hotel</a> -->
+            <!-- <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'juicy-player-controller.html')">Juicy</a> -->
             <!-- <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'ps1-styled-game.html')">PS1 Styled Game</a> -->
 
             <img class="icon" src="${icon_path}">
