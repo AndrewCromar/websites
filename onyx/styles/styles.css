@@ -134,6 +134,58 @@ a {
     background-color: #303030;
 }
 
+.social {
+    width: fit-content;
+    display: block;
+
+    text-decoration: none;
+}
+
+.social > div {
+    background-color: dimgray;
+
+    border-radius: 5px;
+    border: solid gray 2px;
+
+    margin: 5px;
+
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.social > div > img {
+    height: 50px;
+    
+    border-radius: 5px;
+
+    margin-right: 5px;
+}
+
+.social > div  > p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.social > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.social > div > div > p {
+    margin: 0;
+    margin-right: 5px;
+
+    text-decoration: underline;
+}
+
+.social > div > div > p:nth-of-type(2) {
+    font-size: 10px;
+}
+
 .headshots {
     display: flex;
     flex-wrap: wrap;
