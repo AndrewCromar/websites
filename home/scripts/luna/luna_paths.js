@@ -17,7 +17,7 @@ const imagePaths = {
         "../../images/luna/dead/6.png",
         "../../images/luna/dead/7.png",
         "../../images/luna/dead/8.png",
-        "../../images/luna/dead/9.png"
+        "../../images/luna/dead/Photo Jul 28 2024, 6 31 29 PM.png"
     ]
 };
 imagePaths.ordered = [
@@ -35,5 +35,5 @@ imagePaths.ordered = [
     "../../images/luna/alive/6.png",
     "../../images/luna/dead/7.png",
     "../../images/luna/dead/8.png",
-    "../../images/luna/dead/9.png"
+    "../../images/luna/dead/Photo Jul 28 2024, 6 31 29 PM.png"
 ];
