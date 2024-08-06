@@ -12,6 +12,21 @@ def extract_number(filename):
 def get_modification_date(filepath):
     return os.path.getmtime(filepath)
 
+# Function to rename files without a number
+def rename_files(directory):
+    files = [f for f in os.listdir(directory) if f.endswith('.png')]
+    numbered_files = [f for f in files if extract_number(f) != float('inf')]
+    numbered_files.sort(key=lambda f: extract_number(f))
+    next_number = len(numbered_files) + 1
+
+    for file in files:
+        if extract_number(file) == float('inf'):
+            new_name = f"{next_number}.png"
+            old_path = os.path.join(directory, file)
+            new_path = os.path.join(directory, new_name)
+            os.rename(old_path, new_path)
+            next_number += 1
+
 # Get the directory where the script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -31,9 +46,11 @@ for category, relative_path in relative_paths_to_images.items():
     if not os.path.exists(absolute_path_to_images):
         raise FileNotFoundError(f"The path {absolute_path_to_images} does not exist.")
 
+    # Rename files without a number
+    rename_files(absolute_path_to_images)
+
     # List all image files in the directory
-    image_extensions = ['.jpg', '.jpeg', '.png', '.gif']
-    image_files = [f for f in os.listdir(absolute_path_to_images) if os.path.splitext(f)[1].lower() in image_extensions]
+    image_files = [f for f in os.listdir(absolute_path_to_images) if f.endswith('.png')]
 
     # Sort image files by number and modification date
     image_files.sort(key=lambda f: (extract_number(f), get_modification_date(os.path.join(absolute_path_to_images, f))))
