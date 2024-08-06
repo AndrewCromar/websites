@@ -1,3 +1,4 @@
+
 const imagePaths = {
     "alive": [
         "../../images/luna/alive/1.png",
@@ -15,7 +16,8 @@ const imagePaths = {
         "../../images/luna/dead/5.png",
         "../../images/luna/dead/6.png",
         "../../images/luna/dead/7.png",
-        "../../images/luna/dead/8.png"
+        "../../images/luna/dead/8.png",
+        "../../images/luna/dead/9.png"
     ]
 };
 imagePaths.ordered = [
@@ -32,5 +34,6 @@ imagePaths.ordered = [
     "../../images/luna/dead/6.png",
     "../../images/luna/alive/6.png",
     "../../images/luna/dead/7.png",
-    "../../images/luna/dead/8.png"
+    "../../images/luna/dead/8.png",
+    "../../images/luna/dead/9.png"
 ];
