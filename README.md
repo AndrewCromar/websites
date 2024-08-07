@@ -34,3 +34,4 @@ Source code for [my website](https://andrewcromar.org/).
 - [x] Add Grandma's Weekly Newspaper website.
 - [ ] Make a new theme system/ maybe a command line.
 - [x] Add favicon to ONYX site.
+- [ ] Make ONYX site remove # from the url on reload.
