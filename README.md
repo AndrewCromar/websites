@@ -1,8 +1,8 @@
 # Website
-Main Website: [link](https://www.andrewcromar.org/
-Blog Website: [link](https://blog.andrewcromar.org/
-ONYX Development: [link](https://onyx.andrewcromar.org/
-TRIO Productions: [link](https://trio.andrewcromar.org/
+Main Website: [link](https://www.andrewcromar.org/)
+Blog Website: [link](https://blog.andrewcromar.org/)
+ONYX Development: [link](https://onyx.andrewcromar.org/)
+TRIO Productions: [link](https://trio.andrewcromar.org/)
 
 
 # To Do
