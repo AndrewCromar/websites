@@ -17,29 +17,28 @@ TRIO Productions: [link](https://trio.andrewcromar.org/)
 - [x] Fix white flash when loading a new page.
 - [x] Add "The Case for Wikepedia" article.
 - [x] Add a page for luna.
-- [ ] Setup a bot to auto pull (on the server) when I push to the main branch on github.
+- [x] Setup a bot to auto pull (on the server) when I push to the main branch on github.
 - [x] Add more to the software page.
 - - [x] Blender.
 - - [x] Gimp.
 - - [x] Audacity.
-- [ ] Add content to the ONYX Development site.
-- - [ ] About.
+- [x] Add content to the ONYX Development site.
+- - [x] About.
 - - [x] Juicy player controller.
 - - [x] Punch her.
 - - [x] Sergent wiskers brigade.
 - [x] Change up how the onyx team section works. (Maybe make a whole section for each person with an image.)
-- [ ] Add images for the onyx team.
+- [x] Add images for the onyx team.
 - - [x] Andrew
 - - [x] David
 - - [x] Charlie
 - - [x] Everett
-- - [ ] Ethan
+- - [x] Ethan
 - [ ] Add a link for Juicy Player Controller to the github.
-- [ ] Update the trio productions songs and their covers.
+- [x] Update the trio productions songs and their covers.
 - [x] Add Grandma's Weekly Newspaper website.
-- [ ] Make a new theme system/ maybe a command line.
+- [x] Make a new theme system/ maybe a command line.
 - [x] Add favicon to ONYX site.
-- [ ] Make ONYX site remove # from the url on reload.
 
 # Screenshots
 
