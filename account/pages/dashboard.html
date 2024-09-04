@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="../styles/main.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+  rel="stylesheet"
+/>
+
+<title>Account Dashboard</title>
+
+<div class="box">
+  <center><h1>Account Dashboard</h1></center>
+</div>
+
+<div class="box" id="b_login">
+  <h3>Login</h3>
+  <hr />
+  <form id="loginForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required />
+    <br />
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required />
+    <br />
+    <button type="submit">Login</button>
+  </form>
+  <div id="output" class="box"></div>
+</div>
+
+<div class="box" id="b_register">
+  <h3>Register</h3>
+  <hr />
+  <form id="registerForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required />
+    <br />
+    <label for="username">Password</label>
+    <input type="text" id="password" name="password" required />
+    <br />
+    <label for="username">First Name</label>
+    <input type="text" id="firstname" name="firstname" required />
+    <br />
+    <label for="username">Last Name</label>
+    <input type="text" id="lastname" name="lastname" required />
+    <br />
+    <label for="username">Email</label>
+    <input type="text" id="emain" name="emain" required />
+    <br />
+    <button type="submit">Register</button>
+  </form>
+  <div id="output" class="box"></div>
+</div>
+
+<div class="box" id="b_logout">
+  <h3>Logout</h3>
+  <hr />
+  <form id="logoutForm">
+    <button type="submit">Logout</button>
+  </form>
+  <div id="output" class="box"></div>
+</div>
+
+<div class="box">
+  <h3>Current Token</h3>
+  <div id="currentToken">No token found</div>
+</div>
+
+<script>
+  // ---------- LOGIN ----------
+  // $("#loginForm").submit(function (event) {
+  //   event.preventDefault();
+
+  //   var formData = $(this).serialize();
+
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "../backend/login.php",
+  //     data: formData,
+  //     dataType: "json",
+  //     success: function (response) {
+  //       $("#response").html(response.message);
+  //       if (response.status === "success" && response.token) {
+  //         sessionStorage.setItem("userSession", response.token);
+  //         updateUIBasedOnToken(); // Update UI based on login status
+  //       }
+  //     },
+  //     error: function (xhr, status, error) {
+  //       $("#response").html("<p>An error occurred: " + error + "</p>");
+  //     },
+  //   });
+  // });
+</script>
