@@ -15,8 +15,10 @@ function Header(title, icon_path){
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'languages-and-sofware.html')">Languages and Software</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, 'luna.html')">Luna</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../articles/articles.html')">Articles</a>
-            <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../onyx/onyx-development.html')">ONYX Development</a>
+            <!-- <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../onyx/onyx-development.html')">ONYX Development</a> -->
+            <a class="nav-button" href="https://onyx.andrewcromar.org/" target="_blank">ONYX Development</a>
             <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../trio/trio-productions.html')">Trio Productions</a>
+            <!-- <a class="nav-button" href="https://trio.andrewcromar.org/" target="_blank">Trio Productions</a> -->
             <!-- <a class="nav-button" onclick="navigateWithLoadingScreen(event, '../games/games.html')">Games</a> -->
             
             <img class="icon" src="${icon_path}">
