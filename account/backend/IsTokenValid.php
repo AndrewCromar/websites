@@ -1,7 +1,7 @@
 <?php
 
-include './CreateDBConnection.php';
-include './DeleteExpiredTokens.php';
+include_once './CreateDBConnection.php';
+include_once './DeleteExpiredTokens.php';
 
 function IsTokenValid($token)
 {

@@ -24,8 +24,8 @@
 - [x] GenerateNewToken
 - [x] SaveTokenToDatabaseForUser
 - [x] IsTokenValidForUser
-- [ ] IsTokenValid
-- [ ] DeleteExpiredTokens
+- [x] IsTokenValid
+- [x] DeleteExpiredTokens
 
 ## Cookies
 

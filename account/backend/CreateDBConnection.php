@@ -1,6 +1,6 @@
 <?php
 
-include '../../global.php';
+include_once '../../global.php';
 
 function CreateDBConnection()
 {

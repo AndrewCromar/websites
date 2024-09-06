@@ -1,6 +1,6 @@
 <?php
 
-include './CreateDBConnection.php';
+include_once './CreateDBConnection.php';
 
 function DeleteExpiredTokensForUser($userId)
 {

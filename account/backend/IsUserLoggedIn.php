@@ -1,8 +1,8 @@
 <?php
 
-include './DoesTokenCookieExist.php';
-include './GetTokenFromCookie.php';
-include './IsTokenValid.php';
+include_once './DoesTokenCookieExist.php';
+include_once './GetTokenFromCookie.php';
+include_once './IsTokenValid.php';
 
 function IsUserLoggedIn()
 {

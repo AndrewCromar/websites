@@ -1,8 +1,8 @@
 <?php
 
-include './DeleteExpiredTokensForUser.php';
-include './DoesUserHaveValidToken.php';
-include './GetValidTokenForUserId.php';
+include_once './DeleteExpiredTokensForUser.php';
+include_once './DoesUserHaveValidToken.php';
+include_once './GetValidTokenForUserId.php';
 
 function IsTokenValidForUser($token, $userId)
 {
