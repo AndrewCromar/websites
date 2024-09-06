@@ -1,13 +1,16 @@
 <?php
 
 include './CreateDBConnection.php';
+include './DeleteExpiredTokens.php';
 
-function DoesUsernameExist($username)
+function IsTokenValid($token)
 {
+    if (!DeleteExpiredTokens()) return false;
+
     $conn = CreateDBConnection();
 
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
+    $stmt = $conn->prepare("SELECT * FROM tokens WHERE token = ?");
+    $stmt->bind_param("s", $token);
 
     $stmt->execute();
 

@@ -1,12 +1,13 @@
 <?php
-include 'CreateDBConnection.php';
+
+include './CreateDBConnection.php';
 
 function GetCreationDateByUserId($userId)
 {
     $conn = CreateDBConnection();
 
     $stmt = $conn->prepare("SELECT creationdate FROM users WHERE userId = ?");
-    $stmt->bind_param("s", $creationdate);
+    $stmt->bind_param("s", $userId);
 
     $stmt->execute();
 

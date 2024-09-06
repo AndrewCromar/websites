@@ -1,12 +1,13 @@
 <?php
-include 'CreateDBConnection.php';
+
+include './CreateDBConnection.php';
 
 function GetAdminByUserId($userId)
 {
     $conn = CreateDBConnection();
 
     $stmt = $conn->prepare("SELECT admin FROM users WHERE userId = ?");
-    $stmt->bind_param("s", $admin);
+    $stmt->bind_param("s", $userId);
 
     $stmt->execute();
 

@@ -1,5 +1,6 @@
 <?php
-include 'CreateDBConnection.php';
+
+include './CreateDBConnection.php';
 
 function GetPasswordByUserId($userId)
 {

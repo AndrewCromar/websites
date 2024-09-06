@@ -2,20 +2,20 @@
 
 include './CreateDBConnection.php';
 
-function GetFirstNameByUserId($userId)
+function DoesUserHaveValidToken($userId)
 {
     $conn = CreateDBConnection();
 
-    $stmt = $conn->prepare("SELECT firstname FROM users WHERE userId = ?");
+    $stmt = $conn->prepare("SELECT token FROM tokens WHERE user_id = ? AND expires_at > NOW()");
     $stmt->bind_param("s", $userId);
 
     $stmt->execute();
 
-    $stmt->bind_result($firstname);
+    $stmt->bind_result($token);
     $stmt->fetch();
 
     $stmt->close();
     $conn->close();
 
-    return $firstname ? $firstname : null;
+    return !empty($token);
 }

@@ -1,4 +1,4 @@
-# Functions We Need
+# PHP Functions
 
 ## User Information
 
@@ -18,14 +18,23 @@
 
 ## Tokens
 
-- [ ] DeleteExpiredTokensForUser
-- [ ] GetValidTokenForUser
-- [ ] DoesUserHaveValidToken
-- [ ] GenerateNewToken
-- [ ] SaveTokenToDatabaseForUser
+- [x] DeleteExpiredTokensForUser
+- [x] GetValidTokenForUser
+- [x] DoesUserHaveValidToken
+- [x] GenerateNewToken
+- [x] SaveTokenToDatabaseForUser
+- [x] IsTokenValidForUser
+- [ ] IsTokenValid
+- [ ] DeleteExpiredTokens
+
+## Cookies
+
+- [x] SetTokenToCookie
+- [x] GetTokenFromCookie
+- [x] DoesTokenCookieExist
 
 ## Login
-- [ ] IsUserLoggedIn
+- [x] IsUserLoggedIn
 - [ ] Login
 - [ ] Logout
 - [ ] Register

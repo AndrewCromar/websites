@@ -1,4 +1,5 @@
 <?php
+
 include '../../global.php';
 
 function CreateDBConnection()
