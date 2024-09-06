@@ -1,18 +1,51 @@
-$.ajax({
-    url: '../backend/IsUserLoggedIn.php', // Path to your PHP script
-    type: 'GET', // Method of request
-    dataType: 'json', // Expecting JSON data from the server
-    success: function(response) {
-        if (response) {
-            console.log('User is logged in');
-            // Handle the case where the user is logged in
-        } else {
-            console.log('User is not logged in');
-            // Handle the case where the user is not logged in
-        }
+// ---------- Is User Logged In ----------
+function IsUserLoggedIn() {
+  $.ajax({
+    url: "../backend/IsUserLoggedIn.php",
+    type: "GET",
+    success: function (response) {
+      if (response == true) {
+        $("#loggedout_area").hide();
+        $("#loggedin_area").show();
+
+        FillUserInfo();
+      } else {
+        $("#loggedout_area").show();
+        $("#loggedin_area").hide();
+      }
     },
-    error: function(xhr, status, error) {
-        console.error('AJAX request failed:', error);
-        console.error('Response text:', xhr.responseText); // Log the response text for debugging
-    }
-});
+    error: function (xhr, status, error) {
+      console.error("AJAX 1 request failed:", error);
+      console.error("Response text:", xhr.responseText);
+    },
+  });
+}
+
+function FillUserInfo() {
+  $.ajax({
+    url: "../backend/GetUserInfo.php",
+    type: "GET",
+    dataType: "json",
+    data: {
+      userId: localStorage.getItem("userId"),
+    },
+    success: function (response) {
+      $("#userinfo_fullname").html(
+        response.firstName + " " + response.lastName
+      );
+
+      $("#userinfo_username").html(response.username);
+      $("#userinfo_firstName").html(response.firstName);
+      $("#userinfo_lastName").html(response.lastName);
+      $("#userinfo_email").html(response.email);
+      $("#userinfo_admin").html(response.admin ? "Yes." : "No.");
+      $("#userinfo_creationDate").html(response.creationDate);
+    },
+    error: function (xhr, status, error) {
+      console.error("AJAX 2 request failed:", error);
+      console.error("Response text:", xhr.responseText);
+    },
+  });
+}
+
+IsUserLoggedIn();

@@ -6,7 +6,7 @@ function GetCreationDateByUserId($userId)
 {
     $conn = CreateDBConnection();
 
-    $stmt = $conn->prepare("SELECT creationdate FROM users WHERE userId = ?");
+    $stmt = $conn->prepare("SELECT creationdate FROM users WHERE user_id = ?");
     $stmt->bind_param("s", $userId);
 
     $stmt->execute();

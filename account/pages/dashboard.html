@@ -15,57 +15,114 @@
   <center><h1>Account Dashboard</h1></center>
 </div>
 
-<div class="box" id="b_login">
-  <h3>Login</h3>
-  <hr />
-  <form id="loginForm">
-    <label for="login_username">Username</label>
-    <input type="text" id="login_username" name="login_username" required />
-    <br />
-    <label for="login_password">Password</label>
-    <input type="password" id="login_password" name="login_password" required />
-    <br />
-    <button type="login_submit">Login</button>
-  </form>
-  <div id="login_output" class="box"></div>
+<div id="loggedout_area">
+  <div class="box">
+    <h3>Login</h3>
+    <hr />
+    <form id="loginForm">
+      <label for="login_username">Username</label>
+      <input type="text" id="login_username" name="login_username" required />
+      <br />
+      <label for="login_password">Password</label>
+      <input
+        type="password"
+        id="login_password"
+        name="login_password"
+        required
+      />
+      <br />
+      <button type="login_submit">Login</button>
+    </form>
+    <div id="login_output" class="box"></div>
+  </div>
+
+  <div class="box">
+    <h3>Register</h3>
+    <hr />
+    <form id="registerForm">
+      <label for="register_username">Username</label>
+      <input
+        type="text"
+        id="register_username"
+        name="register_username"
+        required
+      />
+      <br />
+      <label for="register_password">Password</label>
+      <input
+        type="text"
+        id="register_password"
+        name="register_password"
+        required
+      />
+      <br />
+      <label for="register_firstname">First Name</label>
+      <input
+        type="text"
+        id="register_firstname"
+        name="register_firstname"
+        required
+      />
+      <br />
+      <label for="register_lastname">Last Name</label>
+      <input
+        type="text"
+        id="register_lastname"
+        name="register_lastname"
+        required
+      />
+      <br />
+      <label for="register_emain">Email</label>
+      <input type="text" id="register_emain" name="register_emain" required />
+      <br />
+      <button type="register_submit">Register</button>
+    </form>
+    <div id="register_output" class="box"></div>
+  </div>
 </div>
 
-<div class="box" id="b_register">
-  <h3>Register</h3>
-  <hr />
-  <form id="registerForm">
-    <label for="register_username">Username</label>
-    <input type="text" id="register_username" name="register_username" required />
-    <br />
-    <label for="register_password">Password</label>
-    <input type="text" id="register_password" name="register_password" required />
-    <br />
-    <label for="register_firstname">First Name</label>
-    <input type="text" id="register_firstname" name="register_firstname" required />
-    <br />
-    <label for="register_lastname">Last Name</label>
-    <input type="text" id="register_lastname" name="register_lastname" required />
-    <br />
-    <label for="register_emain">Email</label>
-    <input type="text" id="register_emain" name="register_emain" required />
-    <br />
-    <button type="register_submit">Register</button>
-  </form>
-  <div id="register_output" class="box"></div>
+<div id="loggedin_area">
+  <div class="box">
+    <h3>Hello, <span id="userinfo_fullname"></span>!</h3>
+    <hr>
+    <h4>Account Information:</h4>
+    <p>Username: <span id="userinfo_username"></span></p>
+    <p>First Name: <span id="userinfo_firstName"></span></p>
+    <p>Last Name: <span id="userinfo_lastName"></span></p>
+    <p>Email: <span id="userinfo_email"></span></p>
+    <p>Admin: <span id="userinfo_admin"></span></p>
+    <p>Account Creation Date: <span id="userinfo_creationDate"></span></p>
+  </div>
+  <div class="box">
+    <h3>Logout</h3>
+    <hr />
+    <form id="logoutForm">
+      <button type="logout_submit">Logout</button>
+    </form>
+    <div id="logout_output" class="box"></div>
+  </div>
 </div>
 
-<div class="box" id="b_logout">
-  <h3>Logout</h3>
-  <hr />
-  <form id="logoutForm">
-    <button type="logout_submit">Logout</button>
-  </form>
-  <div id="logout_output" class="box"></div>
-</div>
-
-<div class="box" id="b_currentToken">
-  <h3>Current Token</h3>
-  <div id="currentToken_output">No token found</div>
+<div class="box">
+  <h3>Tools</h3>
+  <div class="box">
+    <h4>Hash Password</h4>
+    <hr />
+    <form id="hashPasswordForm">
+      <label for="hashPassword_password">Password To Hash:</label>
+      <input
+        type="text"
+        id="hashPassword_password"
+        name="hashPassword_password"
+        required
+      />
+      <button type="hashPassword_submit">hashPassword</button>
+    </form>
+    <div id="hashPassword_output" class="box"></div>
+  </div>
 </div>
 
 <script src="../scripts/SetupPage.js"></script>
+<script src="../scripts/HashPassword.js"></script>
+<script src="../scripts/Login.js"></script>
+<script src="../scripts/Logout.js"></script>

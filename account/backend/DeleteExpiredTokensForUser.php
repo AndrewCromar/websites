@@ -6,7 +6,7 @@ function DeleteExpiredTokensForUser($userId)
 {
     $conn = CreateDBConnection();
 
-    $stmt = $conn->prepare("DELETE FROM tokens WHERE userId = ? AND expires_at < NOW()");
+    $stmt = $conn->prepare("DELETE FROM tokens WHERE user_id = ? AND expires_at < NOW()");
 
     $stmt->bind_param("s", $userId);
 

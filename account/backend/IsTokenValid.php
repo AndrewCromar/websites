@@ -9,7 +9,7 @@ function IsTokenValid($token)
 
     $conn = CreateDBConnection();
 
-    $stmt = $conn->prepare("SELECT * FROM tokens WHERE token = ?");
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM tokens WHERE token = ?");
     $stmt->bind_param("s", $token);
 
     $stmt->execute();

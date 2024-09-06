@@ -15,4 +15,5 @@ function IsUserLoggedIn()
     return false;
 }
 
-echo json_encode(IsUserLoggedIn());
+// AJAX
+echo IsUserLoggedIn();

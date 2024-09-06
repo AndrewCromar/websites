@@ -6,7 +6,7 @@ function GetLastNameByUserId($userId)
 {
     $conn = CreateDBConnection();
 
-    $stmt = $conn->prepare("SELECT lastname FROM users WHERE userId = ?");
+    $stmt = $conn->prepare("SELECT lastname FROM users WHERE user_id = ?");
     $stmt->bind_param("s", $userId);
 
     $stmt->execute();

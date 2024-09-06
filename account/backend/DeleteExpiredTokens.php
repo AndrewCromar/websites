@@ -8,8 +8,6 @@ function DeleteExpiredTokens()
 
     $stmt = $conn->prepare("DELETE FROM tokens WHERE expires_at < NOW()");
 
-    $stmt->bind_param("s", $userId);
-
     if ($stmt->execute()) {
         return true;
     } else {

@@ -2,14 +2,16 @@
 
 ## User Information
 
-- [x] DoesUsernameExsist
 - [x] GetUserIdByUsername
+- [x] DoesUsernameExist
+- [x] GetUsernameByUserId
 - [x] GetPasswordByUserId
 - [x] GetFirstNameByUserId
 - [x] GetLastNameByUserId
 - [x] GetEmailByUserId
 - [x] GetAdminByUserId
 - [x] GetCreationDateByUserId
+- [x] GetUserInfo
 
 ## General Functions
 
@@ -32,9 +34,20 @@
 - [x] SetTokenToCookie
 - [x] GetTokenFromCookie
 - [x] DoesTokenCookieExist
+- [x] RemoveTokenCookie
 
 ## Login
 - [x] IsUserLoggedIn
-- [ ] Login
-- [ ] Logout
+- [x] Login
+- [x] Logout
 - [ ] Register
+
+## Username
+- [x] VerifyUsername
+
+## Passwords
+- [x] VerifyPassword
+- [x] HashPassword
+
+## Sanitization
+- [x] SanitizeInput

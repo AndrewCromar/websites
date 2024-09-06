@@ -1,6 +1,11 @@
 <?php
 
+include_once './DoesTokenCookieExist.php';
+
 function GetTokenFromCookie()
 {
-    return $_COOKIE['token'];
+    if (DoesTokenCookieExist()) {
+        return $_COOKIE['token'];
+    }
+    return false;
 }
