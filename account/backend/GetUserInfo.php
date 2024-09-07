@@ -6,6 +6,7 @@ include_once './GetLastNameByUserId.php';
 include_once './GetEmailByUserId.php';
 include_once './GetAdminByUserId.php';
 include_once './GetCreationDateByUserId.php';
+include_once './GetUserIdFromCookie.php';
 
 function GetUserInfo($userId)
 {
@@ -19,6 +20,5 @@ function GetUserInfo($userId)
     ]);
 }
 
-$userId = $_GET['userId'];
 header('Content-Type: application/json');
-echo GetUserInfo($userId);
+echo GetUserInfo(GetUserIdFromCookie());

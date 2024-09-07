@@ -36,6 +36,11 @@
 - [x] DoesTokenCookieExist
 - [x] RemoveTokenCookie
 
+- [x] SetUserIdToCookie
+- [x] GetUserIdFromCookie
+- [x] DoesUserIdCookieExist
+- [x] RemoveUserIdCookie
+
 ## Login
 - [x] IsUserLoggedIn
 - [x] Login

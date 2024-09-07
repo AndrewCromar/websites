@@ -12,9 +12,11 @@ $(document).ready(function() {
                 password: password
             },
             success: function(response) {
+                $('#hashPassword_output').show();
                 $('#hashPassword_output').html(response);
             },
             error: function(xhr, status, error) {
+                $('#hashPassword_output').show();
                 $('#hashPassword_output').html('<p>An error occurred: ' + error + '</p>');
             }
         });

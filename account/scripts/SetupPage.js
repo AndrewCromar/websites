@@ -26,9 +26,6 @@ function FillUserInfo() {
     url: "../backend/GetUserInfo.php",
     type: "GET",
     dataType: "json",
-    data: {
-      userId: localStorage.getItem("userId"),
-    },
     success: function (response) {
       $("#userinfo_fullname").html(
         response.firstName + " " + response.lastName

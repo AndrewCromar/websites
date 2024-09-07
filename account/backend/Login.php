@@ -16,6 +16,7 @@ include_once './DoesTokenCookieExist.php';
 include_once './DoesTokenCookieExist.php';
 include_once './GetTokenFromCookie.php';
 include_once './SetTokenToCookie.php';
+include_once './SetUserIdToCookie.php';
 
 function Login($inputUsername, $inputPassword)
 {
@@ -27,6 +28,9 @@ function Login($inputUsername, $inputPassword)
     
     // get userid from username
     $userId = GetUserIdByUsername($inputUsername);
+
+    // save the userId to cookies
+    SetUserIdToCookie($userId);
     
     // get username from userid
     $storedUsername = GetUsernameByUserId($userId);
@@ -66,7 +70,7 @@ function Login($inputUsername, $inputPassword)
         $cookieToken = $storedToken;
     }
 
-    return json_encode(["success" => true, "userId" => $userId]);
+    return true;
 }
 
 // AJAX

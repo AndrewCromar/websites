@@ -9,10 +9,12 @@ $(document).ready(function () {
         action: "Logout"
       },
       success: function (response) {
+        $("#logout_output").show();
         $("#logout_output").html(response);
         window.location.reload();
       },
       error: function (xhr, status, error) {
+        $("#logout_output").show();
         $("#logout_output").html("<p>An error occurred: " + error + "</p>");
       },
     });
