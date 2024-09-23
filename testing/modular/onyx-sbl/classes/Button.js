@@ -5,6 +5,6 @@ class Button {
   }
 
   Render() {
-    return `<div class="sbl_button"><a href="${this.url}">${this.title}</a></div>`;
+    return `<div class="sbl_button" onclick="window.location.href='${this.url}'"><a>${this.title}</a></div>`;
   }
 }

@@ -3,8 +3,12 @@ body {
   color: var(--color);
   background-color: var(--background);
 
+  cursor: none;
+
   padding: 0px;
   margin: 0px;
+
+  overflow-x: hidden;
 }
 
 .sbl_navBar {
@@ -20,7 +24,7 @@ body {
 .sbl_button {
   color: var(--color);
 
-  cursor: pointer;
+  cursor: none;
   float: left;
   display: block;
   text-align: center;
@@ -36,6 +40,7 @@ body {
 .sbl_button > a {
   color: var(--color);
   text-decoration: none;
+  cursor: none;
 }
 
 .sbl_button:hover {
@@ -44,4 +49,20 @@ body {
 
 .sbl_content {
   margin: 10px;
+}
+
+hr {
+  border: solid var(--accent) 1px;
+}
+
+#dotcursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  visibility: hidden;
 }

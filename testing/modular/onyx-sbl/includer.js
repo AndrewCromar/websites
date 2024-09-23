@@ -1,6 +1,8 @@
 document.write(`
     <link rel="stylesheet" href="${pathPrefix}onyx-sbl/styles/main.css" />
 
+    <script src="${pathPrefix}onyx-sbl/dotCursor.js"></script>
+
     <script src="${pathPrefix}onyx-sbl/classes/Button.js"></script>
     <script src="${pathPrefix}onyx-sbl/classes/FontData.js"></script>
     <script src="${pathPrefix}onyx-sbl/classes/NavBar.js"></script>

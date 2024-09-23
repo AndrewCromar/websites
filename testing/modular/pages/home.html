@@ -9,6 +9,9 @@
 <p>Welcome to my website!</p>
 <p>I am Andrew (obviously) and this is my new and improved (hopefully) website.</p>
 <p>It is created with my own custom js component based system.
+<hr>
+
+
 
   `;
   //#endregion
@@ -26,7 +29,7 @@
     `
   );
 
-  navBar = new NavBar([new Button("Test Page", "test.html")]);
+  navBar = new NavBar([new Button("Home", "home.html"), new Button("Test", "test.html")]);
 
   page = new ContentPage(
     "Andrew Cromar",

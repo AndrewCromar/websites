@@ -5,11 +5,12 @@ class ContentPage extends Page {
   }
 
   Render() {
-    return (
-      super.Render() +
-      `
-        <div class="sbl_content">${this.content}</div>
-      `
-    );
+    let finalRender = super.Render();
+    finalRender +=
+    `
+      <div class="sbl_content">${this.content}</div>
+      <div id="dotcursor"></div>
+    `
+    return finalRender;
   }
 }
