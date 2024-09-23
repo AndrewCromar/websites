@@ -1,0 +1,47 @@
+.html,
+body {
+  color: var(--color);
+  background-color: var(--background);
+
+  padding: 0px;
+  margin: 0px;
+}
+
+.sbl_navBar {
+  background-color: var(--secondary-background);
+
+  border-top: solid var(--accent) 2px;
+  border-bottom: solid var(--accent) 2px;
+
+  overflow: hidden;
+  z-index: 100;
+}
+
+.sbl_button {
+  color: var(--color);
+
+  cursor: pointer;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px;
+  font-size: larger;
+  text-decoration: none;
+  color: var(--text);
+  border-right: solid var(--background) 2px;
+
+  transition-duration: 50ms;
+}
+
+.sbl_button > a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+.sbl_button:hover {
+  background-color: var(--hover);
+}
+
+.sbl_content {
+  margin: 10px;
+}

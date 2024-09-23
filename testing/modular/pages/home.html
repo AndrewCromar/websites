@@ -1,0 +1,39 @@
+<script>
+  const pathPrefix = "../";
+</script>
+<script src="../onyx-sbl/includer.js"></script>
+<script>
+  //#region CONTENT
+  content = `
+
+<p>Welcome to my website!</p>
+<p>I am Andrew (obviously) and this is my new and improved (hopefully) website.</p>
+<p>It is created with my own custom js component based system.
+
+  `;
+  //#endregion
+
+  fontData = new FontData(
+    `
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    `,
+    `
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    `
+  );
+
+  navBar = new NavBar([new Button("Test Page", "test.html")]);
+
+  page = new ContentPage(
+    "Andrew Cromar",
+    BuiltInTheme("homeDark"),
+    navBar,
+    content
+  );
+
+  document.write(page.Render());
+</script>
