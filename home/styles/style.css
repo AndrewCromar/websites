@@ -15,6 +15,9 @@ html, body {
     overflow: hidden;
     background-color: var(--primary);
     z-index: 100;
+
+    border-top: solid var(--secondary) 2px;
+    border-bottom: solid var(--secondary) 2px;
 }
 
 .nav-button {
@@ -33,7 +36,7 @@ html, body {
 
 .icon {
     float: right;
-    height: 51px;
+    height: 50px;
 }
 
 .social {
@@ -62,6 +65,8 @@ html, body {
     color: var(--text);
     text-align: center;
     z-index: 100;
+
+    border-top: solid var(--secondary) 2px;
 }
 
 hr {
