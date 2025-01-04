@@ -4,7 +4,6 @@ include_once './GetUsernameByUserId.php';
 include_once './GetFirstNameByUserId.php';
 include_once './GetLastNameByUserId.php';
 include_once './GetEmailByUserId.php';
-include_once './GetAdminByUserId.php';
 include_once './GetCreationDateByUserId.php';
 include_once './GetUserIdFromCookie.php';
 include_once './GetRolesByUserId.php';
