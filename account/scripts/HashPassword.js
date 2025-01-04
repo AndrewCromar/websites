@@ -5,7 +5,7 @@ $(document).ready(function() {
         var password = $('#hashPassword_password').val();
 
         $.ajax({
-            url: '../backend/HashPassword.php',
+            url: '../backend/HashPasswordAJAX.php',
             type: 'POST',
             data: {
                 action: 'HashPassword',

@@ -50,7 +50,7 @@
       <br />
       <label for="register_password">Password</label>
       <input
-        type="text"
+        type="password"
         id="register_password"
         name="register_password"
         required
@@ -72,8 +72,8 @@
         required
       />
       <br />
-      <label for="register_emain">Email</label>
-      <input type="text" id="register_emain" name="register_emain" required />
+      <label for="register_email">Email</label>
+      <input type="text" id="register_email" name="register_email" required />
       <br />
       <button type="register_submit">Register</button>
     </form>
@@ -84,7 +84,7 @@
 <div id="loggedin_area">
   <div class="box">
     <h3>Hello, <span id="userinfo_fullname"></span>!</h3>
-    <hr>
+    <hr />
     <h4>Account Information:</h4>
     <p>Username: <span id="userinfo_username"></span></p>
     <p>First Name: <span id="userinfo_firstName"></span></p>
@@ -124,5 +124,7 @@
 
 <script src="../scripts/SetupPage.js"></script>
 <script src="../scripts/HashPassword.js"></script>
+<script src="../scripts/GetUserIP.js"></script>
 <script src="../scripts/Login.js"></script>
 <script src="../scripts/Logout.js"></script>
+<script src="../scripts/Register.js"></script>

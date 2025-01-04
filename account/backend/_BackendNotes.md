@@ -12,6 +12,7 @@
 - [x] GetAdminByUserId
 - [x] GetCreationDateByUserId
 - [x] GetUserInfo
+- [x] DoesEmailExist
 
 ## General Functions
 
@@ -53,6 +54,10 @@
 ## Passwords
 - [x] VerifyPassword
 - [x] HashPassword
+- [x] HashPasswordAJAX
 
 ## Sanitization
 - [x] SanitizeInput
+
+## Other
+- [ ] GetUserCountAtIP
