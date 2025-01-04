@@ -1,7 +1,6 @@
 # PHP Functions
 
 ## User Information
-
 - [x] GetUserIdByUsername
 - [x] DoesUsernameExist
 - [x] GetUsernameByUserId
@@ -9,18 +8,15 @@
 - [x] GetFirstNameByUserId
 - [x] GetLastNameByUserId
 - [x] GetEmailByUserId
-- [x] GetAdminByUserId
 - [x] GetCreationDateByUserId
 - [x] GetUserInfo
 - [x] DoesEmailExist
 
 ## General Functions
-
 - [x] ComparePasswords
 - [x] CreateDBConnection
 
 ## Tokens
-
 - [x] DeleteExpiredTokensForUser
 - [x] GetValidTokenForUser
 - [x] DoesUserHaveValidToken
@@ -31,12 +27,10 @@
 - [x] DeleteExpiredTokens
 
 ## Cookies
-
 - [x] SetTokenToCookie
 - [x] GetTokenFromCookie
 - [x] DoesTokenCookieExist
 - [x] RemoveTokenCookie
-
 - [x] SetUserIdToCookie
 - [x] GetUserIdFromCookie
 - [x] DoesUserIdCookieExist
@@ -46,7 +40,8 @@
 - [x] IsUserLoggedIn
 - [x] Login
 - [x] Logout
-- [ ] Register
+- [x] Register
+- [x] RegisterNewUser
 
 ## Username
 - [x] VerifyUsername
@@ -60,4 +55,8 @@
 - [x] SanitizeInput
 
 ## Other
-- [ ] GetUserCountAtIP
+- [x] GetUserCountAtIP
+- [x] GetRoleNameFromRoleId
+- [x] GetRolesByUserId
+- [x] GetUserIdFromCookie
+- [x] RemoveUserIdCookie
