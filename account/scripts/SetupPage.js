@@ -35,10 +35,20 @@ function FillUserInfo() {
       $("#userinfo_firstName").html(response.firstName);
       $("#userinfo_lastName").html(response.lastName);
       $("#userinfo_email").html(response.email);
-      $("#userinfo_admin").html(response.admin ? "Yes." : "No.");
+      $("#userinfo_userId").html(response.userId);
+
+      var roleText = "";
+      response.roles.forEach((role) => {
+        roleText +=
+          "<br>&nbsp;&nbsp;&nbsp;&nbsp;> " + CapitalizeFirstLetter(role) + ".";
+      });
+
+      $("#userinfo_roles").html(roleText);
+
       $("#userinfo_creationDate").html(response.creationDate);
     },
     error: function (xhr, status, error) {
+      console.error("Status:", status);
       console.error("AJAX 2 request failed:", error);
       console.error("Response text:", xhr.responseText);
     },
