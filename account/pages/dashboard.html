@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="../styles/main.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+  rel="stylesheet"
+/>
+
+<title>Account Dashboard</title>
+
+<div class="box" id="b_title">
+  <center><h1>Account Dashboard</h1></center>
+</div>
+
+<div id="loggedout_area">
+  <div class="box">
+    <h3>Login</h3>
+    <hr />
+    <form id="loginForm">
+      <label for="login_username">Username</label>
+      <input type="text" id="login_username" name="login_username" required />
+      <br />
+      <label for="login_password">Password</label>
+      <input
+        type="password"
+        id="login_password"
+        name="login_password"
+        required
+      />
+      <br />
+      <button type="login_submit">Login</button>
+    </form>
+    <div id="login_output" class="box" hidden></div>
+  </div>
+
+  <div class="box">
+    <h3>Register</h3>
+    <hr />
+    <form id="registerForm">
+      <label for="register_username">Username</label>
+      <input
+        type="text"
+        id="register_username"
+        name="register_username"
+        required
+      />
+      <br />
+      <label for="register_password">Password</label>
+      <input
+        type="password"
+        id="register_password"
+        name="register_password"
+        required
+      />
+      <br />
+      <label for="register_firstname">First Name</label>
+      <input
+        type="text"
+        id="register_firstname"
+        name="register_firstname"
+        required
+      />
+      <br />
+      <label for="register_lastname">Last Name</label>
+      <input
+        type="text"
+        id="register_lastname"
+        name="register_lastname"
+        required
+      />
+      <br />
+      <label for="register_email">Email</label>
+      <input type="text" id="register_email" name="register_email" required />
+      <br />
+      <button type="register_submit">Register</button>
+    </form>
+    <div id="register_output" class="box" hidden></div>
+  </div>
+</div>
+
+<div id="loggedin_area">
+  <div class="box">
+    <h3>Hello, <span id="userinfo_fullname"></span>!</h3>
+    <hr />
+    <h4>Account Information:</h4>
+    <p>Username: <span id="userinfo_username"></span></p>
+    <p>First Name: <span id="userinfo_firstName"></span></p>
+    <p>Last Name: <span id="userinfo_lastName"></span></p>
+    <p>Email: <span id="userinfo_email"></span></p>
+    <p>User Id: <span id="userinfo_userId"></span></p>
+    <p>Roles: <span id="userinfo_roles"></span></p>
+    <p>Account Creation Date: <span id="userinfo_creationDate"></span></p>
+  </div>
+  <div class="box">
+    <h3>Logout</h3>
+    <hr />
+    <form id="logoutForm">
+      <button type="logout_submit">Logout</button>
+    </form>
+    <div id="logout_output" class="box" hidden></div>
+  </div>
+</div>
+
+<div class="box">
+  <h3>Tools</h3>
+  <div class="box">
+    <h4>Hash Password</h4>
+    <hr />
+    <form id="hashPasswordForm">
+      <label for="hashPassword_password">Password To Hash:</label>
+      <input
+        type="text"
+        id="hashPassword_password"
+        name="hashPassword_password"
+        required
+      />
+      <button type="hashPassword_submit">hashPassword</button>
+    </form>
+    <div id="hashPassword_output" class="box" hidden></div>
+  </div>
+</div>
+
+<script src="../scripts/ScriptImporter.js"></script>
