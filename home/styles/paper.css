@@ -1,0 +1,17 @@
+.paper {
+    text-align: center;
+}
+
+.paper > img {
+    max-width: 75%;
+
+    border-radius: 20px;
+    border: solid var(--accent-dark) 2px;
+
+    filter: drop-shadow(0 0 10px var(--accent));
+}
+
+.paper > hr {
+    border: none;
+    height: 25px;
+}

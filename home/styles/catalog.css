@@ -1,11 +1,13 @@
-.luna-image-container {
+.catalog {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.luna-image {
+.catalog-image {
+    background-color: white;
+
     width: 250px;
 
     margin-right: 10px;

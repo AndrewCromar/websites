@@ -6,7 +6,8 @@ function Bootstrapper(_pageTitle, _theme) {
     
         <link rel="stylesheet" href="../styles/defaults.css">
         <link rel="stylesheet" href="../styles/navbar.css">
-        <link rel="stylesheet" href="../styles/luna-image.css">
+        <link rel="stylesheet" href="../styles/catalog.css">
+        <link rel="stylesheet" href="../styles/paper.css">
         <link rel="stylesheet" href="../styles/themes/${_theme}.css">
     
         <div class="title">
@@ -15,11 +16,17 @@ function Bootstrapper(_pageTitle, _theme) {
         </div>
     
         <div class="navbar">
-            <img src="../images/navbar/home_icon.png" onclick="ToPage('index.html')">
-            <img src="../images/navbar/luna_icon.png" onclick="ToPage('luna.html')">
+            <div><img src="../images/navbar/home_icon.png" onclick="ToPage('index.html')"></div>
             <hr>
-            <img src="../images/navbar/onyx_logo.png" onclick="ToPage('https://onyx.andrewcromar.org/')">
-            <img src="../images/navbar/trio-production-logo.png" onclick="ToPage('https://trio.andrewcromar.org/')">
+            <div><img src="../images/navbar/luna_icon.png" onclick="ToPage('luna.html')"></div>
+            <div><img src="../images/navbar/code_icon.png" style="padding: 5px; width: calc(100% - 10px); height: calc(100% - 10px);" onclick="ToPage('languages-and-software.html')"></div>
+            <div><img src="../images/navbar/paper_icon.png" onclick="ToPage('less-homework-relates-to-greater-learing.html')"></div>
+            <hr>
+            <div><img src="../images/navbar/onyx_logo.png" onclick="ToPage('https://onyx.andrewcromar.org/')"></div>
+            <div><img src="../images/navbar/trio-production-logo.png" style="padding: 5px; width: calc(100% - 10px); height: calc(100% - 10px);" onclick="ToPage('https://trio.andrewcromar.org/')"></div>
+            <hr>
+            <div><img src="../images/navbar/github_icon.png" onclick="ToPage('https://github.com/AndrewCromar')"></div>
+            <div><img src="../images/navbar/linkedin_icon.png" onclick="ToPage('https://www.linkedin.com/in/andrew-cromar-5257b22ab/')"></div>
         </div>
     
         <script src="../scripts/ToPage.js"></script>
