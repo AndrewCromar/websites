@@ -1,0 +1,16 @@
+.luna-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.luna-image {
+    width: 250px;
+
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 25px;
+    border: solid var(--accent-dark) 2px;
+}
