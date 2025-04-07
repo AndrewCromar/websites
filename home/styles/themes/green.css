@@ -1,15 +1,15 @@
-:root {
-    --primary: #32a852;
-    --secondary: #51d675;
-    --background: #363636;
-    --text: white;
-    --text-alternate: #32a852;
+/* Pallet "https://coolors.co/palette/004b23-006400-007200-008000-38b000-70e000-9ef01a-ccff33" */
 
-    --error: #ff3c00;
-    
-    --github: #f5f5f5;
-    --youtube: #FF0000;
-    --linkedin: #0077B5;
-    --discord: #5c6aed;
-    --dropbox: #0061FE;
+:root {
+    --accent: #007200;
+    --accent-light: #008000;
+    --accent-dark: #006400;
+
+    --text: black;
+
+    --background: #38B000;
+
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
