@@ -32,6 +32,6 @@ function Bootstrapper(_pageTitle, _theme) {
         </div>
             
         <script src="../scripts/ToPage.js"></script>
-        <script src="../scripts/Countdown.js"></script>
+        <script src="../scripts/Countdown..js"></script>
     `);
 }
