@@ -1,0 +1,30 @@
+<script>
+  const pathPrefix = "../";
+</script>
+<script src="../onyx-sbl/includer.js"></script>
+<script>
+  //#region CONTENT
+  content = `
+
+  `;
+  //#endregion
+
+  fontData = new FontData(
+    `
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    `,
+    `
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    `
+  );
+
+  navBar = new NavBar([new Button("Home", "home.html"), new Button("Test", "test.html")]);
+
+  page = new ContentPage("Test", BuiltInTheme("homeDark"), navBar, content);
+
+  document.write(page.Render());
+</script>
