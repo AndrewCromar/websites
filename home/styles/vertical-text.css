@@ -1,0 +1,12 @@
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 35px;
+
+    font-size: small;
+}
