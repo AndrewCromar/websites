@@ -7,7 +7,7 @@ function Bootstrapper(_pageTitle, _theme) {
         <link rel="stylesheet" href="../styles/defaults.css">
         <link rel="stylesheet" href="../styles/navbar.css">
         <link rel="stylesheet" href="../styles/catalog.css">
-        <link rel="stylesheet" href="../styles/paper.css">
+        <link rel="stylesheet" href="../styles/album.css">
         <link rel="stylesheet" href="../styles/vertical-text.css">
         <link rel="stylesheet" href="../styles/themes/${_theme}.css">
         
