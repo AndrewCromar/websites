@@ -1,0 +1,288 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8e8f9; /* Light pinkish-purple background */
+    color: #4a154b; /* Dark purple text */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #f3e5f5; /* Light purple background */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ba68c8; /* Updated to lighter purple */
+    margin: 0;
+    font-size: 2rem;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #d500f9; /* Bright purple */
+    margin: 20px auto;
+    width: 80%;
+}
+
+@keyframes jiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(-3deg);
+    }
+    75% {
+        transform: rotate(3deg);
+    }
+}
+
+button {
+    background-color: #ba68c8; /* Medium purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #9c27b0; /* Darker purple */
+    animation: jiggle 0.3s ease-in-out; /* Add jiggle animation */
+}
+
+button:active {
+    transform: scale(0.95); /* Squish effect */
+}
+
+button:disabled {
+    background-color: #e1bee7; /* Disabled button color */
+    cursor: not-allowed;
+}
+
+.switch-page {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Flashcard-specific styles */
+.flashcard {
+    width: 90vw; /* Use 90% of the viewport width */
+    height: calc(90vh - 100px); /* Use 90% of the viewport height minus space for buttons and margins */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    max-height: 400px; /* Set a maximum height for larger screens */
+    perspective: 1000px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.flashcard-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Slightly larger font size for better readability */
+    border: 2px solid #d500f9; /* Bright purple border */
+    border-radius: 10px;
+    background-color: #e1bee7; /* Slightly darker purple */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .flashcard {
+        width: 95vw; /* Use 95% of the viewport width */
+        height: calc(80vh - 80px); /* Use 80% of the viewport height minus space for buttons */
+        max-height: 300px; /* Ensure it doesn't grow too large on small screens */
+    }
+
+    .front, .back {
+        font-size: 20px; /* Slightly smaller font size for smaller screens */
+    }
+
+    .buttons {
+        margin-top: 10px; /* Ensure buttons are close to the flashcard */
+    }
+}
+
+/* Manage Cards-specific styles */
+.card-list {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+    list-style: none;
+}
+
+.card-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f3e5f5; /* Light purple background */
+    border: 2px solid #d500f9; /* Bright purple border */
+    border-radius: 5px;
+}
+
+/* Input fields for text boxes */
+.card-item input {
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 14px;
+    flex: 1;
+    border: 2px solid #d500f9; /* Bright purple border */
+    border-radius: 5px;
+    background-color: #f3e5f5; /* Light purple background */
+    color: #4a154b; /* Dark purple text */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item input:focus {
+    border-color: #9c27b0; /* Darker purple on focus */
+    box-shadow: 0 0 5px rgba(156, 39, 176, 0.5); /* Purple glow */
+}
+
+.card-item button {
+    padding: 5px 10px;
+}
+
+/* Import button styling */
+.import-cards-label {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ba68c8; /* Medium purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.import-cards-label:hover {
+    background-color: #9c27b0; /* Darker purple */
+    animation: jiggle 0.3s ease-in-out; /* Add jiggle animation */
+}
+
+.import-cards-label:active {
+    transform: scale(0.95); /* Squish effect */
+}
+
+/* Toast notification styles */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ba68c8; /* Updated to medium purple */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Icon page styles */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f8e8f9; /* Light pinkish-purple background */
+}
+
+.icon-circle {
+    width: 150px;
+    height: 150px;
+    background-color: #ba68c8; /* Medium purple */
+    border: 5px solid #d500f9; /* Bright purple border */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.icon-circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    z-index: 1;
+}
+
+.icon-text {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    z-index: 2; /* Ensure text is above the gradient */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Landing page styles */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; /* Add spacing below the header */
+    height: auto; /* Remove fixed height to prevent scrolling */
+}
+
+.description {
+    font-size: 16px; /* Slightly smaller font size */
+    color: #4a154b; /* Dark purple text */
+    margin-bottom: 15px; /* Reduced margin */
+    max-width: 500px; /* Reduced max width */
+    line-height: 1.4; /* Slightly tighter line spacing */
+}
+
+.landing-buttons {
+    display: flex;
+    gap: 20px;
+}
