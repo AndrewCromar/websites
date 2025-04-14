@@ -1,0 +1,15 @@
+/* Pallet "https://coolors.co/palette/ffe5ec-ffc2d1-ffb3c6-ff8fab-fb6f92" */
+
+:root {
+    --accent: #FF8FAB;
+    --accent-light: #FFB3C6;
+    --accent-dark: #FB6F92;
+
+    --text: black;
+
+    --background: #FFC2D1;
+
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
