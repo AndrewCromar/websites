@@ -1,0 +1,39 @@
+.image-comparison-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 500px;
+    width: 100%;
+
+    border: solid var(--accent) 2px;
+    border-radius: 10px;
+}
+
+.image-comparison-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-comparison-container .after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: inset(0 0 0 50%);
+}
+
+.image-comparison-container .image-comparison-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent);
+    cursor: ew-resize;
+    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.image-comparison-container .image-comparison-handle:hover {
+    background-color: var(--accent);
+}
