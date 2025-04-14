@@ -7,7 +7,6 @@ const toast = document.getElementById('toast');
 
 const storedFlashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
 
-// Function to show a toast notification
 function showToast(message) {
     toast.classList.remove('show');
     clearTimeout(toast.timeout);
@@ -47,16 +46,13 @@ function createCardItem(front = '', back = '') {
     cardList.appendChild(cardItem);
 }
 
-// Load existing flashcards into the list
 storedFlashcards.forEach(card => createCardItem(card.front, card.back));
 
-// Add a new card
 addCardButton.addEventListener('click', () => {
     createCardItem();
     showToast('New card added!');
 });
 
-// Save cards to local storage
 saveCardsButton.addEventListener('click', () => {
     const cards = [];
     const cardItems = document.querySelectorAll('.card-item');
@@ -71,7 +67,6 @@ saveCardsButton.addEventListener('click', () => {
     showToast('Cards saved to local storage!');
 });
 
-// Export cards to a JSON file
 exportCardsButton.addEventListener('click', () => {
     const cards = [];
     const cardItems = document.querySelectorAll('.card-item');
@@ -95,7 +90,6 @@ exportCardsButton.addEventListener('click', () => {
     showToast('Cards exported as flashcards.json!');
 });
 
-// Import cards from a JSON file
 importCardsInput.addEventListener('change', (event) => {
     const file = event.target.files[0];
     if (!file) {
@@ -108,7 +102,7 @@ importCardsInput.addEventListener('change', (event) => {
         try {
             const importedCards = JSON.parse(e.target.result);
             if (Array.isArray(importedCards) && importedCards.every(card => card.front && card.back)) {
-                cardList.innerHTML = ''; // Clear the current list
+                cardList.innerHTML = '';
                 importedCards.forEach(card => createCardItem(card.front, card.back));
 
                 localStorage.setItem('flashcards', JSON.stringify(importedCards));
@@ -127,6 +121,5 @@ importCardsInput.addEventListener('change', (event) => {
 
     reader.readAsText(file);
 
-    // Reset the file input value to allow re-importing the same file
     importCardsInput.value = '';
 });

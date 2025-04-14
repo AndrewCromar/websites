@@ -1,7 +1,7 @@
 const storedFlashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
 const flashcards = storedFlashcards.map(card => ({
     ...card,
-    score: 0 // Ensure all cards start with a score of 0
+    score: 0
 }));
 
 let currentIndex = 0;
