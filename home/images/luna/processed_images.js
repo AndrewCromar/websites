@@ -75,6 +75,12 @@ const processed_images = [
     '76.png',
     '77.png',
     '78.png',
+    '79.png',
     '8.png',
+    '80.png',
+    '81.png',
+    '82.png',
+    '83.png',
+    '84.png',
     '9.png',
 ];
