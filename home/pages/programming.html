@@ -1,19 +1,7 @@
 <script src="../scripts/Bootstrapper.js"></script>
-<script>Bootstrapper("Andrew Cromar", "purple")</script>
+<script>Bootstrapper("Programming", "green")</script>
 
 <div class="content">
-    <div class="box">
-        <div class="box-header">
-            <p>Hello! :)</p>
-        </div>
-        <div class="box-content">
-            <ul>
-                <li><p>Check out the <span><a href="./school-countdown.html">school countdown</a></span> page.</p></li>
-                <li><p>Check out my <span><a href="./programming.html">most recent project</a></span> (also located on this page).</p></li>
-            </ul>
-        </div>
-    </div>
-
     <div class="box">
         <div class="box-header">
             <p>Most Recent Project (as of 4/14/2025)</p>
@@ -36,7 +24,16 @@
             <p>This project is effectively complete (I won't be working on it anymore).</p>
         </div>
     </div>
+
+    <div class="box">
+        <div>Tools I Use</div>
+        <div>
+            <p>Please note that this list may not always be up to date, and I might have forgotten to include some tools that I use.</p>
+            <div class="catalog"></div>
+        </div>
+    </div>
 </div>
 
+<script src="../scripts/Catalog.js"></script>
 <script src="../scripts/ImageComparison.js"></script>
-<script src="../scripts/Dropdown.js"></script>
+<script>LoadCatalog("../images/languagesandsoftware", "catalog")</script>

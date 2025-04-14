@@ -1,13 +1,13 @@
-/* Pallet "https://coolors.co/palette/004b23-006400-007200-008000-38b000-70e000-9ef01a-ccff33" */
+/* Pallet "https://coolors.co/palette/dad7cd-a3b18a-588157-3a5a40-344e41" */
 
 :root {
-    --accent: #007200;
-    --accent-light: #008000;
-    --accent-dark: #006400;
+    --accent: #588157;
+    --accent-light: #A3B18A;
+    --accent-dark: #3A5A40;
 
     --text: black;
 
-    --background: #38B000;
+    --background: #DAD7CD;
 
     font-family: "Roboto Mono", serif;
     font-optical-sizing: auto;

@@ -22,7 +22,7 @@ function Bootstrapper(_pageTitle, _theme) {
         <hr>
             <div><img src="../images/icons/clock_icon.png" onclick="ToPage('school-countdown.html')"></div>
             <div><img src="../images/icons/luna_icon.png" onclick="ToPage('luna.html')"></div>
-            <div><img src="../images/icons/code_icon.png" style="padding: 5px; width: calc(100% - 10px); height: calc(100% - 10px);" onclick="ToPage('languages-and-software.html')"></div>
+            <div><img src="../images/icons/bug_icon.png" onclick="ToPage('programming.html')"></div>
             <div><img src="../images/icons/paper_icon.png" onclick="ToPage('less-homework-relates-to-greater-learing.html')"></div>
             <hr>
             <div><img src="../images/icons/onyx_logo.png" onclick="ToPage('https://onyx.andrewcromar.org/')"></div>
