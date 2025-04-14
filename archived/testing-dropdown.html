@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Example</title>
+    <style>
+        /* Container styles */
+        .dropdown-container {
+            width: fit-content;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styles */
+        .dropdown-header {
+            cursor: pointer;
+            background-color: #f9f9f9;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-bottom: 1px solid #ddd;
+            user-select: none; /* Prevent text selection */
+        }
+
+        .dropdown-header img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            transition: transform 0.3s ease; /* Smooth rotation */
+        }
+
+        .dropdown-header p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Dropdown content styles */
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #fff;
+            padding: 0 15px;
+            border-top: 1px solid #ddd;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .dropdown-content p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Optional hover effect */
+        .dropdown-header:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Rotated arrow when dropdown is open */
+        .dropdown-header.open img {
+            transform: rotate(180deg); /* Arrow points down when open */
+        }
+
+        /* Default arrow rotation (closed) */
+        .dropdown-header img {
+            transform: rotate(0deg); /* Arrow points up when closed */
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown-container">
+        <div class="dropdown-header">
+            <img src="./home/images/icons/trio-production-logo.png" alt="Arrow">
+            <p>Dropdown 1</p>
+        </div>
+        <div class="dropdown-content">
+            <p>Content for dropdown 1.</p>
+        </div>
+    </div>
+
+    <div class="dropdown-container">
+        <div class="dropdown-header">
+            <img src="./home/images/icons/trio-production-logo.png" alt="Arrow">
+            <p>Dropdown 2</p>
+        </div>
+        <div class="dropdown-content">
+            <p>Content for dropdown 2.</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle multiple dropdowns
+        const dropdownHeaders = document.querySelectorAll('.dropdown-header');
+
+        dropdownHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    content.style.padding = "0 15px";
+                    header.classList.remove('open'); // Remove rotation class
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.padding = "10px 15px";
+                    header.classList.add('open'); // Add rotation class
+                }
+            });
+        });
+    </script>
+</body>
+</html>

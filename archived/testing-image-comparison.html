@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before-After Image Comparison</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        } */
+
+        .image-comparison-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            max-width: 500px; /* Set the maximum width */
+            width: 100%; /* Allow it to scale down */
+        }
+
+        .image-comparison-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .image-comparison-container .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip-path: inset(0 0 0 50%); /* Adjust clip-path to start from the left */
+        }
+
+        .image-comparison-container .image-comparison-handle {
+            position: absolute;
+            top: 0;
+            left: 50%; /* Handle starts in the middle */
+            width: 4px;
+            height: 100%;
+            background-color: #fff;
+            cursor: ew-resize;
+            z-index: 10;
+            transform: translateX(-50%);
+        }
+
+        .image-comparison-container .image-comparison-handle:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-comparison-container">
+        <img src="../home/images/clean-gmail/clean-gmail-before.png" alt="Before Image">
+        <img src="../home/images/clean-gmail/clean-gmail-after.png" alt="After Image" class="after-image">
+        <div class="image-comparison-handle"></div>
+    </div>
+
+    <script>
+        // Select all image comparison containers
+        const imageComparisonContainers = document.querySelectorAll('.image-comparison-container');
+
+        imageComparisonContainers.forEach(container => {
+            const handle = container.querySelector('.image-comparison-handle');
+            const afterImage = container.querySelector('.after-image');
+
+            const updateComparison = (clientX) => {
+                const rect = container.getBoundingClientRect();
+                const offsetX = clientX - rect.left;
+                const percentage = Math.max(0, Math.min(1, offsetX / rect.width));
+                handle.style.left = `${percentage * 100}%`;
+                afterImage.style.clipPath = `inset(0 0 0 ${percentage * 100}%)`; // Adjust clip-path to match the new layout
+            };
+
+            container.addEventListener('mousemove', (e) => {
+                updateComparison(e.clientX);
+            });
+
+            container.addEventListener('touchmove', (e) => {
+                const touch = e.touches[0];
+                updateComparison(touch.clientX);
+            });
+        });
+    </script>
+</body>
+</html>
