@@ -2,6 +2,33 @@
 <script>Bootstrapper("Andrew Cromar", "purple")</script>
 
 <div class="content">
-    <p>Hello! :)</p>
-    <p>New simple website if you didn't notice.</p>
+    <h3>Hello! :)</h3>
+    <p>Check out the <span><a href="./school-countdown.html">school countdown</a></span> page.</p>
+    <hr>
+    <h3>Recent Project</h3>
+
+    <div class="dropdown-container">
+        <div class="dropdown-header">
+            <img src="../images/icons/dropdown_arrow_icon.png" alt="Arrow">
+            <p>Clean Gmail Chrome Extension</p>
+        </div>
+        <div class="dropdown-content">
+            <p>
+                Clean Gmail is a Chrome extension to clean up the UI of the Gmail website.
+                <br>
+                Recently, I have been feeling like the Gmail website is full of random stuff that I do not need,
+                like the tabs on the left, the tabs on the right, and things in the top bar.
+            </p>
+            <p>Here is a before and after comparison:</p>
+            <div class="image-comparison-container" style="max-width: 750px;">
+                <img src="../images/clean-gmail/clean-gmail-before.png">
+                <img src="../images/clean-gmail/clean-gmail-after.png" class="after-image">
+                <div class="image-comparison-handle"></div>
+            </div> 
+            <p>The way it works is by either removing elements or modifying elements. I get references to everything using class names.</p>
+        </div>
+    </div>
 </div>
+
+<script src="../scripts/ImageComparison.js"></script>
+<script src="../scripts/Dropdown.js"></script>
