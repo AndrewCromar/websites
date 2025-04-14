@@ -1,0 +1,35 @@
+.box {
+    width: fit-content;
+    margin: 20px 0;
+    border: 1px solid var(--accent-dark);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.box > div:first-child {
+    background-color: var(--accent);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    user-select: none;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.box > div:first-child p {
+    margin: 0;
+    line-height: 1;
+}
+
+.box > div:last-child {
+    background-color: var(--background);
+    padding: 0 15px;
+}
+
+.box > div:last-child p {
+    margin: 10px 0;
+    font-size: 14px;
+}

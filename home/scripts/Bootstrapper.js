@@ -8,6 +8,7 @@ function Bootstrapper(_pageTitle, _theme) {
         <link rel="stylesheet" href="../styles/navbar.css">
         <link rel="stylesheet" href="../styles/catalog.css">
         <link rel="stylesheet" href="../styles/paper.css">
+        <link rel="stylesheet" href="../styles/box.css">
         <link rel="stylesheet" href="../styles/vertical-text.css">
         <link rel="stylesheet" href="../styles/themes/${_theme}.css">
         
@@ -34,6 +35,5 @@ function Bootstrapper(_pageTitle, _theme) {
         </div>
             
         <script src="../scripts/ToPage.js"></script>
-        <script src="../scripts/Countdown.js"></script>
     `);
 }
