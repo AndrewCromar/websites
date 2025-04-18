@@ -1,7 +1,8 @@
 const storedFlashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
 const flashcards = storedFlashcards.map(card => ({
     ...card,
-    score: 0
+    score: card.score || 0,
+    lastShown: card.lastShown || 0
 }));
 
 let currentIndex = 0;
@@ -61,25 +62,61 @@ function transitionToNextCard(skipCurrent = false) {
     if (flashcards.length === 0) return;
     isTransitioning = true;
     flashcard.classList.remove('flipped');
+
+    flashcards.forEach((card, index) => {
+        if (index !== currentIndex) {
+            card.lastShown += 1;
+        } else {
+            card.lastShown = 0;
+        }
+    });
+
+    console.log("Updated lastShown values:", flashcards.map(card => card.lastShown));
+
     const nextIndex = getNextIndex(skipCurrent);
     updateFront(nextIndex);
     setTimeout(() => {
         currentIndex = nextIndex;
+        console.log("Showing card:", flashcards[currentIndex]);
         updateBack(currentIndex);
         isTransitioning = false;
     }, 300);
 }
 
 function getNextIndex(skipCurrent = false) {
-    let lowestScore = Math.min(...flashcards.map(card => card.score));
-    let lowestIndex = flashcards.findIndex((card, index) =>
-        card.score === lowestScore && (!skipCurrent || index !== currentIndex)
-    );
-    if (lowestIndex === -1 || (lowestIndex === currentIndex && skipCurrent)) {
-        lowestIndex = (currentIndex + 1) % flashcards.length;
+    if (flashcards.length === 0) return 0;
+
+    const weights = flashcards.map((card, index) => {
+        if (skipCurrent && index === currentIndex) return 0;
+
+        const scoreWeight = Math.max(1, 10 - card.score);
+        const lastShownWeight = Math.min(10, card.lastShown);
+        return scoreWeight + lastShownWeight;
+    });
+
+    console.log("Weights:", weights);
+
+    const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+    const probabilities = weights.map(weight => weight / totalWeight);
+
+    console.log("Probabilities:", probabilities);
+
+    let random = Math.random();
+    for (let i = 0; i < probabilities.length; i++) {
+        random -= probabilities[i];
+        if (random <= 0) {
+            console.log("Selected index:", i);
+            return i;
+        }
     }
-    return lowestIndex;
+
+    console.log("Fallback to current index:", currentIndex);
+    return currentIndex;
 }
+
+window.addEventListener('beforeunload', () => {
+    localStorage.setItem('flashcards', JSON.stringify(flashcards));
+});
 
 updateFront(currentIndex);
 updateBack(currentIndex);
