@@ -14,6 +14,7 @@ const correctButton = document.querySelector('.correct');
 const wrongButton = document.querySelector('.wrong');
 const frontElement = document.querySelector('.front');
 const backElement = document.querySelector('.back');
+const doneButton = document.querySelector('.done');
 
 function updateFront(index) {
     if (flashcards.length === 0) {
@@ -56,6 +57,11 @@ wrongButton.addEventListener('click', () => {
     if (isTransitioning) return;
     hideButtons();
     transitionToNextCard(true);
+});
+
+doneButton.addEventListener('click', () => {
+    sessionStorage.setItem('flashcardStats', JSON.stringify(flashcards));
+    window.location.href = 'stats.html';
 });
 
 function transitionToNextCard(skipCurrent = false) {

@@ -1,20 +1,20 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8e8f9; /* Light pinkish-purple background */
-    color: #4a154b; /* Dark purple text */
+    background-color: #f8e8f9;
+    color: #4a154b;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 header {
-    background-color: #f3e5f5; /* Light purple background */
+    background-color: #f3e5f5;
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #ba68c8; /* Updated to lighter purple */
+    color: #ba68c8;
     margin: 0;
     font-size: 2rem;
 }
@@ -22,7 +22,7 @@ h1 {
 hr {
     border: none;
     height: 2px;
-    background-color: #d500f9; /* Bright purple */
+    background-color: #d500f9;
     margin: 20px auto;
     width: 80%;
 }
@@ -43,7 +43,7 @@ hr {
 }
 
 button {
-    background-color: #ba68c8; /* Medium purple */
+    background-color: #ba68c8;
     color: white;
     border: none;
     border-radius: 5px;
@@ -55,16 +55,16 @@ button {
 }
 
 button:hover {
-    background-color: #9c27b0; /* Darker purple */
-    animation: jiggle 0.3s ease-in-out; /* Add jiggle animation */
+    background-color: #9c27b0;
+    animation: jiggle 0.3s ease-in-out;
 }
 
 button:active {
-    transform: scale(0.95); /* Squish effect */
+    transform: scale(0.95);
 }
 
 button:disabled {
-    background-color: #e1bee7; /* Disabled button color */
+    background-color: #e1bee7;
     cursor: not-allowed;
 }
 
@@ -76,12 +76,11 @@ button:disabled {
     display: none;
 }
 
-/* Flashcard-specific styles */
 .flashcard {
-    width: 90vw; /* Use 90% of the viewport width */
-    height: calc(90vh - 100px); /* Use 90% of the viewport height minus space for buttons and margins */
-    max-width: 600px; /* Set a maximum width for larger screens */
-    max-height: 400px; /* Set a maximum height for larger screens */
+    width: 90vw;
+    height: calc(90vh - 100px);
+    max-width: 600px;
+    max-height: 400px;
     perspective: 1000px;
     margin: 20px auto;
     position: relative;
@@ -107,10 +106,10 @@ button:disabled {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px; /* Slightly larger font size for better readability */
-    border: 2px solid #d500f9; /* Bright purple border */
+    font-size: 24px;
+    border: 2px solid #d500f9;
     border-radius: 10px;
-    background-color: #e1bee7; /* Slightly darker purple */
+    background-color: #e1bee7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -118,24 +117,22 @@ button:disabled {
     transform: rotateY(180deg);
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .flashcard {
-        width: 95vw; /* Use 95% of the viewport width */
-        height: calc(80vh - 80px); /* Use 80% of the viewport height minus space for buttons */
-        max-height: 300px; /* Ensure it doesn't grow too large on small screens */
+        width: 95vw;
+        height: calc(80vh - 80px);
+        max-height: 300px;
     }
 
     .front, .back {
-        font-size: 20px; /* Slightly smaller font size for smaller screens */
+        font-size: 20px;
     }
 
     .buttons {
-        margin-top: 10px; /* Ensure buttons are close to the flashcard */
+        margin-top: 10px;
     }
 }
 
-/* Manage Cards-specific styles */
 .card-list {
     max-width: 600px;
     margin: 20px auto;
@@ -149,41 +146,39 @@ button:disabled {
     justify-content: space-between;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #f3e5f5; /* Light purple background */
-    border: 2px solid #d500f9; /* Bright purple border */
+    background-color: #f3e5f5;
+    border: 2px solid #d500f9;
     border-radius: 5px;
 }
 
-/* Input fields for text boxes */
 .card-item input {
     margin: 0 5px;
     padding: 5px;
     font-size: 14px;
     flex: 1;
-    border: 2px solid #d500f9; /* Bright purple border */
+    border: 2px solid #d500f9;
     border-radius: 5px;
-    background-color: #f3e5f5; /* Light purple background */
-    color: #4a154b; /* Dark purple text */
+    background-color: #f3e5f5;
+    color: #4a154b;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-item input:focus {
-    border-color: #9c27b0; /* Darker purple on focus */
-    box-shadow: 0 0 5px rgba(156, 39, 176, 0.5); /* Purple glow */
+    border-color: #9c27b0;
+    box-shadow: 0 0 5px rgba(156, 39, 176, 0.5);
 }
 
 .card-item button {
     padding: 5px 10px;
 }
 
-/* Import button styling */
 .import-cards-label {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #ba68c8; /* Medium purple */
+    background-color: #ba68c8;
     color: white;
     border: none;
     border-radius: 5px;
@@ -192,20 +187,19 @@ button:disabled {
 }
 
 .import-cards-label:hover {
-    background-color: #9c27b0; /* Darker purple */
-    animation: jiggle 0.3s ease-in-out; /* Add jiggle animation */
+    background-color: #9c27b0;
+    animation: jiggle 0.3s ease-in-out;
 }
 
 .import-cards-label:active {
-    transform: scale(0.95); /* Squish effect */
+    transform: scale(0.95);
 }
 
-/* Toast notification styles */
 .toast {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ba68c8; /* Updated to medium purple */
+    background-color: #ba68c8;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -222,21 +216,20 @@ button:disabled {
     transform: translateY(0);
 }
 
-/* Icon page styles */
 .icon-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #f8e8f9; /* Light pinkish-purple background */
+    height: 100vh;
+    background-color: #f8e8f9;
 }
 
 .icon-circle {
     width: 150px;
     height: 150px;
-    background-color: #ba68c8; /* Medium purple */
-    border: 5px solid #d500f9; /* Bright purple border */
-    border-radius: 50%; /* Make it a circle */
+    background-color: #ba68c8;
+    border: 5px solid #d500f9;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,30 +252,69 @@ button:disabled {
     font-size: 48px;
     font-weight: bold;
     color: white;
-    z-index: 2; /* Ensure text is above the gradient */
+    z-index: 2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Landing page styles */
 .landing-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 20px;
-    margin-top: 20px; /* Add spacing below the header */
-    height: auto; /* Remove fixed height to prevent scrolling */
+    margin-top: 20px;
+    height: auto;
 }
 
 .description {
-    font-size: 16px; /* Slightly smaller font size */
-    color: #4a154b; /* Dark purple text */
-    margin-bottom: 15px; /* Reduced margin */
-    max-width: 500px; /* Reduced max width */
-    line-height: 1.4; /* Slightly tighter line spacing */
+    font-size: 16px;
+    color: #4a154b;
+    margin-bottom: 15px;
+    max-width: 500px;
+    line-height: 1.4;
 }
 
 .landing-buttons {
     display: flex;
     gap: 20px;
+}
+
+.stats-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    background-color: #f3e5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stats-container h2 {
+    color: #ba68c8;
+    margin-bottom: 10px;
+}
+
+.stats-container p, .stats-container ul {
+    color: #4a154b;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card-stat {
+    background-color: #f3e5f5;
+    border: 2px solid #d500f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-front, .card-back, .card-score {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #4a154b;
+}
+
+.card-front strong, .card-back strong, .card-score strong {
+    color: #ba68c8;
 }
