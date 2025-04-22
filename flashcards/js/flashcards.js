@@ -1,3 +1,5 @@
+sessionStorage.removeItem('flashcardStats');
+
 const storedFlashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
 const flashcards = storedFlashcards.map(card => ({
     ...card,
