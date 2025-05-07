@@ -21,6 +21,7 @@ function Bootstrapper(_pageTitle, _theme) {
         <div><img src="../images/icons/home_icon.png" onclick="ToPage('index.html')"></div>
         <hr>
             <div><img src="../images/icons/clock_icon.png" onclick="ToPage('school-countdown.html')"></div>
+            <div><img src="../images/icons/focus_timer.png" onclick="ToPage('focus.html')"></div>
             <div><img src="../images/icons/luna_icon.png" onclick="ToPage('luna.html')"></div>
             <div><img src="../images/icons/bug_icon.png" onclick="ToPage('programming.html')"></div>
             <div><img src="../images/icons/paper_icon.png" onclick="ToPage('less-homework-relates-to-greater-learing.html')"></div>
