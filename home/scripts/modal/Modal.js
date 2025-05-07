@@ -31,8 +31,6 @@ function onModalClosed(callback) {
 }
 
 // function loadModal() {
-//     document.writeln('<link rel="stylesheet" href="../styles/modal.css">');
-
 //     fetch('../scripts/modal/modal.html')
 //         .then(response => response.text())
 //         .then(html => {
@@ -49,7 +47,9 @@ function loadModal() {
 
         <div class="modal_container" style="display:none;">
             <div class="modal">
-                <p class="modal_closeButton">×</p>
+                <a class="modal_closeButton">
+                    <img src="../images/icons/close.png" alt="Close" />
+                </a>
                 <p class="modal_text">This is a modal message</p>
             </div>
         </div>
