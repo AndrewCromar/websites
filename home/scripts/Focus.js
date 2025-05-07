@@ -1,81 +1,36 @@
-let timer;
-let timerInterval;
-let isBreakTime = false;
-let cycleCount = 0;
-let totalCycles;
+// display the timer in format: 00:00 to .focus_timer (as the text)
+// at the end of a timer use showModal({message}, modalClosedFunction) to show a popup
 
-function initializeTimer() {
-    timer = 0;
-    updateTimerDisplay();
-}
+// how does it work
 
-function updateTimerDisplay() {
-    const minutes = Math.floor(timer / 60);
-    const seconds = timer % 60;
-    const timeString = `${padTime(minutes)}:${padTime(seconds)}`;
-    document.querySelector(".focus_timer").textContent = timeString;
-}
+// when i press start get the focus length, break length, and repeat times from number inputs wwith classes
+// focus_fl_input, focus_bl_input, and focus_rt_input respectivly
 
-function padTime(time) {
-    return time < 10 ? '0' + time : time;
-}
+// start the clock ticking down with teh focus length
 
-function startTimer() {
-    timerInterval = setInterval(() => {
-        if (timer > 0) {
-            timer--;
-            updateTimerDisplay();
-        } else {
-            clearInterval(timerInterval);
-            alert(isBreakTime ? "Time's up! Start focus time!" : "Time's up! Take a break!");
-            switchTimer();
-        }
-    }, 1000);
-}
+// when the clock reaches zero show a modal that says "Times up! Time to take a break!"
 
-function switchTimer() {
-    if (cycleCount < totalCycles) {
-        isBreakTime = !isBreakTime;
-        timer = isBreakTime ? breakLength : focusLength;
-        updateTimerDisplay();
-        setTimeout(() => {
-            startTimer();
-        }, 500);
-        cycleCount++;
-    } else {
-        alert("All done, good work!");
-    }
-}
+// when the modal is closed start another timer this time with the break length
 
-function focus_startButton() {
-    const focusLength = document.querySelector('.focus_fl_input').value * 60;
-    const breakLength = document.querySelector('.focus_bl_input').value * 60;
-    totalCycles = document.querySelector('.focus_rt_input').value;
-    cycleCount = 0;
-    timer = focusLength;
-    startTimer();
-    document.getElementById("pauseButton").style.display = "inline-block";
-    document.getElementById("resumeButton").style.display = "none";
-}
+// when the clock reaches zero show a modal that says "Times up! Time focus!"
+
+// when this modal is closed check how many times we have done this
+// if it is less than the reapeat times: go again for another focus and break
+// if it is greater than repeat times: show a modal "All done! Good job focusing!"
 
 function focus_pauseButton() {
-    clearInterval(timerInterval);
-    document.getElementById("pauseButton").style.display = "none";
-    document.getElementById("resumeButton").style.display = "inline-block";
+    updateButtons(false, true);
 }
 
 function focus_resumeButton() {
-    startTimer();
-    document.getElementById("pauseButton").style.display = "inline-block";
-    document.getElementById("resumeButton").style.display = "none";
+    updateButtons(true, false);
 }
 
 function focus_endButton() {
-    clearInterval(timerInterval);
-    timer = 0;
-    updateTimerDisplay();
-    document.getElementById("pauseButton").style.display = "none";
-    document.getElementById("resumeButton").style.display = "none";
+    updateButtons(false, false);
 }
 
-initializeTimer();
+function updateButtons(pause, resume){
+    document.getElementById("pauseButton").style.display = pause == true ? "inline-block" : "none";
+    document.getElementById("resumeButton").style.display = resume == true ? "inline-block" : "none";
+}

@@ -30,17 +30,30 @@ function onModalClosed(callback) {
     modalCallback = callback;
 }
 
-function loadModal() {
-    document.writeln('<link rel="stylesheet" href="../styles/modal.css">');
+// function loadModal() {
+//     document.writeln('<link rel="stylesheet" href="../styles/modal.css">');
 
-    fetch('../scripts/modal/modal.html')
-        .then(response => response.text())
-        .then(html => {
-            const div = document.createElement('div');
-            div.innerHTML = html;
-            document.body.appendChild(div);
-        })
-        .catch(err => console.error('Error loading modal HTML:', err));
+//     fetch('../scripts/modal/modal.html')
+//         .then(response => response.text())
+//         .then(html => {
+//             const div = document.createElement('div');
+//             div.innerHTML = html;
+//             document.body.appendChild(div);
+//         })
+//         .catch(err => console.error('Error loading modal HTML:', err));
+// }
+
+function loadModal() {
+    document.write(`
+        <link rel="stylesheet" href="../styles/modal.css">
+
+        <div class="modal_container" style="display:none;">
+            <div class="modal">
+                <p class="modal_closeButton">×</p>
+                <p class="modal_text">This is a modal message</p>
+            </div>
+        </div>
+    `);
 }
 
 loadModal();
