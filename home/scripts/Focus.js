@@ -1,5 +1,5 @@
-const breakMessage = "Times up! Time for a break!";
-const focusMessage = "Times up! Time to focus!";
+const breakMessage = "Time for a break!";
+const focusMessage = "Time to focus!";
 
 const ClockState = {
     Off: 2,
