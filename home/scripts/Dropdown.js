@@ -9,11 +9,11 @@ dropdownHeaders.forEach(header => {
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
             content.style.padding = "0 15px";
-            header.classList.remove('open'); // Remove rotation class
+            header.classList.remove('open');
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
             content.style.padding = "10px 15px";
-            header.classList.add('open'); // Add rotation class
+            header.classList.add('open');
         }
     });
 });
