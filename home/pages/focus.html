@@ -1,0 +1,56 @@
+<script src="../scripts/Bootstrapper.js"></script>
+<script>Bootstrapper("Focus", "dark")</script>
+
+<div class="content">
+    <center>
+        <div class="box" style="min-width: 50%;">
+            <div class="box-header">
+                <p>Timer</p>
+            </div>
+            <div class="box-content">
+                <center><p class="focus_timer">00:00</p></center>
+                <div class="focus_buttons">
+                    <p onclick="focus_startButton()"  id="startButton"                       >Start </p>
+                    <p onclick="focus_pauseButton()"  id="pauseButton"  style="display:none;">Pause </p>
+                    <p onclick="focus_resumeButton()" id="resumeButton" style="display:none;">Resume</p>
+                    <p onclick="focus_endButton()"    id="endButton"    style="display:none;">End   </p>
+                </div>
+            </div>
+        </div>
+    </center>
+    
+    <hr>
+    
+    <div class="dropdown-container">
+        <div class="dropdown-header">
+            <img src="../images/icons/dropdown_arrow_icon.png" alt="Arrow">
+            <p>Setup Timer</p>
+        </div>
+        <div class="dropdown-content">
+            <p>Focus length: <span><input class="focus_fl_input" type="number" value="10"/><br></span></p>
+            <p>Break length: <span><input class="focus_bl_input" type="number" value="5" /><br></span></p>
+        </div>
+    </div>
+
+    <div class="dropdown-container">
+        <div class="dropdown-header">
+            <img src="../images/icons/dropdown_arrow_icon.png" alt="Arrow">
+            <p>How to Use</p>
+        </div>
+        <div class="dropdown-content">
+            <ol>
+                <li>Open the setup timer dropdown.</li>
+                <li>Set how long you want each section to last.</li>
+                <li>Press the Start button.</li>
+                <li>A popup will appear at the end of each section.</li>
+                <ul>
+                    <li>Close the popup to start the next section.</li>
+                </ul>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/Modal.js"></script>
+<script src="../scripts/Dropdown.js"></script>
+<script src="../scripts/Focus.js"></script>

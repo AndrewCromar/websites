@@ -1,0 +1,41 @@
+.focus_timer {
+    font-size: 100px !important;
+}
+
+.focus_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    height: calc(1em + 14px + 4px);
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.focus_buttons > p {
+    background-color: var(--accent);
+
+    border-radius: 10px;
+    border: solid var(--accent-dark) 2px;
+
+    margin-right: 10px;
+    padding: 5px 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition-duration: 200ms;
+}
+
+.focus_buttons > p:hover {
+    background-color: var(--accent-dark);
+
+    padding: 7px 12px;
+}
