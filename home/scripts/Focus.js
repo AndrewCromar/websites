@@ -1,36 +1,100 @@
-// display the timer in format: 00:00 to .focus_timer (as the text)
-// at the end of a timer use showModal({message}, modalClosedFunction) to show a popup
+const breakMessage = "Times up! Time for a break!";
+const focusMessage = "Times up! Time to focus!";
 
-// how does it work
+const ClockState = {
+    Off: 2,
+    Focus: 0,
+    Break: 1
+};
+var state = ClockState.Off;
 
-// when i press start get the focus length, break length, and repeat times from number inputs wwith classes
-// focus_fl_input, focus_bl_input, and focus_rt_input respectivly
+const tickerInterval = 1000;
+var ticker = null;
 
-// start the clock ticking down with teh focus length
+var focusLength = 10;
+var breakLength = 5;
 
-// when the clock reaches zero show a modal that says "Times up! Time to take a break!"
+var currentTick = 0;
+var ticksLeft = 0;
 
-// when the modal is closed start another timer this time with the break length
+const clockObjectClass = ".focus_timer";
 
-// when the clock reaches zero show a modal that says "Times up! Time focus!"
+function clockTick() {
+    console.log(`Tick: ${currentTick}, State: ${state}, Focus Length: ${focusLength}, Break Length: ${breakLength}`);
 
-// when this modal is closed check how many times we have done this
-// if it is less than the reapeat times: go again for another focus and break
-// if it is greater than repeat times: show a modal "All done! Good job focusing!"
+    currentTick ++;
+    if(state === ClockState.Focus) ticksLeft = focusLength * 60 - currentTick;
+    if(state === ClockState.Break) ticksLeft = breakLength * 60 - currentTick;
+
+    if((state === ClockState.Focus && currentTick >= focusLength * 60)
+    || (state === ClockState.Break && currentTick >= breakLength * 60))
+        setupNextClock();
+
+    updateClockUI();
+}
+
+function updateClockUI() {
+    let minutes = Math.floor(ticksLeft / 60);
+    let seconds = ticksLeft % 60;
+
+    minutes = minutes.toString().padStart(2, '0');
+    seconds = seconds.toString().padStart(2, '0');
+
+    document.querySelector(clockObjectClass).innerHTML = `${minutes}:${seconds}`;
+}
+
+function startClock() {
+    if (!ticker) ticker = setInterval(clockTick, tickerInterval);
+}
+
+function stopClock() {
+    clearInterval(ticker);
+    ticker = null;
+}
+
+function setupNextClock() {
+    currentTick = 0;
+    state = state === ClockState.Focus ? ClockState.Break : ClockState.Focus;
+
+    stopClock();
+    showModal(state === ClockState.Focus ? focusMessage : breakMessage, () => startClock());
+}
+
+function focus_startButton() {
+    updateButtons(false, true, false, true);
+
+    focusLength = document.querySelector(".focus_fl_input").value;
+    breakLength = document.querySelector(".focus_bl_input").value;
+
+    currentTick = 0;
+
+    state = ClockState.Focus;
+
+    startClock();
+}
 
 function focus_pauseButton() {
-    updateButtons(false, true);
+    updateButtons(false, false, true, true);
+
+    stopClock();
 }
 
 function focus_resumeButton() {
-    updateButtons(true, false);
+    updateButtons(false, true, false, true);
+
+    startClock();
 }
 
 function focus_endButton() {
-    updateButtons(false, false);
+    updateButtons(true, false, false, false);
+
+    stopClock();
+    document.querySelector(clockObjectClass).innerHTML = "00:00";
 }
 
-function updateButtons(pause, resume){
-    document.getElementById("pauseButton").style.display = pause == true ? "inline-block" : "none";
+function updateButtons(start, pause, resume, end){
+    document.getElementById("startButton").style.display  = start  == true ? "inline-block" : "none";
+    document.getElementById("pauseButton").style.display  = pause  == true ? "inline-block" : "none";
     document.getElementById("resumeButton").style.display = resume == true ? "inline-block" : "none";
+    document.getElementById("endButton").style.display    = end    == true ? "inline-block" : "none";
 }
