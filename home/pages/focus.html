@@ -8,12 +8,22 @@
                 <p>Timer</p>
             </div>
             <div class="box-content">
-                <center><p class="focus_timer">00:00</p></center>
-                <div class="focus_buttons">
-                    <p onclick="focus_startButton()"  id="startButton"                       >Start </p>
-                    <p onclick="focus_pauseButton()"  id="pauseButton"  style="display:none;">Pause </p>
-                    <p onclick="focus_resumeButton()" id="resumeButton" style="display:none;">Resume</p>
-                    <p onclick="focus_endButton()"    id="endButton"    style="display:none;">End   </p>
+                <div id="fullscreen_box" class="fullscreenable fullscreen_closed">
+                    <div id="fullscreen_allowCenter">
+                        <center><p class="focus_timer">00:00</p></center>
+                        <div class="focus_buttons">
+                            <p onclick="focus_startButton()"  id="startButton"                       >Start </p>
+                            <p onclick="focus_pauseButton()"  id="pauseButton"  style="display:none;">Pause </p>
+                            <p onclick="focus_resumeButton()" id="resumeButton" style="display:none;">Resume</p>
+                            <p onclick="focus_endButton()"    id="endButton"    style="display:none;">End   </p>
+                        </div>
+                    </div>
+                    <div id="fullscreen_open" class="fullscreen_button" onclick="fullscreen_openButton()">
+                        <img src="../images/icons/fullscreen.png">
+                    </div>
+                    <div id="fullscreen_close" class="fullscreen_button" onclick="fullscreen_closeButton()" style="display: none;">
+                        <img src="../images/icons/close.png">
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,3 +64,4 @@
 <script src="../scripts/Modal.js"></script>
 <script src="../scripts/Dropdown.js"></script>
 <script src="../scripts/Focus.js"></script>
+<script src="../scripts/Fullscreen.js"></script>

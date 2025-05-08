@@ -11,6 +11,7 @@ function Bootstrapper(_pageTitle, _theme) {
         <link rel="stylesheet" href="../styles/box.css">
         <link rel="stylesheet" href="../styles/vertical-text.css">
         <link rel="stylesheet" href="../styles/focus.css">
+        <link rel="stylesheet" href="../styles/fullscreen.css">
         <link rel="stylesheet" href="../styles/themes/${_theme}.css">
         
         <div class="title">

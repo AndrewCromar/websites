@@ -21,8 +21,8 @@
     border: solid var(--accent-dark) 2px;
     border-radius: 10px;
 
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 10px;
+    padding-right: 40px;
 
     width: 300px;
     height: auto;
