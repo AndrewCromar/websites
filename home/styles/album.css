@@ -1,0 +1,53 @@
+:root {
+    --plyr-color-main: var(--accent);
+    --plyr-audio-controls-background: var(--accent-light);
+}
+
+.plyr--audio .plyr__controls {
+    border: solid var(--accent-dark) 2px !important;
+    border-radius: 10px !important;
+}
+
+.album {
+    width: 200px;
+    height: 200px;
+
+    margin: 10px;
+    padding: 0;
+
+    border: solid black 2px;
+    border-radius: 10px;
+
+    filter: drop-shadow(0 0 10px black);
+
+    cursor: pointer;
+}
+
+.audio-footer {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    height: 65px;
+
+    background-color: var(--accent);
+
+    border-top: solid var(--accent-dark) 2px;
+    border-bottom: solid var(--accent-dark) 2px;
+
+    filter: drop-shadow(0 0 10px var(--accent));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-footer .plyr {
+    width: 100%;
+    max-width: calc(100% - 20px);
+}
