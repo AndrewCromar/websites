@@ -1,0 +1,25 @@
+:root {
+    --bg-darkest: hsl(0 0% 70%);
+    --bg-dark: hsl(0 0% 80%);
+    --bg: hsl(0 0% 85%);
+    --bg-light: hsl(0 0% 90%);
+
+    --border: hsl(0 0% 70%);
+    --border-radius: 10px;
+
+    --highlight: hsl(0 0% 40%);
+
+    --text: hsl(0 0% 5%);
+    --text-muted: hsl(0 0% 30%);
+
+    --primary: hsl(274 100% 50%);
+    --secondary: hsl(215 100% 50%);
+
+    --danger: oklch(0.7 0.12% 30%);
+    --warning: oklch(0.7 0.12% 100%);
+    --success: oklch(0.7 0.12% 160%);
+    --info: oklch(0.7 0.12% 260%);
+
+    --gradient: linear-gradient( 0deg, var(--bg) 95%, var(--bg-light));
+    --gradient-hover: linear-gradient( 0deg, var(--bg), var(--bg-light));
+}
