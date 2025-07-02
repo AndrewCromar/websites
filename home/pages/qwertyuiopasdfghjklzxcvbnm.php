@@ -7,12 +7,10 @@ if (!isset($_GET['key']) || $_GET['key'] !== $secret) {
     exit('Forbidden');
 }
 
-$msg = isset($_GET['msg']) ? urldecode($_GET['msg']) : '(No message provided)';
-
 $subject = "Andrew studied some college stuff!";
-$body = "Here is what he worked on:\n\n" . $msg;
+$body = "Andrew has been studying he just finished a notable bit of research.";
 
-$to = 'andrewmcromar@gmail.com'; //, scromar@gmail.com';
+$to = 'andrewmcromar@gmail.com, scromar@gmail.com';
 
 mail($to, $subject, $body);
 
