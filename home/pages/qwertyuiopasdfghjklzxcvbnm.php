@@ -12,9 +12,9 @@ $msg = isset($_GET['msg']) ? urldecode($_GET['msg']) : '(No message provided)';
 
 $subject = "Andrew studied some college stuff!";
 
-$body = "Hello Scott,\n\nAndrew has been studying he just finished a notable section.\n\nHere is what he worked on:\n" . $msg;
+$body = "Hello Scott,\n\nAndrew has been studying and he just finished a notable section.\n\nHere is what he worked on:\n" . $msg . "\n\nThanks,\nAutomated Andrew\n\nP.S. This is just a commit message; it is supposed to be short.";
 
-$to = 'andrewmcromar@gmail.com'; //, scromar@gmail.com';
+$to = 'andrewmcromar@gmail.com, scromar@gmail.com';
 
 if ($use_custom_from) {
     $from = 'me@andrewcromar.org';
