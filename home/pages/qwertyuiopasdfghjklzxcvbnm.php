@@ -1,7 +1,7 @@
 <?php
 
 $secret = 'boobs';
-$use_custom_from = true;
+$use_custom_from = false;
 
 if (!isset($_GET['key']) || $_GET['key'] !== $secret) {
     http_response_code(403);
