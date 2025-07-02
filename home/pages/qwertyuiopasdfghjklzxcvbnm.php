@@ -7,5 +7,10 @@ if (!isset($_GET['key']) || $_GET['key'] !== $secret) {
     exit('Forbidden');
 }
 
-mail('andrewmcromar@gmail.com', 'Subject', 'Message triggered by GitHub Action');
+$msg = isset($_GET['msg']) ? $_GET['msg'] : '(No message provided)';
+
+$subject = "Andrew studied some college stuff!";
+$body = "Here is what he worked on:\n\n" . $msg;
+
+mail('andrewmcromar@gmail.com', $subject, $body);
 echo 'Email sent.';
