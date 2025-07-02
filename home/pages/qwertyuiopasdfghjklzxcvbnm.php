@@ -13,11 +13,11 @@ $msg = isset($_GET['msg']) ? urldecode($_GET['msg']) : '(No message provided)';
 $subject = "Andrew studied some college stuff!";
 $body = "Here is what he worked on:\n\n" . $msg;
 
-$to = 'andrewmcromar@gmail.com, scromar@gmail.com';
+$to = 'andrewmcromar@gmail.com'; //, scromar@gmail.com';
 
 if ($use_custom_from) {
     $from = 'me@andrewcromar.org';
-    $headers = "From: Notification <{$from}>\r\n";
+    $headers = "From: Automated Andrew <{$from}>\r\n";
     $headers .= "Reply-To: {$from}\r\n";
     mail($to, $subject, $body, $headers);
 } else {
