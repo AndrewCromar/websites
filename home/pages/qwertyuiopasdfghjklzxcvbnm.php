@@ -1,3 +1,6 @@
+<!-- THIS PAGE IS FOR THE AUTOMATED EMAILS WHEN I RESEARCH COLLEGE STUFF -->
+<!-- A GITHUB ACTION WILL PING THE PAGE AND TRIGGER THE EMAIL -->
+
 <?php
 
 $secret = 'boobs';
@@ -14,15 +17,18 @@ $subject = "Andrew studied some college stuff!";
 
 $body = "Hello Scott,\n\nAndrew has been studying and he just finished a notable section.\n\nHere is what he worked on:\n" . $msg . "\n\nThanks,\nAutomated Andrew\n\nP.S. This is just a commit message; it is supposed to be short.";
 
-$to = 'andrewmcromar@gmail.com, scromar@gmail.com';
+$to = 'scromar@gmail.com';
+$cc = 'andrewmcromar@gmail.com';
 
 if ($use_custom_from) {
     $from = 'me@andrewcromar.org';
     $headers = "From: Automated Andrew <{$from}>\r\n";
     $headers .= "Reply-To: {$from}\r\n";
+    $headers .= "Cc: {$cc}\r\n";
     mail($to, $subject, $body, $headers);
 } else {
-    mail($to, $subject, $body);
+    $headers = "Cc: {$cc}\r\n";
+    mail($to, $subject, $body, $headers);
 }
 
 echo 'Email sent.';
