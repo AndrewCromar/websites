@@ -17,7 +17,7 @@ $subject = "Andrew studied some college stuff!";
 
 $body = "Hello Scott,\n\nAndrew has been studying and he just finished a notable section.\n\nHere is what he worked on:\n" . $msg . "\n\nThanks,\nAutomated Andrew\n\nP.S. This is just a commit message; it is supposed to be short.";
 
-$to = 'scromar@gmail.com';
+$to = 'scromar@gmail.com,catcromar@gmail.com';
 $cc = 'andrewmcromar@gmail.com';
 
 if ($use_custom_from) {
