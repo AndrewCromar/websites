@@ -21,7 +21,7 @@ $to = 'scromar@gmail.com,catcromar@gmail.com';
 $cc = 'andrewmcromar@gmail.com';
 
 if ($use_custom_from) {
-    $from = 'me@andrewcromar.org';
+    $from = 'notifacations@andrewcromar.org';
     $headers = "From: Automated Andrew <{$from}>\r\n";
     $headers .= "Reply-To: {$from}\r\n";
     $headers .= "Cc: {$cc}\r\n";
