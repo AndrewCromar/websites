@@ -40,7 +40,12 @@ function updateClockUI() {
     minutes = minutes.toString().padStart(2, '0');
     seconds = seconds.toString().padStart(2, '0');
 
-    document.querySelector(clockObjectClass).innerHTML = `${minutes}:${seconds}`;
+    const timeString = `${minutes}:${seconds}`;
+    document.querySelector(clockObjectClass).innerHTML = timeString;
+
+    const stateName = state === ClockState.Focus ? "Focus" :
+                      state === ClockState.Break ? "Break" : "Stopped";
+    document.title = `${stateName} - ${timeString}`;
 }
 
 function startClock() {
@@ -57,8 +62,17 @@ function setupNextClock() {
     state = state === ClockState.Focus ? ClockState.Break : ClockState.Focus;
 
     stopClock();
-    showModal(state === ClockState.Focus ? focusMessage : breakMessage, () => startClock());
+
+    const timerSound = document.getElementById("timerSound");
+    timerSound.currentTime = 0;
+    timerSound.play().catch(err => console.error("Audio play failed:", err));
+
+    showModal(state === ClockState.Focus ? focusMessage : breakMessage, () => {
+        timerSound.pause();
+        startClock();
+    });
 }
+
 
 function focus_startButton() {
     updateButtons(false, true, false, true);
