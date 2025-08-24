@@ -216,7 +216,8 @@ a {
 
     overflow: hidden;
     
-    width: 220px;
+    /* width: 120px; */
+    width: 14%;
     height: fit-content;
 }
 
