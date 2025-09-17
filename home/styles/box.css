@@ -32,3 +32,11 @@
     margin: 10px 0;
     font-size: 14px;
 }
+
+.side-by-side { display: block; }
+.side-by-side > .box { width: auto; box-sizing: border-box; }
+
+@media (min-width: 800px) {
+    .side-by-side { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .side-by-side > .box { flex: 1 1 45%; min-width: 220px; }
+}
