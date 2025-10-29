@@ -77,5 +77,30 @@ const recipes = [
       "Put it into a pan.",
       "Bake it for however long the instructions say (I know these are the instructions but just use the box common)."
     ]
-  }
+  },
+
+
+
+
+
+  {
+  title: "Edible Cookie Dough",
+  ingredients: [
+    { amount: "1 1/2 cups (180g)", item: "all-purpose flour." },
+    { amount: "3 tablespoons (38g)", item: "granulated sugar." },
+    { amount: "6 tablespoons (75g)", item: "brown sugar, packed." },
+    { amount: "3 tablespoons (45g)", item: "melted butter." },
+    { amount: "3 tablespoons (45mL)", item: "milk, plus more if needed." },
+    { amount: "1/2 teaspoon", item: "vanilla paste or extract." },
+    { amount: "Pinch", item: "of salt." },
+    { amount: "Optional", item: "mix-ins (chocolate chips, sprinkles, etc.)." }
+  ],
+  directions: [
+    "Microwave the flour for 30–60 seconds to heat-treat it and kill any bacteria. Let it cool completely.",
+    "In a medium bowl, whisk together the flour, granulated sugar, brown sugar, and salt until evenly combined.",
+    "Add the melted butter, milk, and vanilla, then stir until a smooth dough forms. If it feels too dry, add a splash of milk at a time until the texture is right.",
+    "Fold in your favorite mix-ins like chocolate chips or sprinkles.",
+    "Enjoy immediately or store covered in the fridge for up to 3 days."
+  ]
+}
 ];
