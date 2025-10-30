@@ -98,6 +98,14 @@ a {
     justify-content: space-between;
 }
 
+.sbssmallleft > .left {
+    width: 24%;
+}
+
+.sbssmallleft > .right {
+    width: 74%;
+}
+
 .left, .right {
     background-color: var(--bg);
     
@@ -112,7 +120,7 @@ a {
     width: 100%;
 
     border-radius: 5px;
-    border: solid gray 2px;
+    border: solid var(--text-muted) 2px;
 }
 
 .topbutton {
@@ -128,13 +136,13 @@ a {
     
     font-size: 18px;
     
-    border: solid var(--border) 2px;
+    border: solid var(--bg-dark) 4px;
     
     outline: none;
     
     color: var(--text-muted);
     cursor: pointer;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
 
     transition-duration: 200ms;
