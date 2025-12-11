@@ -1,0 +1,10 @@
+.iconlist > i,
+.iconlist > img {
+  font-size: 75px;
+  height: 75px;
+}
+
+.posterlist > img {
+  width: 75px;
+  border: solid 2px var(--text);
+}

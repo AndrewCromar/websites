@@ -1,0 +1,18 @@
+:root {
+  --primary: oklch(0.78 0.14 260);
+
+  --bg-dark:  oklch(0.25 0.03 260);
+  --bg:       oklch(0.32 0.02 260);
+  --bg-light: oklch(0.42 0.015 260);
+
+  --text:        oklch(0.92 0.01 260);
+  --text-muted:  oklch(0.75 0.015 260);
+
+  --shadow-s: inset 0 1px 2px #ffffff10,
+              0 1px 2px #00000040,
+              0 1px 4px #00000030;
+
+  --shadow-m: inset 0 1px 2px #ffffff15,
+              0 2px 4px #00000045,
+              0 4px 8px #00000035;
+}

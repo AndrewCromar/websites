@@ -1,0 +1,57 @@
+<div data-include="../fragments/imports.html"></div>
+<div
+  data-include="../fragments/title.html"
+  data-vars="title:Andrew Cromar,subtitle:Welcome to my website!"
+></div>
+<div data-include="../fragments/navbar.html"></div>
+
+<div class="container">
+  <div class="container-raised">
+    <h2>About Me</h2>
+    <hr />
+    <p>
+      <span style="font-weight: bold">Interests/Hobbies:</span> Programming,
+      parkour, surfing, climbing, gaming.
+    </p>
+    <p>
+      <span style="font-weight: bold">Current Age:</span>
+      <span class="ageText"></span>.
+    </p>
+  </div>
+</div>
+<div class="container">
+  <div class="container-raised">
+    <h2>Favorite Video Games</h2>
+    <hr />
+    <div data-include="../fragments/gameicons.html"></div>
+    <p style="color: var(--text-muted)">
+      * I am most likely missing some items here.
+    </p>
+    <div class="buttons-container">
+      <div
+        data-include="../fragments/igdbButton.html"
+        data-vars="text:Posters from IGDB"
+      ></div>
+    </div>
+  </div>
+  <div class="container-raised">
+    <h2>Favorite Shows and Movies</h2>
+    <hr />
+    <div data-include="../fragments/showsandmoviesicons.html"></div>
+    <p style="color: var(--text-muted)">
+      * I am most likely missing some items here.
+    </p>
+    <div class="buttons-container">
+      <div
+        data-include="../fragments/tmdbButton.html"
+        data-vars="text:Posters from TMDB"
+      ></div>
+    </div>
+  </div>
+</div>
+<br />
+
+<script src="../scripts/FragmentLoader.js"></script>
+<script src="../scripts/ToPage.js"></script>
+<script src="../scripts/Theme.js"></script>
+<script src="../scripts/AgeText.js"></script>

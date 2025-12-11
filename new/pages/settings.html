@@ -1,0 +1,37 @@
+<div data-include="../fragments/imports.html"></div>
+<div
+  data-include="../fragments/title.html"
+  data-vars="title:Settings,subtitle:Adjust the site to your hearts desire."
+></div>
+<div data-include="../fragments/navbar.html"></div>
+
+<div class="container">
+  <div class="container-raised">
+    <h2>Theme Selector</h2>
+    <p style="color: var(--text-muted)">Select any theme you like.</p>
+    <hr />
+    <div class="buttons-container">
+      <div
+        data-include="../fragments/theme.html"
+        data-vars="name:light,icon:fa-solid fa-sun,displayName:Light"
+      ></div>
+      <div
+        data-include="../fragments/theme.html"
+        data-vars="name:dark,icon:fa-solid fa-moon,displayName:Dark"
+      ></div>
+      <div
+        data-include="../fragments/theme.html"
+        data-vars="name:smoke,icon:fa-solid fa-smoking,displayName:Smoke"
+      ></div>
+      <div
+        data-include="../fragments/theme.html"
+        data-vars="name:midnight,icon:fa-solid fa-star,displayName:Midnight"
+      ></div>
+    </div>
+  </div>
+</div>
+<br />
+
+<script src="../scripts/FragmentLoader.js"></script>
+<script src="../scripts/ToPage.js"></script>
+<script src="../scripts/Theme.js"></script>

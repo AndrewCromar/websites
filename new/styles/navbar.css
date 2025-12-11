@@ -1,0 +1,40 @@
+.navbar-container {
+  background-color: var(--bg);
+
+  width: calc(100% - 10px - 10px - 26px - 26px);
+  height: fit-content;
+
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  padding-left: 26px;
+  padding-right: 26px;
+
+  box-shadow: var(--shadow-s);
+
+  border-radius: 26px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: right;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.navbar-spacer {
+  background-color: var(--bg-light);
+
+  width: fit-content;
+  height: 16px;
+
+  margin: 0px;
+  padding: 10px;
+
+  box-shadow: var(--shadow-m);
+
+  border-radius: 26px;
+}
