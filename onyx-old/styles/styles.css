@@ -1,0 +1,292 @@
+html, body {
+    font-family: "Source Code Pro", monospace;
+
+    background-color: var(--bg-darkest);
+    color: var(--text-muted);
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text);
+}
+
+.content {
+    background-color: var(--bg-dark);
+
+    width: 90%;
+    max-width: 1000px;
+
+    height: fit-content;
+    min-height: calc(100% - 60px);
+
+    margin: 20px;
+
+    padding: 10px;
+    
+    border-radius: 10px;
+}
+
+.onyxbanner {
+    width: 100%;
+
+    border-top-left-radius: 7.5px;
+    border-top-right-radius: 7.5px;
+
+    border-bottom: solid var(--border) 2px;
+}
+
+hr {
+    background-color: var(--text);
+
+    width: 100%;
+    height: 2px;
+
+    border: none;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: var(--text-muted);
+}
+
+.starter, .spacer, .finisher {
+    background-color: var(--bg);
+    
+    height: 10px;
+    
+    border-radius: 5px;
+}
+
+.starter {
+    margin-top: 10px;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.spacer {
+    border-radius: 0;
+}
+
+.finisher {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.single {
+    background-color: var(--bg);
+
+    padding: 10px;
+}
+
+.sidebyside {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sbssmallleft > .left {
+    width: 24%;
+}
+
+.sbssmallleft > .right {
+    width: 74%;
+}
+
+.left, .right {
+    background-color: var(--bg);
+    
+    width: 48%;
+    
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.projectimage {
+    width: 100%;
+
+    border-radius: 5px;
+    border: solid var(--text-muted) 2px;
+}
+
+.topbutton {
+    background-color: var(--bg);
+
+    display: none;
+    position: fixed;
+    
+    bottom: 10px;
+    right: 10px;
+    
+    z-index: 99;
+    
+    font-size: 18px;
+    
+    border: solid var(--bg-dark) 4px;
+    
+    outline: none;
+    
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+
+    transition-duration: 200ms;
+}
+
+.topbutton:hover {
+    background-color: var(--bg);
+}
+
+.social {
+    width: fit-content;
+    display: block;
+
+    text-decoration: none;
+}
+
+.social > div {
+    background-color: var(--bg-light);
+
+    border-radius: 5px;
+    border: solid var(--border) 2px;
+
+    margin: 5px;
+
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.social > div > img {
+    height: 50px;
+    
+    border-right: solid var(--border) 2px;
+
+    margin-right: 5px;
+}
+
+.social > div  > p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.social > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.social > div > div > p {
+    margin: 0;
+    margin-right: 5px;
+
+    text-decoration: underline;
+}
+
+.social > div > div > p:nth-of-type(2) {
+    font-size: 10px;
+}
+
+.headshots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.headshot {
+    background-color: var(--bg-light);
+    text-align: center;
+
+    margin: 10px;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: solid var(--border) 2px;
+
+    overflow: hidden;
+    
+    /* width: 120px; */
+    width: 14%;
+    height: fit-content;
+}
+
+.headshot > img {
+    border-radius: 500px;
+    border: solid var(--border) 2px;
+
+    width: 100%;
+}
+
+.collapsible-container {
+    background-color: var(--bg);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.collapsible {
+    background-color: var(--bg);
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+.collapsible:hover {
+    background-color: var(--bg-light    );
+}
+
+.collapsible-content {
+    padding: 10px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--bg);
+    display: block;
+}
+
+.video-thumbnail {
+    width: 250px;
+
+    margin: 0;
+    padding: 0;
+
+    border: solid gray 2px;
+    border-radius: 5px;
+}
+
+.theme-selector {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 5px;
+}
+
+.theme-selector > p {
+    color: var(--text);
+}
+
+.theme-selector > a {
+    text-decoration: underline;
+    cursor: pointer;
+}
