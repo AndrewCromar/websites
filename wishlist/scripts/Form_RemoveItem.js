@@ -2,17 +2,19 @@ function RemoveItem(id) {
   $.ajax({
     url: "../backend/RemoveItem.php",
     type: "POST",
-    data: {
-      id,
-    },
+    data: { id },
+    dataType: "json",
     success: function (response) {
-      if (response === "OK") {
-        console.log("DEV REMOVE ITEM:", response);
+      if (response.status === "ok") {
         document.location.reload();
       } else {
-        alert("Failed to remove item.");
+        alert("Failed to remove item: " + (response.message || "Unknown error"));
       }
     },
+    error: function (xhr, status, error) {
+      alert("Failed to remove item due to server error.");
+      console.error("AJAX error:", status, error, xhr.responseText);
+    }
   });
 }
 

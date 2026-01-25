@@ -50,6 +50,20 @@ if (!isset($_SESSION['uid'])) {
         ".
       </li>
     </ul>
+    <button id="logoutButton">Logout</button>
+  </div>
+</div>
+
+<div class="dropdown startOpen">
+  <div onclick="Dropdown(this.parentElement)">
+    <i class="fa-solid fa-caret-down"></i>
+    <p>Add Funding</p>
+  </div>
+  <div>
+    <form id="addFundingForm" class="neatForm">
+      <input type="number" id="add_funding_amount" name="add_funding_amount" placeholder="Amount to Add (USD)" required />
+      <button type="button" id="addFundingButton">Add Funding</button>
+    </form>
   </div>
 </div>
 
@@ -81,12 +95,15 @@ if (!isset($_SESSION['uid'])) {
 <div class="dropdown">
   <div onclick="Dropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
-    <p>Remove Item</p>
+    <p>Edit Item</p>
   </div>
   <div>
-    <form id="removeItemForm" class="neatForm">
-      <input type="number" id="remove_id" name="remove_id" placeholder="Item ID to Remove" required />
-      <button type="button" id="removeItemButton">Remove Item</button>
+    <form id="editItemForm" class="neatForm">
+      <input type="number" id="edit_id" name="edit_id" placeholder="Item ID to Edit" required />
+      <input type="text" id="edit_name" name="edit_name" placeholder="Name" required />
+      <input type="text" id="edit_link" name="edit_link" placeholder="Link" required />
+      <input type="number" id="edit_price" name="edit_price" placeholder="Price (USD)" required />
+      <button type="button" id="editItemButton">Edit Item</button>
     </form>
   </div>
 </div>
@@ -94,28 +111,25 @@ if (!isset($_SESSION['uid'])) {
 <div class="dropdown">
   <div onclick="Dropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
-    <p>Add Funding</p>
+    <p>Remove Item</p>
   </div>
   <div>
-    <form id="addFundingForm" class="neatForm">
-      <input type="number" id="add_funding_amount" name="add_funding_amount" placeholder="Amount to Add (USD)" required />
-      <button type="button" id="addFundingButton">Add Funding</button>
+    <form id="removeItemForm" class="neatForm">
+      <input type="number" id="remove_id" name="remove_id" placeholder="Item ID to Remove" required />
+      <button type="button" id="removeItemButton">Remove Item</button>
+    </form>
+    <form id="removeBoughtForm" class="neatForm">
+      <button type="button" id="removeBoughtButton">Remove Bought Items</button>
     </form>
   </div>
 </div>
 
-<!-- <div class="dropdown">
-  <div onclick="Dropdown(this.parentElement)">
-    <i class="fa-solid fa-caret-down"></i>
-    <p>Edit Item</p>
-  </div>
-  <div>
-  </div>
-</div> -->
-
 <script src="../scripts/Form_AddItem.js"></script>
 <script src="../scripts/Form_RemoveItem.js"></script>
+<script src="../scripts/Form_EditItem.js"></script>
 <script src="../scripts/MarkBought.js"></script>
 <script src="../scripts/Form_AddFunding.js"></script>
 <script src="../scripts/Dropdown.js"></script>
+<script src="../scripts/LogoutButton.js"></script>
 <script src="../scripts/RenderItems.js"></script>
+<script src="../scripts/RemoveBoughtButton.js"></script>

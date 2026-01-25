@@ -7,31 +7,28 @@ $email = $_POST['email'] ?? '';
 $uid = GetUidByEmail($email);
 
 if (!$uid) {
-    echo "ERROR001";
-    exit;
+  echo "ERROR001";
+  exit;
 }
 
-// --- RATE LIMIT ---
 if (!isset($_SESSION['last_code_request'])) {
-    $_SESSION['last_code_request'] = [];
+  $_SESSION['last_code_request'] = [];
 }
 
 $now = time();
 $lastRequest = $_SESSION['last_code_request'][$uid] ?? 0;
 
-if ($now - $lastRequest < 30) { // 30 seconds cooldown
-    echo "ERROR_RATE_LIMIT";
-    exit;
+if ($now - $lastRequest < 30) {
+  echo "ERROR_RATE_LIMIT";
+  exit;
 }
 
 $_SESSION['last_code_request'][$uid] = $now;
 
-// --- GENERATE CODE ---
 $code = GenerateLoginCodeForUser($uid);
 
-// --- SEND EMAIL ---
 $to = $email;
-$subject = "Your Login Code for Finance Dat Ho";
+$subject = "Your Login Code for Wishlist";
 
 $body = "
 <html>
@@ -47,7 +44,7 @@ $body = "
 <body>
   <div class='container'>
     <div class='header'>Hello!</div>
-    <p>You requested a login code for <strong>Finance Dat Ho</strong>.</p>
+    <p>You requested a login code for <strong>Wishlist</strong>.</p>
     <p>Your login code is:</p>
     <div class='code'>{$code}</div>
     <p>This code is valid for 10 minutes. Do not share it with anyone.</p>
@@ -59,10 +56,9 @@ $body = "
 
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-$headers .= "From: HellHotel Login <no-reply@financedatho.com>\r\n";
-$headers .= "Reply-To: no-reply@financedatho.com\r\n";
+$headers .= "From: Wishlist Login <no-reply@andrewcromar.org>\r\n";
+$headers .= "Reply-To: no-reply@andrewcromar.org\r\n";
 
 mail($to, $subject, $body, $headers);
 
-// return code in response for dev/testing (remove in production)
 // echo $code;

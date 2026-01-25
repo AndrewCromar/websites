@@ -84,15 +84,15 @@ function RenderItems(firstRender = false) {
   });
 
   if (firstRender) {
-    setTimeout(OpenWishlistDropdown, 100);
+    setTimeout(OpenStartOpenDropdowns, 100);
   }
 }
 
-function OpenWishlistDropdown() {
-  const wishlistDropdown = document.querySelector(".dropdown.startOpen");
-  if (wishlistDropdown) {
-    Dropdown(wishlistDropdown);
-  }
+function OpenStartOpenDropdowns() {
+  const startOpenDropdowns = document.querySelectorAll(".dropdown.startOpen");
+  startOpenDropdowns.forEach(dropdown => {
+    Dropdown(dropdown);
+  });
 }
 
 RenderItems(true);
