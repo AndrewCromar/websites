@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/GetUidByEmail.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '
+include_once __DIR__ . '/GetUidByEmail.php';
+include_once __DIR__ . '/GenerateLoginCode.php';
 
 $email = $_POST['email'] ?? '';
 $uid = GetUidByEmail($email);
@@ -28,37 +28,31 @@ $_SESSION['last_code_request'][$uid] = $now;
 $code = GenerateLoginCodeForUser($uid);
 
 $to = $email;
-$subject = "Your Login Code for Wishlist";
+$subject = "Your Wishlist Login Code";
+$from = 'no-reply@andrewcromar.org';
 
-$body = "
-<html>
-<head>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #f7f7f7; color: #333; }
-    .container { background-color: #fff; padding: 20px; border-radius: 8px; max-width: 600px; margin: auto; }
-    .header { font-size: 20px; font-weight: bold; margin-bottom: 10px; }
-    .code { font-size: 24px; font-weight: bold; color: #a200ff; margin: 20px 0; }
-    .footer { font-size: 12px; color: #777; margin-top: 30px; }
-  </style>
-</head>
-<body>
-  <div class='container'>
-    <div class='header'>Hello!</div>
-    <p>You requested a login code for <strong>Wishlist</strong>.</p>
-    <p>Your login code is:</p>
-    <div class='code'>{$code}</div>
-    <p>This code is valid for 10 minutes. Do not share it with anyone.</p>
-    <div class='footer'>If you didn't request this code, you can safely ignore this email.</div>
-  </div>
-</body>
-</html>
-";
+$body = <<<EOD
+Hello,
 
-$headers = "MIME-Version: 1.0\r\n";
-$headers .= "Content-type: text/html; charset=UTF-8\r\n";
-$headers .= "From: Wishlist Login <no-reply@andrewcromar.org>\r\n";
-$headers .= "Reply-To: no-reply@andrewcromar.org\r\n";
+Your login code for Wishlist is:
 
-mail($to, $subject, $body, $headers);
+    {$code}
 
-// echo $code;
+This code is valid for 10 minutes. Please do not share it with anyone.
+
+Thank you,
+Wishlist
+
+---
+This is an automated message, please do not reply.
+EOD;
+
+$headers = "From: Wishlist <{$from}>\r\n";
+$headers .= "Reply-To: {$from}\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+if (mail($to, $subject, $body, $headers)) {
+  echo json_encode(["status" => "ok", "message" => "Email sent"]);
+} else {
+  echo json_encode(["status" => "error", "message" => "Failed to send email"]);
+}
