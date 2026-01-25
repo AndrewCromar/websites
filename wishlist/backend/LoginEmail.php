@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once $_SERVER['DOCUMENT_ROOT'] . '/home3/astartup/public_html/andrewcromar/wishlist/backend/GetUidByEmail.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/home3/astartup/public_html/andrewcromar/wishlistublic_html/andrewcromar/wishlist/backend/GenerateLoginCode.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/GetUidByEmail.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '
 
 $email = $_POST['email'] ?? '';
 $uid = GetUidByEmail($email);

@@ -1,6 +1,6 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/home3/astartup/public_html/andrewcromar/wishlist/backend/GetUserItems.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/home3/astartup/public_html/andrewcromar/wishlist/backend/AddMoneyToItem.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/GetUserItems.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/AddMoneyToItem.php';
 
 function DistributeFunding($uid, $amount)
 {
