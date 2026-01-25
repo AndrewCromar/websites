@@ -23,8 +23,8 @@ if (!isset($_POST['id']) || !is_numeric($_POST['id'])) {
 $uid = $_SESSION['uid'];
 $itemId = intval($_POST['id']);
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/hellhotelnodepth/backend/CreateDBConnection.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/hellhotelnodepth/backend/DistributeFunding.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/home3/astartup/public_html/andrewcromar/wishlist/backend/CreateDBConnection.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/home3/astartup/public_html/andrewcromar/wishlist/backend/DistributeFunding.php';
 
 $conn = CreateDBConnection();
 
