@@ -1,4 +1,4 @@
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=./pages/login.php">
+<meta http-equiv="refresh" content="0; url=./pages/dashboard.php">
 <title>Redirecting...</title>
-<p>If you are not redirected, <a href="./pages/login.php">click here</a>.</p>
+<p>If you are not redirected, <a href="./pages/dashboard.php">click here</a>.</p>
