@@ -1,6 +1,6 @@
 function LoginCode(code) {
   $.ajax({
-    url: "../backend/LoginCode.php",
+    url: "../backend/endpoints/ENDPOINT_LoginCode.php",
     type: "POST",
     data: {
       code,
@@ -9,7 +9,7 @@ function LoginCode(code) {
       if (response === "OK") {
         document.location.href = "./dashboard.php";
       } else {
-        alert("Invalid or expired code.");
+        alert(response);
       }
     },
   });
