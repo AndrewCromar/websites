@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $uid = $_SESSION['uid'];
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/CreateDBConnection.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend-old/CreateDBConnection.php';
 
 try {
     $conn = CreateDBConnection();

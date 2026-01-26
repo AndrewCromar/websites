@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/CreateDBConnection.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend-old/CreateDBConnection.php';
 
 $code = $_POST['code'] ?? '';
 $conn = CreateDBConnection();

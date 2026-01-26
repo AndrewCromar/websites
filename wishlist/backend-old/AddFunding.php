@@ -31,7 +31,7 @@ if ($amount <= 0) {
 $uid = $_SESSION['uid'];
 
 // Logic only (no output inside these files)
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/DistributeFunding.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend-old/DistributeFunding.php';
 
 try {
     DistributeFunding($uid, $amount);

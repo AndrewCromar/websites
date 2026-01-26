@@ -1,5 +1,5 @@
 document.getElementById("logoutButton").addEventListener("click", function () {
-  fetch("../backend/Logout.php", { method: "POST" })
+  fetch("../backend-old/Logout.php", { method: "POST" })
     .then((response) => response.json())
     .then((data) => {
       if (data.status === "ok") {

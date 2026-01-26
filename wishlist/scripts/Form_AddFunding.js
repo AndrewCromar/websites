@@ -1,6 +1,6 @@
 function AddFunding(amount) {
   $.ajax({
-    url: "../backend/AddFunding.php",
+    url: "../backend-old/AddFunding.php",
     type: "POST",
     data: {
       amount: amount,

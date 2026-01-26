@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/CreateDBConnection.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend-old/CreateDBConnection.php';
 
 function EditItem($id, $name, $link, $price)
 {

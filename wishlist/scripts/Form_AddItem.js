@@ -1,6 +1,6 @@
 function AddItem(name, link, price) {
   $.ajax({
-    url: "../backend/AddItem.php",
+    url: "../backend-old/AddItem.php",
     type: "POST",
     data: {
       name,

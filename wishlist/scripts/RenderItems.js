@@ -1,6 +1,6 @@
 function RenderItems(firstRender = false) {
   $.ajax({
-    url: "../backend/GetUserItemsENDPOINT.php",
+    url: "../backend-old/GetUserItemsENDPOINT.php",
     type: "GET",
     dataType: "json",
     success: function (items) {

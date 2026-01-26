@@ -2,7 +2,7 @@ document.getElementById("removeBoughtButton").addEventListener("click", function
   if (!confirm("Are you sure you want to remove all bought items?")) return;
 
   $.ajax({
-    url: "../backend/RemoveBoughtItems.php",
+    url: "../backend-old/RemoveBoughtItems.php",
     type: "POST",
     dataType: "json",
     success: function(response) {
