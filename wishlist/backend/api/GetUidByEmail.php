@@ -1,5 +1,6 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/CreateDBConnection.php';
+
+require_once __DIR__ . '/CreateDBConnection.php';
 
 function GetUidByEmail($email)
 {

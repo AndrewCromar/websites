@@ -10,12 +10,12 @@ session_start();
 
 $email = trim($_POST['email'] ?? '');
 
-require_once __DIR__ . '/backend/api/IsEmailReal.php';
-require_once __DIR__ . '/backend/api/DoesEmailExist.php';
-require_once __DIR__ . '/backend/api/GetUidByEmail.php';
-require_once __DIR__ . '/backend/api/GenerateLoginCodeForUser.php';
-require_once __DIR__ . '/backend/api/SendEmailCode.php';
-require_once __DIR__ . '/backend/api/CheckCodeRequestRateLimitForUser.php';
+require_once __DIR__ . '/../api/IsEmailReal.php';
+require_once __DIR__ . '/../api/DoesEmailExist.php';
+require_once __DIR__ . '/../api/GetUidByEmail.php';
+require_once __DIR__ . '/../api/GenerateLoginCodeForUser.php';
+require_once __DIR__ . '/../api/SendEmailCode.php';
+require_once __DIR__ . '/../api/CheckCodeRequestRateLimitForUser.php';
 
 if (!IsEmailReal($email)) { echo "ERROR001"; exit; }
 if (!DoesEmailExist($email)) { echo "ERROR002"; exit; }
