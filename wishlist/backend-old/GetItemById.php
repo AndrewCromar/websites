@@ -17,7 +17,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 $uid = $_SESSION['uid'];
 $itemId = intval($_GET['id']);
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/CreateDBConnection.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend-old/CreateDBConnection.php';
 $conn = CreateDBConnection();
 
 $stmt = $conn->prepare(

@@ -8,7 +8,7 @@ if (!isset($_SESSION['uid'])) {
     exit;
 }
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/GetUserItems.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend-old/GetUserItems.php';
 
 $items = GetUserItems($_SESSION['uid']);
 echo json_encode($items);

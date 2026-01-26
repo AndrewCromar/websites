@@ -25,7 +25,7 @@ if (!$id || !$name || $price <= 0) {
     exit;
 }
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/CreateDBConnection.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/backend-old/CreateDBConnection.php';
 $conn = CreateDBConnection();
 
 $stmt = $conn->prepare(

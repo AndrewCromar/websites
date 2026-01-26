@@ -1,6 +1,6 @@
 function RemoveItem(id) {
   $.ajax({
-    url: "../backend/RemoveItem.php",
+    url: "../backend-old/RemoveItem.php",
     type: "POST",
     data: { id },
     dataType: "json",

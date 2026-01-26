@@ -3,7 +3,7 @@ document.getElementById("edit_id").addEventListener("input", function () {
   if (!id) return;
 
   $.ajax({
-    url: "../backend/GetItemById.php",
+    url: "../backend-old/GetItemById.php",
     type: "GET",
     data: { id },
     dataType: "json",
@@ -27,7 +27,7 @@ document.getElementById("edit_id").addEventListener("input", function () {
 
 function EditItem(id, name, link, price) {
   $.ajax({
-    url: "../backend/EditItem.php",
+    url: "../backend-old/EditItem.php",
     type: "POST",
     data: { id, name, link, price },
     dataType: "json",
