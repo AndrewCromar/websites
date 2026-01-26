@@ -37,7 +37,7 @@ if (!isset($_SESSION['uid'])) {
       <li>
         Logged in as: "
         <?php
-        include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/GetLoggedInEmail.php';
+        include_once __DIR__ . '/../backend-old/GetLoggedInEmail.php';
         echo GetLoggedInEmail();
         ?>
         ".
