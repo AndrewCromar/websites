@@ -19,8 +19,7 @@ if (!isset($_SESSION['uid'])) {
 <link rel="stylesheet" href="../styles/main.css" />
 <link rel="stylesheet" href="../styles/dropdown.css" />
 <link rel="stylesheet" href="../styles/neatForm.css" />
-<link rel="stylesheet" href="../styles/progressBar.css" />
-<link rel="stylesheet" href="../styles/item.css" />
+<link rel="stylesheet" href="../styles/wishlist.css" />
 
 <center>
   <h1>Dashboard</h1>
@@ -28,16 +27,16 @@ if (!isset($_SESSION['uid'])) {
 <hr>
 
 <div class="dropdown">
-  <div onclick="Dropdown(this.parentElement)">
+  <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Account Information</p>
   </div>
   <div>
     <ul style="padding-left: 20px;">
       <li>
-        Logged in as: "
+        Email: "
         <?php
-        include_once __DIR__ . '/../backend-old/GetLoggedInEmail.php';
+        include_once __DIR__ . '/../backend/api/GetLoggedInEmail.php';
         echo GetLoggedInEmail();
         ?>
         ".
@@ -50,86 +49,58 @@ if (!isset($_SESSION['uid'])) {
         ".
       </li>
     </ul>
-    <button id="logoutButton">Logout</button>
+    <button onclick="Logout();">Logout</button>
   </div>
 </div>
 
-<div class="dropdown startOpen">
-  <div onclick="Dropdown(this.parentElement)">
-    <i class="fa-solid fa-caret-down"></i>
-    <p>Add Funding</p>
-  </div>
-  <div>
-    <form id="addFundingForm" class="neatForm">
-      <input type="number" id="add_funding_amount" name="add_funding_amount" placeholder="Amount to Add (USD)" required />
-      <button type="button" id="addFundingButton">Add Funding</button>
-    </form>
-  </div>
-</div>
-
-<div class="dropdown startOpen">
-  <div onclick="Dropdown(this.parentElement)">
+<div class="dropdown open">
+  <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Wishlist</p>
   </div>
-  <div>
-    <ul id="wishlistItems" style="padding-left: 20px;"></ul>
+  <div class="wishlist-container">
+    <div>
+      <p>
+        -
+        <span><a href="test">Name Goes Here</a></span>&nbsp;
+        <span>$000.00 / $000.00 (00%)</span>&nbsp;
+        <span>#000</span></p>
+        <div><div></div></div>
+    </div>
+    <div>
+      <p>
+        -
+        <span><a href="test">Name Goes Here</a></span>&nbsp;
+        <span>$000.00 / $000.00 (00%)</span>&nbsp;
+        <span>#000</span></p>
+        <div><div></div></div>
+    </div>
+    <div>
+      <p>
+        -
+        <span><a href="test">Name Goes Here</a></span>&nbsp;
+        <span>$000.00 / $000.00 (00%)</span>&nbsp;
+        <span>#000</span></p>
+        <div><div></div></div>
+    </div>
+    <div>
+      <p>
+        -
+        <span><a href="test">Name Goes Here</a></span>&nbsp;
+        <span>$000.00 / $000.00 (00%)</span>&nbsp;
+        <span>#000</span></p>
+        <div><div></div></div>
+    </div>
+    <div>
+      <p>
+        -
+        <span><a href="test">Name Goes Here</a></span>&nbsp;
+        <span>$000.00 / $000.00 (00%)</span>&nbsp;
+        <span>#000</span></p>
+        <div><div></div></div>
+    </div>
   </div>
 </div>
 
-<div class="dropdown">
-  <div onclick="Dropdown(this.parentElement)">
-    <i class="fa-solid fa-caret-down"></i>
-    <p>Add Item</p>
-  </div>
-  <div>
-    <form id="addItemForm" class="neatForm">
-      <input type="text" id="add_name" name="add_name" placeholder="Name" required />
-      <input type="text" id="add_link" name="add_link" placeholder="Link" required />
-      <input type="number" id="add_price" name="add_price" placeholder="Price (USD)" required />
-      <button type="button" id="addItemButton">Add Item</button>
-    </form>
-  </div>
-</div>
-
-<div class="dropdown">
-  <div onclick="Dropdown(this.parentElement)">
-    <i class="fa-solid fa-caret-down"></i>
-    <p>Edit Item</p>
-  </div>
-  <div>
-    <form id="editItemForm" class="neatForm">
-      <input type="number" id="edit_id" name="edit_id" placeholder="Item ID to Edit" required />
-      <input type="text" id="edit_name" name="edit_name" placeholder="Name" required />
-      <input type="text" id="edit_link" name="edit_link" placeholder="Link" required />
-      <input type="number" id="edit_price" name="edit_price" placeholder="Price (USD)" required />
-      <button type="button" id="editItemButton">Edit Item</button>
-    </form>
-  </div>
-</div>
-
-<div class="dropdown">
-  <div onclick="Dropdown(this.parentElement)">
-    <i class="fa-solid fa-caret-down"></i>
-    <p>Remove Item</p>
-  </div>
-  <div>
-    <form id="removeItemForm" class="neatForm">
-      <input type="number" id="remove_id" name="remove_id" placeholder="Item ID to Remove" required />
-      <button type="button" id="removeItemButton">Remove Item</button>
-    </form>
-    <form id="removeBoughtForm" class="neatForm">
-      <button type="button" id="removeBoughtButton">Remove Bought Items</button>
-    </form>
-  </div>
-</div>
-
-<script src="../scripts/Form_AddItem.js"></script>
-<script src="../scripts/Form_RemoveItem.js"></script>
-<script src="../scripts/Form_EditItem.js"></script>
-<script src="../scripts/MarkBought.js"></script>
-<script src="../scripts/Form_AddFunding.js"></script>
 <script src="../scripts/Dropdown.js"></script>
-<script src="../scripts/LogoutButton.js"></script>
-<script src="../scripts/RenderItems.js"></script>
-<script src="../scripts/RemoveBoughtButton.js"></script>
+<script src="../scripts/Logout.js"></script>

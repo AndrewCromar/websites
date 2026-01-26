@@ -10,6 +10,7 @@ session_start();
 
 $email = trim($_POST['email'] ?? '');
 
+require_once __DIR__ . '/../../global.php';
 require_once __DIR__ . '/../api/IsEmailReal.php';
 require_once __DIR__ . '/../api/DoesEmailExist.php';
 require_once __DIR__ . '/../api/GetUidByEmail.php';
@@ -27,6 +28,12 @@ if (CheckCodeRequestRateLimitForuser($uid)) { echo "ERROR004"; exit; }
 
 $code = GenerateLoginCodeForUser($uid);
 
-if (!SendEmailCode($email, $code)) { echo "ERROR003"; exit; }
+global $live;
 
+if ($live)
+{
+    if (!SendEmailCode($email, $code)) { echo "ERROR003"; exit; }
+}
+else { echo "OK [DEV CODE: " . $code . "]"; exit;}
+        
 echo "OK";

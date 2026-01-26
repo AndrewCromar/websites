@@ -6,9 +6,11 @@ function LoginEmail(email) {
       email,
     },
     success: function (response) {
-      if (response == "OK") {
+      if (response.toString().includes("OK")) {
         document.getElementById("loginEmailForm").style.display = "none";
         document.getElementById("loginCodeForm").style.display = "flex";
+
+        if (response.toString().includes("DEV CODE")) { alert(response); }
       } else {
         alert(response);
       }

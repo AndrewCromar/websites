@@ -1,0 +1,22 @@
+.wishlist-container > div > p > span:nth-child(1) {
+    font-weight: bold;
+}
+
+.wishlist-container > div > p > span:nth-child(3) {
+    color: var(--text-color-muted);
+    font-size: smaller;
+}
+
+.wishlist-container > div > div {
+    border: solid var(--text-color) 2px;
+
+    height: 20px;
+    width: 100%;
+}
+
+.wishlist-container > div > div > div {
+    background-color: var(--text-color);
+
+    height: 100%;
+    width: 25%;
+}
