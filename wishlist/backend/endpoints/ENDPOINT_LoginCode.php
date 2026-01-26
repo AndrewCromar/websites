@@ -8,8 +8,8 @@
 
 session_start();
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/api/GetUidByCode.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/backend/api/DeleteCodesForUser.php';
+require_once __DIR__ . '/../api/GetUidByCode.php';
+require_once __DIR__ . '/../api/DeleteCodesForUser.php';
 
 $code = trim($_POST['code'] ?? '');
 
