@@ -1,18 +1,16 @@
 function LoginEmail(email) {
   $.ajax({
-    url: "../backend/LoginEmail.php",
+    url: "../backend/endpoints/ENDPOINT_LoginEmail.php",
     type: "POST",
     data: {
       email,
     },
     success: function (response) {
-      if (response !== "ERROR001") {
-        console.log("DEV LOGIN CODE:", response);
-
+      if (response == "OK") {
         document.getElementById("loginEmailForm").style.display = "none";
         document.getElementById("loginCodeForm").style.display = "flex";
       } else {
-        alert("Login failed.");
+        alert(response);
       }
     },
   });
