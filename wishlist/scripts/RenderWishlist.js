@@ -27,13 +27,22 @@ function RenderWishlist() {
           groupedItems[groupId].push(item);
         });
 
-        // Render grouped items
+        // Render grouped items (groups with items)
         Object.keys(groupedItems).forEach((groupId) => {
           const groupName =
             groupId === "ungrouped" ? "Ungrouped" : groupMap[groupId];
           wishlistContainer.appendChild(
             GenerateWishlistGroup(groupName, groupedItems[groupId], groupId),
           );
+        });
+
+        // Render empty groups (groups with no items)
+        groups.forEach((group) => {
+          if (!groupedItems[group.id]) {
+            wishlistContainer.appendChild(
+              GenerateEmptyWishlistGroup(group.name, group.id),
+            );
+          }
         });
       } else {
         alert(response.status + " " + response.error);
@@ -81,6 +90,45 @@ function GenerateWishlistGroup(name, items, groupId) {
       ),
     );
   });
+
+  wrapper.appendChild(header);
+  wrapper.appendChild(content);
+
+  return wrapper;
+}
+
+function GenerateEmptyWishlistGroup(name, groupId) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "dropdown open";
+
+  const header = document.createElement("div");
+  header.onclick = function () {
+    ToggleDropdown(wrapper);
+  };
+
+  const caretIcon = document.createElement("i");
+  caretIcon.className = "fa-solid fa-caret-down";
+
+  const title = document.createElement("p");
+  title.appendChild(document.createTextNode(name));
+  
+  const idSpan = document.createElement("span");
+  idSpan.style.color = "var(--text-color-muted)";
+  idSpan.style.fontSize = "smaller";
+  idSpan.textContent = `#${groupId}`;
+  
+  title.appendChild(document.createTextNode("\u00A0"));
+  title.appendChild(idSpan);
+
+  header.appendChild(caretIcon);
+  header.appendChild(title);
+
+  const content = document.createElement("div");
+  const emptyMessage = document.createElement("p");
+  emptyMessage.textContent = "No items in this group";
+  emptyMessage.style.color = "var(--text-color-muted)";
+  emptyMessage.style.padding = "10px";
+  content.appendChild(emptyMessage);
 
   wrapper.appendChild(header);
   wrapper.appendChild(content);
