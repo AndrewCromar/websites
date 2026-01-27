@@ -32,7 +32,7 @@ function RenderWishlist() {
           const groupName =
             groupId === "ungrouped" ? "Ungrouped" : groupMap[groupId];
           wishlistContainer.appendChild(
-            GenerateWishlistGroup(groupName, groupedItems[groupId]),
+            GenerateWishlistGroup(groupName, groupedItems[groupId], groupId),
           );
         });
       } else {
@@ -42,7 +42,7 @@ function RenderWishlist() {
   });
 }
 
-function GenerateWishlistGroup(name, items) {
+function GenerateWishlistGroup(name, items, groupId) {
   const wrapper = document.createElement("div");
   wrapper.className = "dropdown open";
 
@@ -55,7 +55,15 @@ function GenerateWishlistGroup(name, items) {
   caretIcon.className = "fa-solid fa-caret-down";
 
   const title = document.createElement("p");
-  title.textContent = name;
+  title.appendChild(document.createTextNode(name));
+  
+  const idSpan = document.createElement("span");
+  idSpan.style.color = "var(--text-color-muted)";
+  idSpan.style.fontSize = "smaller";
+  idSpan.textContent = `#${groupId}`;
+  
+  title.appendChild(document.createTextNode("\u00A0"));
+  title.appendChild(idSpan);
 
   header.appendChild(caretIcon);
   header.appendChild(title);

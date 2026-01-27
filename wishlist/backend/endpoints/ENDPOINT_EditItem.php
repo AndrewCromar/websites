@@ -3,6 +3,7 @@
 session_start();
 
 require_once __DIR__ . '/../api/EditItem.php';
+require_once __DIR__ . '/../api/VerifyGroupOwnership.php';
 
 if (!isset($_SESSION['uid'])) { echo json_encode(["status" => "fail", "error" => "ERROR006"]); exit; }
 
@@ -23,13 +24,20 @@ $itemId = intval($data['itemId']);
 $name = $data['name'];
 $link = $data['link'];
 $price = floatval($data['price']);
+$group_id = isset($data['groupId']) && $data['groupId'] !== '' ? intval($data['groupId']) : null;
 
 if ($itemId <= 0 || empty($name)) {
     echo json_encode(["status" => "fail", "error" => "ERROR011"]);
     exit;
 }
 
-$result = EditItem($uid, $itemId, $name, $link, $price);
+// Verify group ownership if group_id is provided
+if ($group_id !== null && !VerifyGroupOwnership($uid, $group_id)) {
+    echo json_encode(["status" => "fail", "error" => "ERROR011"]);
+    exit;
+}
+
+$result = EditItem($uid, $itemId, $name, $link, $price, $group_id);
 
 if ($result === false) {
     echo json_encode(["status" => "fail", "error" => "ERROR012"]);
@@ -37,3 +45,4 @@ if ($result === false) {
 }
 
 echo json_encode(["status" => "OK", "message" => "Item updated successfully"]);
+

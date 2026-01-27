@@ -75,50 +75,61 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
-<div class="dropdown">
+<div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
-    <p>Add Item</p>
+    <p>Item Manipulation</p>
   </div>
   <div>
-    <form id="addItemForm" class="neatForm">
-      <input type="text" id="add_name" name="add_name" placeholder="Name" required />
-      <input type="text" id="add_link" name="add_link" placeholder="Link" required />
-      <input type="number" id="add_price" name="add_price" placeholder="Price (USD)" required />
-      <button type="button" id="addItemButton">Add Item</button>
-    </form>
-  </div>
-</div>
+    <div class="dropdown">
 
-<div class="dropdown">
-  <div onclick="ToggleDropdown(this.parentElement)">
-    <i class="fa-solid fa-caret-down"></i>
-    <p>Edit Item</p>
-  </div>
-  <div>
-    <form id="editItemForm" class="neatForm">
-      <input type="number" id="edit_id" name="edit_id" placeholder="Item ID to Edit" required />
-      <input type="text" id="edit_name" name="edit_name" placeholder="Name" required />
-      <input type="text" id="edit_link" name="edit_link" placeholder="Link" required />
-      <input type="number" id="edit_price" name="edit_price" placeholder="Price (USD)" required />
-      <button type="button" id="editItemButton">Edit Item</button>
-    </form>
-  </div>
-</div>
+      <div onclick="ToggleDropdown(this.parentElement)">
+        <i class="fa-solid fa-caret-down"></i>
+        <p>Add Item</p>
+      </div>
+      <div>
+        <form id="addItemForm" class="neatForm">
+          <input type="text" id="add_name" name="add_name" placeholder="Name" required />
+          <input type="text" id="add_link" name="add_link" placeholder="Link" required />
+          <input type="number" id="add_price" name="add_price" placeholder="Price (USD)" required />
+          <button type="button" id="addItemButton">Add Item</button>
+        </form>
+      </div>
+    </div>
 
-<div class="dropdown">
-  <div onclick="ToggleDropdown(this.parentElement)">
-    <i class="fa-solid fa-caret-down"></i>
-    <p>Remove Item</p>
-  </div>
-  <div>
-    <form id="removeItemForm" class="neatForm">
-      <input type="number" id="remove_id" name="remove_id" placeholder="Item ID to Remove" required />
-      <button type="button" id="removeItemButton">Remove Item</button>
-    </form>
-    <form id="removeBoughtForm" class="neatForm">
-      <button type="button" id="removeBoughtButton">Remove Bought Items</button>
-    </form>
+    <div class="dropdown">
+      <div onclick="ToggleDropdown(this.parentElement)">
+        <i class="fa-solid fa-caret-down"></i>
+        <p>Edit Item</p>
+      </div>
+      <div>
+        <form id="editItemForm" class="neatForm">
+          <input type="number" id="edit_id" name="edit_id" placeholder="Item ID to Edit" required />
+          <input type="text" id="edit_name" name="edit_name" placeholder="Name" required />
+          <input type="text" id="edit_link" name="edit_link" placeholder="Link" required />
+          <input type="number" id="edit_price" name="edit_price" placeholder="Price (USD)" required />
+          <input type="number" id="edit_group" name="edit_group" placeholder="Group ID" required />
+          <button type="button" id="editItemButton">Edit Item</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div onclick="ToggleDropdown(this.parentElement)">
+        <i class="fa-solid fa-caret-down"></i>
+        <p>Remove Item</p>
+      </div>
+      <div>
+        <form id="removeItemForm" class="neatForm">
+          <input type="number" id="remove_id" name="remove_id" placeholder="Item ID to Remove" required />
+          <button type="button" id="removeItemButton">Remove Item</button>
+        </form>
+        <form id="removeBoughtForm" class="neatForm">
+          <button type="button" id="removeBoughtButton">Remove Bought Items</button>
+        </form>
+      </div>
+    </div>
+    
   </div>
 </div>
 
