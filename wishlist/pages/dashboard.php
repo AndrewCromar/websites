@@ -53,6 +53,8 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
+<div class="left-right-div">
+  <div>
 <div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
@@ -61,6 +63,8 @@ if (!isset($_SESSION['uid'])) {
   <div class="wishlist-groups">
   </div>
 </div>
+  </div>
+  <div>
 
 <div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
@@ -181,6 +185,9 @@ if (!isset($_SESSION['uid'])) {
         </form>
       </div>
     </div>
+  </div>
+</div>
+
   </div>
 </div>
 
