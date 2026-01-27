@@ -18,13 +18,13 @@ require_once __DIR__ . '/../api/GenerateLoginCodeForUser.php';
 require_once __DIR__ . '/../api/SendEmailCode.php';
 require_once __DIR__ . '/../api/CheckCodeRequestRateLimitForUser.php';
 
-if (!IsEmailReal($email)) { echo "ERROR001"; exit; }
-if (!DoesEmailExist($email)) { echo "ERROR002"; exit; }
+if (!IsEmailReal($email)) { echo json_encode(["status" => "fail", "error" => "ERROR001"]); exit; }
+if (!DoesEmailExist($email)) { echo json_encode(["status" => "fail", "error" => "ERROR002"]); exit; }
 
 $uid = GetUidByEmail($email);
-if (!$uid) { echo "ERROR005"; return; }
+if (!$uid) { echo json_encode(["status" => "fail", "error" => "ERROR005"]); exit; }
 
-if (CheckCodeRequestRateLimitForuser($uid)) { echo "ERROR004"; exit; }
+if (CheckCodeRequestRateLimitForuser($uid)) { echo json_encode(["status" => "fail", "error" => "ERROR004"]); exit; }
 
 $code = GenerateLoginCodeForUser($uid);
 
@@ -32,8 +32,8 @@ global $live;
 
 if ($live)
 {
-    if (!SendEmailCode($email, $code)) { echo "ERROR003"; exit; }
+    if (!SendEmailCode($email, $code)) { echo json_encode(["status" => "fail", "error" => "ERROR003"]); exit; }
 }
-else { echo "OK [DEV CODE: " . $code . "]"; exit;}
+else { echo json_encode(["status" => "OK", "devcode" => "$code"]); exit; }
         
-echo "OK";
+echo json_encode(["status" => "OK"]);

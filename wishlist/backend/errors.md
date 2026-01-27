@@ -17,3 +17,15 @@
 # ERROR005
 
 - Invalid UID.
+
+# ERROR006
+
+- Not logged in.
+
+# ERROR007
+
+- Database error.
+
+# ERROR008
+
+- Invalid JSON response.

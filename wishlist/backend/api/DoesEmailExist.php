@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/CreateDBConnection.php';
+require_once __DIR__ . '/../db/CreateDBConnection.php';
 
 function DoesEmailExist($email)
 {

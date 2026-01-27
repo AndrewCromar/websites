@@ -4,4 +4,4 @@ require_once __DIR__ . '/../api/Logout.php';
 
 Logout();
 
-echo "OK";
+echo json_encode(["status" => "OK"]);

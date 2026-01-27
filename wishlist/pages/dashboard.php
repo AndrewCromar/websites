@@ -53,54 +53,15 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
-<div class="dropdown open">
+<!-- <div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Wishlist</p>
   </div>
   <div class="wishlist-container">
-    <div>
-      <p>
-        -
-        <span><a href="test">Name Goes Here</a></span>&nbsp;
-        <span>$000.00 / $000.00 (00%)</span>&nbsp;
-        <span>#000</span></p>
-        <div><div></div></div>
-    </div>
-    <div>
-      <p>
-        -
-        <span><a href="test">Name Goes Here</a></span>&nbsp;
-        <span>$000.00 / $000.00 (00%)</span>&nbsp;
-        <span>#000</span></p>
-        <div><div></div></div>
-    </div>
-    <div>
-      <p>
-        -
-        <span><a href="test">Name Goes Here</a></span>&nbsp;
-        <span>$000.00 / $000.00 (00%)</span>&nbsp;
-        <span>#000</span></p>
-        <div><div></div></div>
-    </div>
-    <div>
-      <p>
-        -
-        <span><a href="test">Name Goes Here</a></span>&nbsp;
-        <span>$000.00 / $000.00 (00%)</span>&nbsp;
-        <span>#000</span></p>
-        <div><div></div></div>
-    </div>
-    <div>
-      <p>
-        -
-        <span><a href="test">Name Goes Here</a></span>&nbsp;
-        <span>$000.00 / $000.00 (00%)</span>&nbsp;
-        <span>#000</span></p>
-        <div><div></div></div>
-    </div>
   </div>
-</div>
+</div> -->
 
 <script src="../scripts/Dropdown.js"></script>
 <script src="../scripts/Logout.js"></script>
+<!-- <script src="../scripts/RenderWishlist.js"></script> -->
