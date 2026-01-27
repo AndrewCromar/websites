@@ -1,25 +1,22 @@
 function AddFunding(amount) {
   $.ajax({
-    url: "../backend-old/AddFunding.php",
+    url: "../backend/endpoints/ENDPOINT_AddFunding.php",
     type: "POST",
-    data: {
-      amount: amount,
-    },
-    dataType: "json", // tell jQuery to parse JSON automatically
+    contentType: "application/json",
+    data: JSON.stringify({
+      amount,
+    }),
+    dataType: "json",
     success: function (response) {
-      console.log(response); // for debugging
-
-      if (response.status === "ok") {
-        // reload page on success
+      if (response.status === "OK") {
         document.location.reload();
       } else {
-        alert("Failed to add funding: " + response.message);
+        alert("Error: " + (response.error || response.message));
       }
     },
     error: function (xhr, status, error) {
-      console.error("AJAX error:", status, error, xhr.responseText);
-      alert("Failed to add funding due to a server error.");
-    },
+      alert("Request failed: " + error);
+    }
   });
 }
 

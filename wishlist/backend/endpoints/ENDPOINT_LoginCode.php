@@ -15,11 +15,11 @@ $code = trim($_POST['code'] ?? '');
 
 $uid = GetUidByCode($code);
 
-if(!$uid) { echo "ERROR005"; exit; }
+if (!$uid) { echo json_encode(["status" => "fail", "error" => "ERROR005"]); exit; }
 
 session_regenerate_id(true);
 $_SESSION['uid'] = $uid;
 
 DeleteCodesForUser($uid);
 
-echo "OK";
+echo json_encode(["status" => "OK"]);

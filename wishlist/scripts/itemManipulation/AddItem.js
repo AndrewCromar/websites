@@ -1,18 +1,19 @@
 function AddItem(name, link, price) {
   $.ajax({
-    url: "../backend-old/AddItem.php",
+    url: "../backend/endpoints/ENDPOINT_AddItem.php",
     type: "POST",
-    data: {
+    contentType: "application/json",
+    data: JSON.stringify({
       name,
       link,
       price,
-    },
+    }),
+    dataType: "json",
     success: function (response) {
-      if (response === "OK") {
-        console.log("DEV ADD ITEM:", response);
+      if (response.status === "OK") {
         document.location.reload();
       } else {
-        alert("Failed to add item.");
+        alert("Error: " + (response.error || response.message));
       }
     },
   });

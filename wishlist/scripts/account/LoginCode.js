@@ -2,14 +2,13 @@ function LoginCode(code) {
   $.ajax({
     url: "../backend/endpoints/ENDPOINT_LoginCode.php",
     type: "POST",
-    data: {
-      code,
-    },
+    data: { code },
+    dataType: "json",
     success: function (response) {
-      if (response === "OK") {
+      if (response.status === "OK") {
         document.location.href = "./dashboard.php";
       } else {
-        alert(response);
+        alert(response.status + " " + response.error);
       }
     },
   });

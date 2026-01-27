@@ -2,15 +2,18 @@ function LoginEmail(email) {
   $.ajax({
     url: "../backend/endpoints/ENDPOINT_LoginEmail.php",
     type: "POST",
-    data: {
-      email,
-    },
+    data: { email },
+    dataType: "json",
     success: function (response) {
-      if (response == "OK") {
+      if (response.status === "OK") {
         document.getElementById("loginEmailForm").style.display = "none";
         document.getElementById("loginCodeForm").style.display = "flex";
+
+        if (response.devcode != null) {
+          alert(response.devcode);
+        }
       } else {
-        alert(response);
+        alert(response.status + " " + response.error);
       }
     },
   });

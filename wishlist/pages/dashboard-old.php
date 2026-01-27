@@ -19,7 +19,8 @@ if (!isset($_SESSION['uid'])) {
 <link rel="stylesheet" href="../styles/main.css" />
 <link rel="stylesheet" href="../styles/dropdown.css" />
 <link rel="stylesheet" href="../styles/neatForm.css" />
-<link rel="stylesheet" href="../styles/wishlist.css" />
+<link rel="stylesheet" href="../styles/progressBar.css" />
+<link rel="stylesheet" href="../styles/item.css" />
 
 <center>
   <h1>Dashboard</h1>
@@ -27,16 +28,16 @@ if (!isset($_SESSION['uid'])) {
 <hr>
 
 <div class="dropdown">
-  <div onclick="ToggleDropdown(this.parentElement)">
+  <div onclick="Dropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Account Information</p>
   </div>
   <div>
     <ul style="padding-left: 20px;">
       <li>
-        Email: "
+        Logged in as: "
         <?php
-        include_once __DIR__ . '/../backend/api/GetLoggedInEmail.php';
+        include_once __DIR__ . '/../backend-old/GetLoggedInEmail.php';
         echo GetLoggedInEmail();
         ?>
         ".
@@ -49,12 +50,12 @@ if (!isset($_SESSION['uid'])) {
         ".
       </li>
     </ul>
-    <button onclick="Logout();">Logout</button>
+    <button id="logoutButton">Logout</button>
   </div>
 </div>
 
-<div class="dropdown open">
-  <div onclick="ToggleDropdown(this.parentElement)">
+<div class="dropdown startOpen">
+  <div onclick="Dropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Add Funding</p>
   </div>
@@ -66,17 +67,18 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
-<div class="dropdown open">
-  <div onclick="ToggleDropdown(this.parentElement)">
+<div class="dropdown startOpen">
+  <div onclick="Dropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Wishlist</p>
   </div>
-  <div class="wishlist-container">
+  <div>
+    <ul id="wishlistItems" style="padding-left: 20px;"></ul>
   </div>
 </div>
 
 <div class="dropdown">
-  <div onclick="ToggleDropdown(this.parentElement)">
+  <div onclick="Dropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Add Item</p>
   </div>
@@ -91,7 +93,7 @@ if (!isset($_SESSION['uid'])) {
 </div>
 
 <div class="dropdown">
-  <div onclick="ToggleDropdown(this.parentElement)">
+  <div onclick="Dropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Edit Item</p>
   </div>
@@ -107,7 +109,7 @@ if (!isset($_SESSION['uid'])) {
 </div>
 
 <div class="dropdown">
-  <div onclick="ToggleDropdown(this.parentElement)">
+  <div onclick="Dropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Remove Item</p>
   </div>
@@ -122,11 +124,12 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
+<script src="../scripts/Form_AddItem.js"></script>
+<script src="../scripts/Form_RemoveItem.js"></script>
+<script src="../scripts/Form_EditItem.js"></script>
+<script src="../scripts/MarkBought.js"></script>
+<script src="../scripts/Form_AddFunding.js"></script>
 <script src="../scripts/Dropdown.js"></script>
-<script src="../scripts/account/Logout.js"></script>
-<script src="../scripts/RenderWishlist.js"></script>
-<script src="../scripts/itemManipulation/AddItem.js"></script>
-<script src="../scripts/itemManipulation/RemoveItem.js"></script>
-<script src="../scripts/itemManipulation/RemoveBoughtItems.js"></script>
-<script src="../scripts/itemManipulation/AddFunding.js"></script>
-<script src="../scripts/itemManipulation/EditItem.js"></script>
+<script src="../scripts/LogoutButton.js"></script>
+<script src="../scripts/RenderItems.js"></script>
+<script src="../scripts/RemoveBoughtButton.js"></script>

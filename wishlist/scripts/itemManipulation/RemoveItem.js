@@ -1,20 +1,19 @@
 function RemoveItem(id) {
   $.ajax({
-    url: "../backend-old/RemoveItem.php",
+    url: "../backend/endpoints/ENDPOINT_RemoveItem.php",
     type: "POST",
-    data: { id },
+    contentType: "application/json",
+    data: JSON.stringify({
+      itemId: id,
+    }),
     dataType: "json",
     success: function (response) {
-      if (response.status === "ok") {
+      if (response.status === "OK") {
         document.location.reload();
       } else {
-        alert("Failed to remove item: " + (response.message || "Unknown error"));
+        alert("Error: " + (response.error || response.message));
       }
     },
-    error: function (xhr, status, error) {
-      alert("Failed to remove item due to server error.");
-      console.error("AJAX error:", status, error, xhr.responseText);
-    }
   });
 }
 
