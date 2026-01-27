@@ -79,7 +79,7 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
-<div class="dropdown">
+<div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Item Manipulation</p>
@@ -137,7 +137,7 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
-<div class="dropdown">
+<div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Group Manipulation</p>
