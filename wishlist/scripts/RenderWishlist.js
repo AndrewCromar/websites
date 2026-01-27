@@ -11,13 +11,11 @@ function RenderWishlist() {
 
         const { items, groups } = response.data;
 
-        // Create a map of group_id to group name
         const groupMap = {};
         groups.forEach((group) => {
           groupMap[group.id] = group.name;
         });
 
-        // Group items by group_id
         const groupedItems = {};
         items.forEach((item) => {
           const groupId = item.group_id || "ungrouped";
@@ -27,16 +25,14 @@ function RenderWishlist() {
           groupedItems[groupId].push(item);
         });
 
-        // Render grouped items (groups with items)
         Object.keys(groupedItems).forEach((groupId) => {
           const groupName =
-            groupId === "ungrouped" ? "Ungrouped" : groupMap[groupId];
+            groupId === "ungrouped" ? "" : groupMap[groupId];
           wishlistContainer.appendChild(
             GenerateWishlistGroup(groupName, groupedItems[groupId], groupId),
           );
         });
 
-        // Render empty groups (groups with no items)
         groups.forEach((group) => {
           if (!groupedItems[group.id]) {
             wishlistContainer.appendChild(

@@ -56,6 +56,15 @@ if (!isset($_SESSION['uid'])) {
 <div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
+    <p>Wishlist</p>
+  </div>
+  <div class="wishlist-groups">
+  </div>
+</div>
+
+<div class="dropdown open">
+  <div onclick="ToggleDropdown(this.parentElement)">
+    <i class="fa-solid fa-caret-down"></i>
     <p>Add Funding</p>
   </div>
   <div>
@@ -66,23 +75,14 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
-<div class="dropdown open">
-  <div onclick="ToggleDropdown(this.parentElement)">
-    <i class="fa-solid fa-caret-down"></i>
-    <p>Wishlist</p>
-  </div>
-  <div class="wishlist-groups">
-  </div>
-</div>
-
-<div class="dropdown open">
+<div class="dropdown">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Item Manipulation</p>
   </div>
   <div>
-    <div class="dropdown">
 
+    <div class="dropdown open">
       <div onclick="ToggleDropdown(this.parentElement)">
         <i class="fa-solid fa-caret-down"></i>
         <p>Add Item</p>
@@ -97,7 +97,7 @@ if (!isset($_SESSION['uid'])) {
       </div>
     </div>
 
-    <div class="dropdown">
+    <div class="dropdown open">
       <div onclick="ToggleDropdown(this.parentElement)">
         <i class="fa-solid fa-caret-down"></i>
         <p>Edit Item</p>
@@ -114,7 +114,7 @@ if (!isset($_SESSION['uid'])) {
       </div>
     </div>
 
-    <div class="dropdown">
+    <div class="dropdown open">
       <div onclick="ToggleDropdown(this.parentElement)">
         <i class="fa-solid fa-caret-down"></i>
         <p>Remove Item</p>
@@ -133,13 +133,13 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
-<div class="dropdown open">
+<div class="dropdown">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Group Manipulation</p>
   </div>
   <div>
-    <div class="dropdown">
+    <div class="dropdown open">
       <div onclick="ToggleDropdown(this.parentElement)">
         <i class="fa-solid fa-caret-down"></i>
         <p>Add Group</p>
@@ -152,7 +152,7 @@ if (!isset($_SESSION['uid'])) {
       </div>
     </div>
 
-    <div class="dropdown">
+    <div class="dropdown open">
       <div onclick="ToggleDropdown(this.parentElement)">
         <i class="fa-solid fa-caret-down"></i>
         <p>Edit Group</p>
@@ -166,7 +166,7 @@ if (!isset($_SESSION['uid'])) {
       </div>
     </div>
 
-    <div class="dropdown">
+    <div class="dropdown open">
       <div onclick="ToggleDropdown(this.parentElement)">
         <i class="fa-solid fa-caret-down"></i>
         <p>Remove Group</p>
