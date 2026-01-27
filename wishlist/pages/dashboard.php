@@ -71,7 +71,7 @@ if (!isset($_SESSION['uid'])) {
     <i class="fa-solid fa-caret-down"></i>
     <p>Wishlist</p>
   </div>
-  <div class="wishlist-container">
+  <div class="wishlist-groups">
   </div>
 </div>
 
