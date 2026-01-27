@@ -25,5 +25,5 @@
     <button type="button" id="loginCodeButton">Login</button>
 </form>
 
-<script src="../scripts/LoginEmail.js"></script>
-<script src="../scripts/LoginCode.js"></script>
+<script src="../scripts/account/LoginEmail.js"></script>
+<script src="../scripts/account/LoginCode.js"></script>

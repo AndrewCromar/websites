@@ -28,8 +28,6 @@ function RenderWishlist() {
 }
 
 function GenerateWishlistItem(name, url, price, money_saved, id) {
-  console.log(name);
-
   const percent = price > 0 ? Math.round((money_saved / price) * 100) : 0;
 
   const wrapper = document.createElement("div");

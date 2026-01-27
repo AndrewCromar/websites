@@ -78,5 +78,6 @@ if (!isset($_SESSION['uid'])) {
 </div>
 
 <script src="../scripts/Dropdown.js"></script>
-<script src="../scripts/Logout.js"></script>
+<script src="../scripts/account/Logout.js"></script>
 <script src="../scripts/RenderWishlist.js"></script>
+<script src="../scripts/itemManipulation/AddItem.js"></script>
