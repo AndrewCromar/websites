@@ -56,6 +56,19 @@ if (!isset($_SESSION['uid'])) {
 <div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
+    <p>Add Funding</p>
+  </div>
+  <div>
+    <form id="addFundingForm" class="neatForm">
+      <input type="number" id="add_funding_amount" name="add_funding_amount" placeholder="Amount to Add (USD)" required />
+      <button type="button" id="addFundingButton">Add Funding</button>
+    </form>
+  </div>
+</div>
+
+<div class="dropdown open">
+  <div onclick="ToggleDropdown(this.parentElement)">
+    <i class="fa-solid fa-caret-down"></i>
     <p>Wishlist</p>
   </div>
   <div class="wishlist-container">
@@ -99,3 +112,4 @@ if (!isset($_SESSION['uid'])) {
 <script src="../scripts/itemManipulation/AddItem.js"></script>
 <script src="../scripts/itemManipulation/RemoveItem.js"></script>
 <script src="../scripts/itemManipulation/RemoveBoughtItems.js"></script>
+<script src="../scripts/itemManipulation/AddFunding.js"></script>
