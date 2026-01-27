@@ -31,20 +31,50 @@ CREATE TABLE codes (
 CREATE TABLE items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     uid INT NOT NULL,
+    group_id INT NULL,
+
     name VARCHAR(255) NOT NULL,
     link VARCHAR(512) DEFAULT NULL,
     price DECIMAL(10,2) NOT NULL,
     money_saved DECIMAL(10,2) NOT NULL DEFAULT 0.00,
     bought BOOLEAN NOT NULL DEFAULT FALSE,
 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         ON UPDATE CURRENT_TIMESTAMP,
 
     INDEX idx_uid (uid),
+    INDEX idx_group_id (group_id),
     INDEX idx_bought (bought),
 
     CONSTRAINT fk_items_account
+        FOREIGN KEY (uid) REFERENCES accounts(uid)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_items_group
+        FOREIGN KEY (group_id) REFERENCES groups(id)
+        ON DELETE SET NULL
+);
+
+ALTER TABLE items
+ADD COLUMN group_id INT NULL AFTER uid,
+ADD INDEX idx_group_id (group_id),
+ADD CONSTRAINT fk_items_group
+    FOREIGN KEY (group_id) REFERENCES groups(id)
+    ON DELETE SET NULL;
+
+
+CREATE TABLE groups (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    uid INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    INDEX idx_uid (uid),
+    UNIQUE KEY uniq_user_group (uid, name),
+
+    CONSTRAINT fk_groups_account
         FOREIGN KEY (uid) REFERENCES accounts(uid)
         ON DELETE CASCADE
 );
