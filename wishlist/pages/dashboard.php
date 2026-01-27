@@ -93,6 +93,22 @@ if (!isset($_SESSION['uid'])) {
 <div class="dropdown">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
+    <p>Edit Item</p>
+  </div>
+  <div>
+    <form id="editItemForm" class="neatForm">
+      <input type="number" id="edit_id" name="edit_id" placeholder="Item ID to Edit" required />
+      <input type="text" id="edit_name" name="edit_name" placeholder="Name" required />
+      <input type="text" id="edit_link" name="edit_link" placeholder="Link" required />
+      <input type="number" id="edit_price" name="edit_price" placeholder="Price (USD)" required />
+      <button type="button" id="editItemButton">Edit Item</button>
+    </form>
+  </div>
+</div>
+
+<div class="dropdown">
+  <div onclick="ToggleDropdown(this.parentElement)">
+    <i class="fa-solid fa-caret-down"></i>
     <p>Remove Item</p>
   </div>
   <div>
@@ -113,3 +129,4 @@ if (!isset($_SESSION['uid'])) {
 <script src="../scripts/itemManipulation/RemoveItem.js"></script>
 <script src="../scripts/itemManipulation/RemoveBoughtItems.js"></script>
 <script src="../scripts/itemManipulation/AddFunding.js"></script>
+<script src="../scripts/itemManipulation/EditItem.js"></script>

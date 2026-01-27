@@ -11,7 +11,7 @@ function RemoveItem(id) {
       if (response.status === "OK") {
         document.location.reload();
       } else {
-        alert(response.status + " " + response.error);
+        alert("Error: " + (response.error || response.message));
       }
     },
   });
