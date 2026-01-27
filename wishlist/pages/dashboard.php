@@ -78,6 +78,54 @@ if (!isset($_SESSION['uid'])) {
 <div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
+    <p>Group Manipulation</p>
+  </div>
+  <div>
+    <div class="dropdown">
+      <div onclick="ToggleDropdown(this.parentElement)">
+        <i class="fa-solid fa-caret-down"></i>
+        <p>Add Group</p>
+      </div>
+      <div>
+        <form id="addGroupForm" class="neatForm">
+          <input type="text" id="add_group_name" name="add_group_name" placeholder="Group Name" required />
+          <button type="button" id="addGroupButton">Add Group</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div onclick="ToggleDropdown(this.parentElement)">
+        <i class="fa-solid fa-caret-down"></i>
+        <p>Edit Group</p>
+      </div>
+      <div>
+        <form id="editGroupForm" class="neatForm">
+          <input type="number" id="edit_group_id" name="edit_group_id" placeholder="Group ID to Edit" required />
+          <input type="text" id="edit_group_name" name="edit_group_name" placeholder="Group Name" required />
+          <button type="button" id="editGroupButton">Edit Group</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div onclick="ToggleDropdown(this.parentElement)">
+        <i class="fa-solid fa-caret-down"></i>
+        <p>Remove Group</p>
+      </div>
+      <div>
+        <form id="removeGroupForm" class="neatForm">
+          <input type="number" id="remove_group_id" name="remove_group_id" placeholder="Group ID to Remove" required />
+          <button type="button" id="removeGroupButton">Remove Group</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown open">
+  <div onclick="ToggleDropdown(this.parentElement)">
+    <i class="fa-solid fa-caret-down"></i>
     <p>Item Manipulation</p>
   </div>
   <div>
@@ -129,7 +177,7 @@ if (!isset($_SESSION['uid'])) {
         </form>
       </div>
     </div>
-    
+
   </div>
 </div>
 
@@ -141,3 +189,6 @@ if (!isset($_SESSION['uid'])) {
 <script src="../scripts/itemManipulation/RemoveBoughtItems.js"></script>
 <script src="../scripts/itemManipulation/AddFunding.js"></script>
 <script src="../scripts/itemManipulation/EditItem.js"></script>
+<script src="../scripts/groupManipulation/AddGroup.js"></script>
+<script src="../scripts/groupManipulation/EditGroup.js"></script>
+<script src="../scripts/groupManipulation/DeleteGroup.js"></script>
