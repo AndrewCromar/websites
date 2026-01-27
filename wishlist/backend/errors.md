@@ -29,3 +29,23 @@
 # ERROR008
 
 - Invalid JSON response.
+
+# ERROR009
+
+- Invalid request method (must be POST).
+
+# ERROR010
+
+- Missing required fields.
+
+# ERROR011
+
+- Invalid input data.
+
+# ERROR012
+
+- Item not found or does not belong to user.
+
+# ERROR013
+
+- Failed to process item operation.

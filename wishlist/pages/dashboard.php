@@ -62,7 +62,7 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
-<div class="dropdown open">
+<div class="dropdown">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Add Item</p>
@@ -77,7 +77,25 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
+<div class="dropdown">
+  <div onclick="ToggleDropdown(this.parentElement)">
+    <i class="fa-solid fa-caret-down"></i>
+    <p>Remove Item</p>
+  </div>
+  <div>
+    <form id="removeItemForm" class="neatForm">
+      <input type="number" id="remove_id" name="remove_id" placeholder="Item ID to Remove" required />
+      <button type="button" id="removeItemButton">Remove Item</button>
+    </form>
+    <form id="removeBoughtForm" class="neatForm">
+      <button type="button" id="removeBoughtButton">Remove Bought Items</button>
+    </form>
+  </div>
+</div>
+
 <script src="../scripts/Dropdown.js"></script>
 <script src="../scripts/account/Logout.js"></script>
 <script src="../scripts/RenderWishlist.js"></script>
 <script src="../scripts/itemManipulation/AddItem.js"></script>
+<script src="../scripts/itemManipulation/RemoveItem.js"></script>
+<script src="../scripts/itemManipulation/RemoveBoughtItems.js"></script>
