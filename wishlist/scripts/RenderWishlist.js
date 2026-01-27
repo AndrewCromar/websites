@@ -18,7 +18,7 @@ function RenderWishlist() {
 
         const groupedItems = {};
         items.forEach((item) => {
-          const groupId = item.group_id || "ungrouped";
+          const groupId = item.group_id || "";
           if (!groupedItems[groupId]) {
             groupedItems[groupId] = [];
           }
@@ -27,7 +27,7 @@ function RenderWishlist() {
 
         Object.keys(groupedItems).forEach((groupId) => {
           const groupName =
-            groupId === "ungrouped" ? "" : groupMap[groupId];
+            groupId === "ungrouped" ? "Ungrouped" : groupMap[groupId];
           wishlistContainer.appendChild(
             GenerateWishlistGroup(groupName, groupedItems[groupId], groupId),
           );
