@@ -5,6 +5,7 @@ document.getElementById("edit_id").addEventListener("input", function () {
     document.getElementById("edit_name").value = "";
     document.getElementById("edit_link").value = "";
     document.getElementById("edit_price").value = "";
+    document.getElementById("edit_group").value = "";
     return;
   }
 
@@ -22,16 +23,19 @@ document.getElementById("edit_id").addEventListener("input", function () {
         document.getElementById("edit_name").value = item.name;
         document.getElementById("edit_link").value = item.link;
         document.getElementById("edit_price").value = item.price;
+        document.getElementById("edit_group").value = item.group_id || "";
       } else {
         document.getElementById("edit_name").value = "";
         document.getElementById("edit_link").value = "";
         document.getElementById("edit_price").value = "";
+        document.getElementById("edit_group").value = "";
       }
     },
     error: function (xhr, status, error) {
       document.getElementById("edit_name").value = "";
       document.getElementById("edit_link").value = "";
       document.getElementById("edit_price").value = "";
+      document.getElementById("edit_group").value = "";
     }
   });
 });
@@ -42,7 +46,8 @@ document.getElementById("editItemForm").addEventListener("submit", function (e) 
   const name = document.getElementById("edit_name").value;
   const link = document.getElementById("edit_link").value;
   const price = document.getElementById("edit_price").value;
-  EditItem(id, name, link, price);
+  const groupId = document.getElementById("edit_group").value;
+  EditItem(id, name, link, price, groupId);
 });
 
 document.getElementById("editItemButton").addEventListener("click", function () {
@@ -50,10 +55,11 @@ document.getElementById("editItemButton").addEventListener("click", function () 
   const name = document.getElementById("edit_name").value;
   const link = document.getElementById("edit_link").value;
   const price = document.getElementById("edit_price").value;
-  EditItem(id, name, link, price);
+  const groupId = document.getElementById("edit_group").value;
+  EditItem(id, name, link, price, groupId);
 });
 
-function EditItem(id, name, link, price) {
+function EditItem(id, name, link, price, groupId) {
   $.ajax({
     url: "../backend/endpoints/ENDPOINT_EditItem.php",
     type: "POST",
@@ -63,6 +69,7 @@ function EditItem(id, name, link, price) {
       name,
       link,
       price,
+      groupId: groupId !== '' ? parseInt(groupId) : null,
     }),
     dataType: "json",
     success: function (response) {
