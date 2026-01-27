@@ -28,7 +28,7 @@ $_SESSION['last_code_request'][$uid] = $now;
 $code = GenerateLoginCodeForUser($uid);
 
 $to = $email;
-$subject = "Your Wishlist Login Code";
+$subject = "Your Wishlist Login Code - {$code}";
 $from = 'no-reply@andrewcromar.org';
 
 $body = <<<EOD
