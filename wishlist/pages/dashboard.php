@@ -53,15 +53,30 @@ if (!isset($_SESSION['uid'])) {
   </div>
 </div>
 
-<!-- <div class="dropdown open">
+<div class="dropdown open">
   <div onclick="ToggleDropdown(this.parentElement)">
     <i class="fa-solid fa-caret-down"></i>
     <p>Wishlist</p>
   </div>
   <div class="wishlist-container">
   </div>
-</div> -->
+</div>
+
+<div class="dropdown open">
+  <div onclick="ToggleDropdown(this.parentElement)">
+    <i class="fa-solid fa-caret-down"></i>
+    <p>Add Item</p>
+  </div>
+  <div>
+    <form id="addItemForm" class="neatForm">
+      <input type="text" id="add_name" name="add_name" placeholder="Name" required />
+      <input type="text" id="add_link" name="add_link" placeholder="Link" required />
+      <input type="number" id="add_price" name="add_price" placeholder="Price (USD)" required />
+      <button type="button" id="addItemButton">Add Item</button>
+    </form>
+  </div>
+</div>
 
 <script src="../scripts/Dropdown.js"></script>
 <script src="../scripts/Logout.js"></script>
-<!-- <script src="../scripts/RenderWishlist.js"></script> -->
+<script src="../scripts/RenderWishlist.js"></script>
