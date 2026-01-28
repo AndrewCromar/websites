@@ -30,3 +30,8 @@ a {
   margin: 0;
   padding: 0;
 }
+
+
+.left-right-div > div:nth-child(1) {
+  border-right: solid var(--text-color) 2px;
+}
