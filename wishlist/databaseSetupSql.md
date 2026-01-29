@@ -56,14 +56,6 @@ CREATE TABLE items (
         ON DELETE SET NULL
 );
 
-ALTER TABLE items
-ADD COLUMN group_id INT NULL AFTER uid,
-ADD INDEX idx_group_id (group_id),
-ADD CONSTRAINT fk_items_group
-    FOREIGN KEY (group_id) REFERENCES groups(id)
-    ON DELETE SET NULL;
-
-
 CREATE TABLE groups (
     id INT AUTO_INCREMENT PRIMARY KEY,
     uid INT NOT NULL,
