@@ -16,3 +16,19 @@
 #loginCodeForm button {
     flex: 0 0 auto;
 }
+
+#registerForm {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#registerForm input, #registerForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#registerForm button {
+    flex: 0 0 auto;
+}

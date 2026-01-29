@@ -25,5 +25,9 @@
     <button type="button" id="loginCodeButton">Login</button>
 </form>
 
+<div style="margin:20px; text-align:center;">
+    <button type="button" id="gotoRegisterButton" onclick="location.href='register.php'">Register</button>
+</div>
+
 <script src="../scripts/account/LoginEmail.js"></script>
 <script src="../scripts/account/LoginCode.js"></script>
