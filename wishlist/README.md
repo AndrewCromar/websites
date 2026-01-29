@@ -26,3 +26,12 @@ A small web project for managing a personal wishlist of items that you want to b
 ## Contributions are Welcomed
 
 Currently I want to style the site better and add a raking system so some items can be prioritized better than others.
+
+## Screenshots
+
+<img width="500px" alt="image" src="https://github.com/user-attachments/assets/7642f3b5-7c02-475e-94bd-5c893d946984" />
+<img width="500px" alt="image" src="https://github.com/user-attachments/assets/6c81c91e-3dcd-4458-909b-0f20d45ce6e5" />
+<img width="500px" alt="image" src="https://github.com/user-attachments/assets/fbe5c35c-9cbd-442a-8cab-083e030cd8ae" />
+<img width="500px" alt="image" src="https://github.com/user-attachments/assets/68f24920-58b3-43bd-a3a5-0e7031e43a21" />
+
+
